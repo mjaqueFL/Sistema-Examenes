@@ -2,7 +2,7 @@
   "id": "2ae2f937-be7f-4d3f-8e8b-658b61097258",
   "version": "2.0",
   "name": "testgestorexamenes",
-  "url": "http://localhost",
+  "url": "http://localhost/GestorExamenes/",
   "tests": [{
     "id": "72954d04-3132-4585-9c3f-7b9b1e7dbfef",
     "name": "prueba alta examen listado",
@@ -234,6 +234,221 @@
         ["xpath=//div[@id='wrapper']/div/div/div/div/table/tbody/tr[4]/td", "xpath:idRelative"],
         ["xpath=//tr[4]/td", "xpath:position"],
         ["xpath=//td[contains(.,'sistemas informaticos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ab6a9367-f2e0-418b-abb9-6100d71d9441",
+    "name": "prueba cancelar examen",
+    "commands": [{
+      "id": "bff7d64e-e63b-4f60-b45a-3a8f8816f5e4",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa09148a-423c-4ed8-9a75-e29aad60037a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1785x962",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60f098fb-9225-4332-95be-577f2d8ab8e1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Google login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2FGestorExamenes%2Fauth%2Foauth2callback&client_id=699526078858-i63tvb0ae822dafaptu51rje59e128mn.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&approval_prompt=auto')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdd6b51c-5904-4d05-abfe-cd09f5e166d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Google login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2FGestorExamenes%2Fauth%2Foauth2callback&client_id=699526078858-i63tvb0ae822dafaptu51rje59e128mn.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&approval_prompt=auto')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58aac6ba-dea5-4739-bc08-a55ebce2b883",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Google login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2FGestorExamenes%2Fauth%2Foauth2callback&client_id=699526078858-i63tvb0ae822dafaptu51rje59e128mn.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&approval_prompt=auto')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b02925e-6d47-46ab-b1a7-00c4a5fa0632",
+      "comment": "",
+      "command": "click",
+      "target": "css=.JDAKTe:nth-child(3) .w1I7fb",
+      "targets": [
+        ["css=.JDAKTe:nth-child(3) .w1I7fb", "css:finder"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[3]/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbfcaeae-3148-44ca-8031-de5b8513ed38",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f13535a0-2d80-4dd0-bd08-38a3e3dc2aa6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-white",
+      "targets": [
+        ["css=.bg-white", "css:finder"],
+        ["xpath=//div[@id='collapseQuiz']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2206efb0-b255-44d0-bd32-a66ef9b5d09d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4275dab7-abbb-4a8c-8d65-d8f485a59595",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1feb0f2-bd25-469b-ba34-4eabf6041572",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear examen",
+      "targets": [
+        ["linkText=Crear examen", "linkText"],
+        ["css=.collapse-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear examen')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear examen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df15c745-59d5-4e56-820f-a3fcb881f10c",
+      "comment": "",
+      "command": "click",
+      "target": "name=tituloexamen",
+      "targets": [
+        ["name=tituloexamen", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='tituloexamen']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58f36358-d428-4499-9f23-2a6cd02bf841",
+      "comment": "",
+      "command": "type",
+      "target": "name=tituloexamen",
+      "targets": [
+        ["name=tituloexamen", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='tituloexamen']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "prueba cancelar"
+    }, {
+      "id": "4472ca01-7189-4385-a30b-b76b4e7a0579",
+      "comment": "",
+      "command": "type",
+      "target": "name=curso",
+      "targets": [
+        ["name=curso", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "cancelar"
+    }, {
+      "id": "e369979a-a68d-4872-8e06-25295c09733f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancelar",
+      "targets": [
+        ["linkText=Cancelar", "linkText"],
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancelar')]", "xpath:link"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost/GestorExamenes/Dashboard'])[2]", "xpath:href"],
+        ["xpath=//form/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cancelar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9952109-fbf3-4af5-8d81-993d1d7a1358",
+      "comment": "",
+      "command": "click",
+      "target": "css=.collapsed > span",
+      "targets": [
+        ["css=.collapsed > span", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b42ffbaa-e617-4eee-a925-8db3f6445ca8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
       ],
       "value": ""
     }]
