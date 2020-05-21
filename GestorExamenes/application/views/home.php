@@ -31,27 +31,6 @@
 
         </div>
     </div>
-    <div class="row">
-        <!--Div con el usuario logeado-->
-        <?php if (isset($_SESSION['name'])) { ?>
-            <div class="col s12 m6 l4 offset-l3 ">
-                <div class="card ">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="<?= $_SESSION['profile_pic'] ?>">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"> <i
-                                    class="material-icons"><?= $_SESSION['name'] ?></i></span>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4"><?= $_SESSION['name'] ?><i
-                                    class="material-icons right">close</i></span>
-                        <p>Email Id: <?= $_SESSION['email'] ?></p>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
-    </div>
 </div>
 
 </body>

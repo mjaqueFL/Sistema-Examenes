@@ -69,12 +69,13 @@
         <div class="row">
             <form method="post" action="http://localhost/GestorExamenes/Examenes/crearexamen">
 
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <br>
-                    <div class="login-panel panel panel-default">
+                    <div  class="login-panel panel panel-default">
                         <div class="panel-body">
                             <div class="form-group">
-                                <input type="text" name="tituloexamen" class="form-control" placeholder="Titulo examen">
+                                <input type="text" name="tituloexamen" class="form-control" placeholder="Titulo examen"
+                                       required autofocus>
                             </div>
                             <div class="form-group">
                                 <input type="text" name="curso" class="form-control" placeholder="Curso">
@@ -87,10 +88,13 @@
                             </div>
                             <button class="btn btn-primary " type="submit">Enviar</button>
                         </div>
-                        <br>
-                            <a class=" btn btn-danger" href="http://localhost/GestorExamenes/Dashboard">Cancelar </a>
+                    </div>
+                    <br>
+                    <a class=" btn btn-danger" href="http://localhost/GestorExamenes/Dashboard">Cancelar </a>
+                </div>
 
             </form>
         </div>
 
     </div>
+</div>

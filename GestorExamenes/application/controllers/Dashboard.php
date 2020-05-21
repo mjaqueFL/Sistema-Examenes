@@ -6,18 +6,18 @@ class Dashboard extends CI_Controller
     function __construct()
     {
         parent::__construct();
-/*        $this->load->library('google');
-      if ($this->session->userdata('sess_logged_in') == 0) { //si no estás logueado no te
-            // deja acceder a este archivo, así vamos a comprobar los accesos a los controladores, comentar esta linea y comprobar que si puedes entrar sin estar logueado
-            echo 'Mal';
+        $this->load->library('google'); /*Libreria de Google necesaria*/
+        $data['google_login_url'] = $this->google->get_login_url();
+        if ($this->session->userdata('sess_logged_in') == 0) {
+           redirect('Auth');
         } else {
-            echo 'bien';
-        }*/
+            $this->load->view('dashboard');
+        }
+
     }
 
     public function index()
     {
-       $this->load->view('dashboard');
-    }
 
+    }
 }

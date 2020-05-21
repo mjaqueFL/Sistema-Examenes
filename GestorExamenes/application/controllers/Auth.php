@@ -7,12 +7,21 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->library('google'); /*Libreria de Google necesaria*/
+        $data['google_login_url'] = $this->google->get_login_url();
+        if ($this->session->userdata('sess_logged_in') == 1) {
+            redirect('Dashboard');
+        } else {
+
+            $this->load->view('home', $data);
+        }
+
+
     }
 
     public function index()
     {
-        $data['google_login_url'] = $this->google->get_login_url();
-        $this->load->view('home', $data);
+
+
     }
 
     public function oauth2callback()
@@ -29,8 +38,9 @@ class Auth extends CI_Controller
         );
 
         $this->session->set_userdata($session_data);
-/*        print_r($google_data);
-        die();*/
+        /*        print_r($google_data);
+                die();*/
+
         $data['google_login_url'] = $this->google->get_login_url();
         /*        $this->load->view('home', $data);*/
         redirect('Dashboard', $data);

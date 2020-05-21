@@ -7,6 +7,7 @@
           rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>css/sb-admin-2.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
@@ -19,6 +20,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+    <script src="http://localhost/GestorExamenes/js/archivo.js"></script>
 
 </head>
 <div id="wrapper">
@@ -33,7 +35,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="http://localhost/GestorExamenes/index.php/Dashboard">
+            <a class="nav-link" href="http://localhost/GestorExamenes/Dashboard">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -53,28 +55,27 @@
 
                     <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/">Crear examen</a>
 
-                    <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/listarexamenes">Lista examenes</a>
+                    <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/listarexamenes">Lista
+                        examenes</a>
 
                 </div>
             </div>
         </li>
-        <?php if (isset($_SESSION['name'])) { ?>
-            <div class="col s12 m6 l4 offset-l3 ">
-                <div class="card ">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class=" img img-fluid" src="<?= $_SESSION['profile_pic'] ?>">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"> <i
-                                    class="material-icons"><?= $_SESSION['name'] ?></i></span>
-                    </div>
-                    <div class="card-reveal">
-                        <p>Email: <?= $_SESSION['email'] ?></p>
-                        <span class="card-title grey-text text-darken-4"><?= $_SESSION['name'] ?><i
-                                    class="material-icons right">close</i></span>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
     </ul>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="alert alert-success">Examen creado de manera satisfactoria. Ahora añade algunas
+                    preguntas al examen
+                </div>
+                <a href="http://localhost/GestorExamenes/Examenes/listarexamenes"
+                   class="btn btn-danger">Abrir lista de examenes</a>
+                <a class="btn btn-success" href="http://localhost/GestorExamenes/Dashboard">Volver al
+                    dashboard</a>
+            </div>
+        </div>
+
+
+    </div>
 </div>
