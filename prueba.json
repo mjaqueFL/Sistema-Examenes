@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "5ec58946e77e000033006abf"
+  },
+  "Titulo examen": "2daw",
+  "Curso": "1daw",
+  "Asignatura": "aa",
+  "Email": "aa@aa.aa"
+},{
+  "_id": {
+    "$oid": "5ec6573084710000680061f2"
+  },
+  "Titulo examen": "sistemas informaticos",
+  "Curso": "sistemas informaticos",
+  "Asignatura": "sistemas",
+  "Email": "correo@correo.com"
+}]
