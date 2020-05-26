@@ -37,7 +37,8 @@ class Examenes extends CI_Controller
         $recoger = $this->input->get('examen');
         $examen = $this->Preguntas->sacarexamenconcreto($recoger);
         $this->miexamenconcreto = $examen;
-        $this->load->view('crear_preguntas');
+/*        $this->load->view('crear_preguntas');*/
+        $this->load->view('estructura');
     }
 
     public function listarexamenes()
@@ -63,6 +64,16 @@ class Examenes extends CI_Controller
        $this->Preguntas->borrarexamenconcreto($recoger);
        redirect("http://localhost/GestorExamenes/Examenes/listarexamenes");
 
+    }
+
+    public function ejemplo()
+    {
+   /*     $miArray = array(1,4,6,8,3,34.8,9,43);
+        print_r(json_encode($miArray));*/
+   /*     $miArray = array("manzana"=>"verde", "uva"=>"Morada", "fresa"=>"roja");
+        print_r(json_encode($miArray));*/
+         $examenes = $this->Preguntas->sacarexamenes();
+        print_r(json_encode($examenes));
 
     }
 }
