@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">-->
+
+
+    <!-- Pon los scripts al final del body -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -20,7 +24,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://localhost/GestorExamenes/js/archivo.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#modifexamen').submit(function (e) {
@@ -75,41 +78,44 @@
         </li>
     </ul>
     <div class="container-fluid principal">
-            <div class="col">
-                <h3>Datos Generales</h3>
-                <form method="post" id="modifexamen">
-                    <div class="login-panel panel panel-default">
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <input type="text" name="tituloexamen" class="form-control"
-                                       value="sistemas informaticos">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="curso" class="form-control" value="sistemas informaticos">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="asignatura" class="form-control" value="sistemas">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control" value="correo@correo.com">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" class=" btn btn-primary">
-                            </div>
+        <div class="col">
+            <h3>Datos Generales</h3>
+            <form method="post" id="modifexamen">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <input type="text" name="tituloexamen" class="form-control"
+                                   value="sistemas informaticos">
                         </div>
-                        <hr class="sidebar-divider">
+                        <div class="form-group">
+                            <input type="text" name="curso" class="form-control" value="sistemas informaticos">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="asignatura" class="form-control" value="sistemas">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" value="correo@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class=" btn btn-primary">
+                        </div>
                     </div>
-                </form>
-            </div><!-- Cierre de Datos Generales -->
+                    <hr class="sidebar-divider">
+                </div>
+            </form>
+        </div><!-- Cierre de Datos Generales -->
 
-            <div class="row" id="0" hidden>
-            </div>
-            <hr class="sidebar-divider"><!-- Los botones de añadir preguntas y enviar siempre al final -->
-            <button onclick="pruebas()">Nueva pregunta</button>
-            <button  class="btn-primary">Enviar</button>
+        <div id="divPreguntas">
+            <!-- En este div se crean las nuevas preguntas -->
+        </div>
+
+        <hr class="sidebar-divider"><!-- Los botones de añadir preguntas y enviar siempre al final -->
+        <button id="btnNuevaPregunta">Nueva pregunta</button>
+        <button onclick="redirigircontrolador()" class="btn-primary">Enviar</button>
 
     </div>
 </div>
+<script type="text/javascript" src="http://localhost/GestorExamenes/js/archivo2.js"></script>
 
 </body>
 </html>

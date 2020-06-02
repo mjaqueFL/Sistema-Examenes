@@ -15,6 +15,10 @@ class Examenes extends CI_Controller
         $this->load->view('alta_examen');
     }
 
+    public function recepciondatos()
+    {
+        echo "Hola mundo";
+    }
     public function crearexamen()
     {
         $examen = array(
@@ -38,7 +42,7 @@ class Examenes extends CI_Controller
         $examen = $this->Preguntas->sacarexamenconcreto($recoger);
         $this->miexamenconcreto = $examen;
 /*        $this->load->view('crear_preguntas');*/
-        $this->load->view('estructura');
+        $this->load->view('estructura2');
     }
 
     public function listarexamenes()
