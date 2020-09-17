@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Aplicacion Code igniter</title>
+    <title>Archivo estructura2.php</title>
     <link href="http://localhost/GestorExamenes/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
           type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -30,10 +30,13 @@
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost/GestorExamenes/Modificar/modificar?examen=sistemas informaticos",
+                    /*           url: "http://localhost/GestorExamenes/Modificar/modificar?examen=sistemas informaticos",*/
+                    url: "http://localhost/GestorExamenes/Modificar/modificar?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
+
                     data: $(this).serialize(),
                     success: function (response) {
                         var jsonData = JSON.stringify(response);
+
                         /*                        console.log(jsonData);
 
                                                 document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*/
@@ -85,16 +88,19 @@
                     <div class="panel-body">
                         <div class="form-group">
                             <input type="text" name="tituloexamen" class="form-control"
-                                   value="sistemas informaticos">
+                                   value="<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="curso" class="form-control" value="sistemas informaticos">
+                            <input type="text" name="curso" class="form-control"
+                                   value="<?php echo $this->miexamenconcreto[0]['Curso'] ?>">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="asignatura" class="form-control" value="sistemas">
+                            <input type="text" name="asignatura" class="form-control"
+                                   value="<?php echo $this->miexamenconcreto[0]['Asignatura'] ?>">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control" value="correo@correo.com">
+                            <input type="email" name="email" class="form-control"
+                                   value="<?php echo $this->miexamenconcreto[0]['Email'] ?>">
                         </div>
                         <div class="form-group">
                             <input type="submit" class=" btn btn-primary">
@@ -111,8 +117,9 @@
 
         <hr class="sidebar-divider"><!-- Los botones de añadir preguntas y enviar siempre al final -->
         <button id="btnNuevaPregunta">Nueva pregunta</button>
-        <button onclick="redirigircontrolador()" class="btn-primary">Enviar</button>
-
+        <a id="btnEnviar"
+           href="http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>"
+           class="btn btn-danger">Enviar </a
     </div>
 </div>
 <script type="text/javascript" src="http://localhost/GestorExamenes/js/archivo2.js"></script>

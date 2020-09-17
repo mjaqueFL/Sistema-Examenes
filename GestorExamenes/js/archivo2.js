@@ -3,13 +3,14 @@ window.onload = iniciar;
 function iniciar() {
 
     document.getElementById("btnNuevaPregunta").onclick = crearPregunta;
+    document.getElementById("btnEnviar").onclick = crearExamen;
 }
 
 function crearPregunta() {
     var divPreguntas = document.getElementById("divPreguntas");
-    var barrahorizontal = document.createElement('hr');
-    divPreguntas.appendChild(barrahorizontal);
-    barrahorizontal.setAttribute("class", "sidebar-divider")
+    /*    var barrahorizontal = document.createElement('hr');
+        divPreguntas.appendChild(barrahorizontal);
+        barrahorizontal.setAttribute("class", "sidebar-divider")*/
 
     divPreguntas.appendChild(crearPreguntaTextoCorto());
 }
@@ -105,12 +106,14 @@ function completarPreguntaTextoCorto(divPregunta) {
     divPregunta.appendChild(crearIconoBorrar());
 
 }
+
 function crearPuntos(divPregunta) {
     var iPuntos = document.createElement('input');
     divPregunta.appendChild(iPuntos);
     iPuntos.setAttribute('type', 'number');
     iPuntos.setAttribute('placeholder', 'Puntos');
 }
+
 function completarPreguntaTextoCorto2(divPregunta) {
     var iTextoRespuesta = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta);
@@ -144,9 +147,11 @@ function crearPreguntaTest(divPregunta) {
 
     var iTextoRespuesta2 = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta2);
-    iTextoRespuesta2.setAttribute('type', 'text')
-    iTextoRespuesta2.setAttribute('placeholder', 'opcion')
-    crearPuntos(divPregunta)
+    iTextoRespuesta2.setAttribute('type', 'text');
+    iTextoRespuesta2.setAttribute('placeholder', 'opcion');
+
+    crearPuntos(divPregunta);
+    divPregunta.appendChild(crearIconoBorrarPregunta(divPregunta));
 }
 
 function completarPreguntaRespuestaMultiple(divPregunta) {
@@ -160,16 +165,17 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
 
     var iTextoRespuesta2 = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta2);
-    iTextoRespuesta2.setAttribute('type', 'text')
-    iTextoRespuesta2.setAttribute('placeholder', 'opcion')
-    crearPuntos(divPregunta)
+    iTextoRespuesta2.setAttribute('type', 'text');
+    iTextoRespuesta2.setAttribute('placeholder', 'opcion');
+    crearPuntos(divPregunta);
+    divPregunta.appendChild(crearIconoBorrarPregunta(divPregunta));
 }
 
 function crearnuevaopcion(divPregunta) {
     var iTextoRespuesta2 = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta2);
-    iTextoRespuesta2.setAttribute('type', 'text')
-    iTextoRespuesta2.setAttribute('placeholder', 'crear nueva opcion')
+    iTextoRespuesta2.setAttribute('type', 'button');
+    iTextoRespuesta2.setAttribute('value', 'nueva opcion');
     iTextoRespuesta2.addEventListener("click", function (event) {
         crearPreguntaTest(divPregunta);
     });
@@ -178,8 +184,8 @@ function crearnuevaopcion(divPregunta) {
 function crearnuevaopcion2(divPregunta) {
     var iTextoRespuesta2 = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta2);
-    iTextoRespuesta2.setAttribute('type', 'text')
-    iTextoRespuesta2.setAttribute('placeholder', 'crear nueva opcion')
+    iTextoRespuesta2.setAttribute('type', 'button')
+    iTextoRespuesta2.setAttribute('value', 'crear nueva opcion')
     iTextoRespuesta2.addEventListener("click", function (event) {
         completarPreguntaRespuestaMultiple(divPregunta);
     });
@@ -199,11 +205,83 @@ function crearIconoBorrar() {
     return spanBorrar;
 }
 
+function crearIconoBorrarPregunta(divPregunta) {
+    var iTextoRespuesta2 = document.createElement('input');
+    divPregunta.appendChild(iTextoRespuesta2);
+    iTextoRespuesta2.setAttribute('type', 'button')
+    iTextoRespuesta2.setAttribute('value', 'borrar  opcion')
+    iTextoRespuesta2.onclick = borrarOpcion;
+    return iTextoRespuesta2;
+}
+
 function borrarPregunta(evento) {
     var divPregunta = evento.target.parentNode;
     divPregunta.parentNode.removeChild(divPregunta);
 }
 
-function redirigircontrolador() {
+function borrarOpcion(evento) {
+
+    for (let i = 0; i < 4; i++) {
+        evento.target.previousSibling.remove();
+    }
+    evento.target.remove();
+
 
 }
+
+
+function crearExamen() {
+    var examen = {}; //Objeto de examen que pasaremos a JSON
+
+//Cargamos los datos generales
+    examen.titulo = document.getElementsByName('tituloexamen').value;
+    examen.curso = document.getElementsByName('curso').value;
+    examen.asignatura = document.getElementsByName('asignatura').value;
+    examen.asignatura = document.getElementsByName('email').value;
+//... resto de campos
+
+    examen.preguntas = [];
+    var divsPregunta = document.getElementsByClassName("pregunta"); //Devuelve una HTMLCollection
+    for (let divPregunta of divsPregunta) { //Iteramos sobre las preguntas
+        var pregunta = {}; //Cada pregunta será un objeto
+        examen.preguntas.push(pregunta); //Añadimos la pregunta al array
+        pregunta.tipo = divPregunta.getAttribute("data-tipo");
+        pregunta.texto = divPregunta.children[1].value; //children[0] es el select
+        switch (pregunta.tipo) {
+            case 'textoCorto':
+            case 'textoCorto':
+                pregunta.respuesta = divPregunta.children[2].value;
+                pregunta.puntos = divPregunta.children[3].value;
+                break;
+            case 'test':
+            case 'respuestaMultiple':
+                pregunta.opciones = [];
+//... Hay que leerlos según la estructura definitiva que hayamos creado
+
+        }
+    }
+    var link = document.getElementById('btnEnviar');
+
+    var objson = JSON.stringify(examen);
+    link.href.innerHTML += link.href += "&j=" + objson;
+
+
+}
+
+
+/*function ajax($examen) {
+        $.ajax({
+            type: "POST",
+            url: "http://localhost/GestorExamenes/Examenes/modificardatos?objeto=" + $examen,
+
+            data: $(this).serialize(),
+            success: function (response) {
+                var jsonData = JSON.stringify(response);
+                /!*                        console.log(jsonData);
+
+                                        document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*!/
+            }
+        });
+
+
+}*/

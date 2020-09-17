@@ -29,7 +29,7 @@ class Preguntas extends CI_Model
 
     public function sacarexamenconcreto($titulo)
     {
-        $resultado = $this->mongo_db->where(['Curso' => $titulo])->get('preguntas');
+        $resultado = $this->mongo_db->where(['Titulo examen' => $titulo])->get('preguntas');
         return $resultado;
     }
 
@@ -50,6 +50,12 @@ class Preguntas extends CI_Model
         $this->mongo_db->where('Titulo examen', $examen)->set($data)->update('preguntas');
         /*       $this->mongo_db->set(['Titulo examen' => $examen])->where(['Titulo examen' => $examen]);*/
                 return $this->mongo_db->where(['Titulo examen'=>$data['Titulo examen']])->get('preguntas');
+    }
+
+    public function editarexamen($examen,$datos)
+    {
+        $this->mongo_db->where('Titulo examen', $examen)->set($datos)->update('preguntas');
+
     }
 
 }

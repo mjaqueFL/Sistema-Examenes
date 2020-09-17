@@ -9,8 +9,8 @@ class Auth extends CI_Controller
         $this->load->library('google'); /*Libreria de Google necesaria*/
         $data['google_login_url'] = $this->google->get_login_url();
         if ($this->session->userdata('sess_logged_in') == 1) {
-            /*redirect('Dashboard');*/
-            $this->load->view('ejemplo');
+            redirect('Dashboard');
+/*            $this->load->view('ejemplo');*/
         } else {
 
             $this->load->view('home', $data);

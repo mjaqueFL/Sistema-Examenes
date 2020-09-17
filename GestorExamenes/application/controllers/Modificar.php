@@ -21,7 +21,7 @@ class Modificar extends CI_Controller
         ];
 
        $datos=$this->Preguntas->modificardatos($data,$_GET['examen']);
-        $this->load->view('crear_preguntas');
+        $this->load->view('estructura2');
     }
 }
 

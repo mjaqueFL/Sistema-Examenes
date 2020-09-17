@@ -15,9 +15,11 @@ class Examenes extends CI_Controller
         $this->load->view('alta_examen');
     }
 
-    public function recepciondatos()
+    public function modificardatos()
     {
-        echo "Hola mundo";
+       echo  $nombreexamen = $this->input->get('examen');
+        echo $datospreguntas=$this->input->get('j');
+        $this->Preguntas->editarexamen($nombreexamen, $datospreguntas);
     }
     public function crearexamen()
     {
@@ -41,8 +43,7 @@ class Examenes extends CI_Controller
         $recoger = $this->input->get('examen');
         $examen = $this->Preguntas->sacarexamenconcreto($recoger);
         $this->miexamenconcreto = $examen;
-/*        $this->load->view('crear_preguntas');*/
-        $this->load->view('estructura2');
+       $this->load->view('estructura2');
     }
 
     public function listarexamenes()
