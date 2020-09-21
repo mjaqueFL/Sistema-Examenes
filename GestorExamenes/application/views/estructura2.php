@@ -117,9 +117,7 @@
 
         <hr class="sidebar-divider"><!-- Los botones de añadir preguntas y enviar siempre al final -->
         <button id="btnNuevaPregunta">Nueva pregunta</button>
-        <a id="btnEnviar"
-           href="http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>"
-           class="btn btn-danger">Enviar </a
+        <a id="btnEnviar" href="http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>" class="btn btn-danger">Enviar </a
     </div>
 </div>
 <script type="text/javascript" src="http://localhost/GestorExamenes/js/archivo2.js"></script>

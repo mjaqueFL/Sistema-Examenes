@@ -80,18 +80,18 @@ function cambiarPregunta(evento) {
             //Quitamos todos los nodos menos el select, la pregunta y la respuesta (que es común a todos los tipos)
             while (divPregunta.childNodes.length > 2)
                 divPregunta.removeChild(divPregunta.lastChild);
-            crearPreguntaTest(divPregunta);
-            crearnuevaopcion(divPregunta);
             divPregunta.appendChild(crearIconoBorrar());
+            crearnuevaopcion(divPregunta);
+            crearPreguntaTest(divPregunta);
             break;
         case 'respuestaMultiple':
             divPregunta.setAttribute('data-tipo', 'respuestaMultiple');
             //Quitamos todos los nodos menos el select, la pregunta y la respuesta (que es común a todos los tipos)
             while (divPregunta.childNodes.length > 2)
                 divPregunta.removeChild(divPregunta.lastChild);
-            completarPreguntaRespuestaMultiple(divPregunta);
-            crearnuevaopcion2(divPregunta);
             divPregunta.appendChild(crearIconoBorrar());
+            crearnuevaopcion2(divPregunta);
+            completarPreguntaRespuestaMultiple(divPregunta);
             break;
     }
 }
@@ -123,8 +123,9 @@ function completarPreguntaTextoCorto2(divPregunta) {
 }
 
 function completarPreguntaTextoLargo(divPregunta) {
-    var iTextoRespuesta = document.createElement('textarea');
+    var iTextoRespuesta = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta);
+    iTextoRespuesta.setAttribute('type', 'text');
     iTextoRespuesta.setAttribute('placeholder', 'Texto de la respuesta');
 
     var iPuntos = document.createElement('input');
@@ -237,7 +238,7 @@ function crearExamen() {
     examen.titulo = document.getElementsByName('tituloexamen').value;
     examen.curso = document.getElementsByName('curso').value;
     examen.asignatura = document.getElementsByName('asignatura').value;
-    examen.asignatura = document.getElementsByName('email').value;
+    examen.email = document.getElementsByName('email').value;
 //... resto de campos
 
     examen.preguntas = [];
@@ -248,7 +249,10 @@ function crearExamen() {
         pregunta.tipo = divPregunta.getAttribute("data-tipo");
         pregunta.texto = divPregunta.children[1].value; //children[0] es el select
         switch (pregunta.tipo) {
-            case 'textoCorto':
+            case 'textoLargo':
+                pregunta.respuesta = divPregunta.children[2].value;
+                pregunta.puntos = divPregunta.children[3].value;
+                break;
             case 'textoCorto':
                 pregunta.respuesta = divPregunta.children[2].value;
                 pregunta.puntos = divPregunta.children[3].value;
@@ -256,7 +260,16 @@ function crearExamen() {
             case 'test':
             case 'respuestaMultiple':
                 pregunta.opciones = [];
-//... Hay que leerlos según la estructura definitiva que hayamos creado
+                var i = 5;
+                while (divPregunta.children[i].name.value == "preguntatest") { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
+                    console.log(divPregunta.children[i].name.value);
+                    var preguntamult = {}; //cada opcion es un objeto
+                    pregunta.opciones.push(preguntamult);
+                    preguntamult.texto = divPregunta.children[i].value;
+                    preguntamult.puntos = divPregunta.children[i].value;
+                    i = i + 5;
+                }
+                break;
 
         }
     }

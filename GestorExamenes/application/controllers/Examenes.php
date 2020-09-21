@@ -17,9 +17,10 @@ class Examenes extends CI_Controller
 
     public function modificardatos()
     {
-       echo  $nombreexamen = $this->input->get('examen');
-        echo $datospreguntas=$this->input->get('j');
-        $this->Preguntas->editarexamen($nombreexamen, $datospreguntas);
+        $nombreexamen = $this->input->get('examen');
+        $jsonrecibido=$this->input->get('j');
+        $preguntas=json_decode($jsonrecibido,true);
+        $this->Preguntas->editarexamen($nombreexamen, $preguntas);
     }
     public function crearexamen()
     {
