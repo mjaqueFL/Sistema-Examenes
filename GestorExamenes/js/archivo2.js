@@ -3,6 +3,7 @@ window.onload = iniciar;
 function iniciar() {
 
     document.getElementById("btnNuevaPregunta").onclick = crearPregunta;
+    document.getElementsByName('tituloexamen').value;
     document.getElementById("btnEnviar").onclick = crearExamen;
 }
 
@@ -145,7 +146,7 @@ function crearPreguntaTest(divPregunta) {
     divPregunta.appendChild(iTextoRespuesta);
     iTextoRespuesta.setAttribute('type', 'radio');
     iTextoRespuesta.setAttribute('value', 'opcion');
-
+    iTextoRespuesta.setAttribute('name', 'preguntatest')
     var iTextoRespuesta2 = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta2);
     iTextoRespuesta2.setAttribute('type', 'text');
@@ -161,7 +162,7 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
     divPregunta.appendChild(iTextoRespuesta);
     iTextoRespuesta.setAttribute('type', 'checkbox')
     iTextoRespuesta.setAttribute('value', 'opcion')
-    iTextoRespuesta.setAttribute('name', 'preguntatest')
+    iTextoRespuesta.setAttribute('name', 'preguntamultiple')
 
 
     var iTextoRespuesta2 = document.createElement('input');
@@ -230,10 +231,8 @@ function borrarOpcion(evento) {
 
 }
 
-
 function crearExamen() {
     var examen = {}; //Objeto de examen que pasaremos a JSON
-
 //Cargamos los datos generales
     examen.titulo = document.getElementsByName('tituloexamen').value;
     examen.curso = document.getElementsByName('curso').value;
@@ -242,10 +241,13 @@ function crearExamen() {
 //... resto de campos
 
     examen.preguntas = [];
+
     var divsPregunta = document.getElementsByClassName("pregunta"); //Devuelve una HTMLCollection
+    let j = 0;
     for (let divPregunta of divsPregunta) { //Iteramos sobre las preguntas
         var pregunta = {}; //Cada pregunta será un objeto
         examen.preguntas.push(pregunta); //Añadimos la pregunta al array
+        pregunta.id = document.getElementsByName('tituloexamen').value + "-P" + j;
         pregunta.tipo = divPregunta.getAttribute("data-tipo");
         pregunta.texto = divPregunta.children[1].value; //children[0] es el select
         switch (pregunta.tipo) {
@@ -258,43 +260,31 @@ function crearExamen() {
                 pregunta.puntos = divPregunta.children[3].value;
                 break;
             case 'test':
+                pregunta.opciones = [];
+                for (let di of divPregunta.querySelectorAll('input[name=preguntatest]')) { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
+                    var preguntatest = {}; //cada opcion es un objeto
+                    pregunta.opciones.push(preguntatest);
+                    preguntatest.texto = di.nextElementSibling.value;
+                    preguntatest.puntos = di.nextElementSibling.nextElementSibling.value;
+                }
+                break;
             case 'respuestaMultiple':
                 pregunta.opciones = [];
-                var i = 5;
-                while (divPregunta.children[i].name.value == "preguntatest") { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
-                    console.log(divPregunta.children[i].name.value);
+                for (let di of divPregunta.querySelectorAll('input[name=preguntamultiple]')) { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
                     var preguntamult = {}; //cada opcion es un objeto
                     pregunta.opciones.push(preguntamult);
-                    preguntamult.texto = divPregunta.children[i].value;
-                    preguntamult.puntos = divPregunta.children[i].value;
-                    i = i + 5;
+                    preguntamult.texto = di.nextElementSibling.value;
+                    preguntamult.puntos = di.nextElementSibling.nextElementSibling.value;
                 }
                 break;
 
         }
+        j++;
     }
     var link = document.getElementById('btnEnviar');
-
     var objson = JSON.stringify(examen);
     link.href.innerHTML += link.href += "&j=" + objson;
 
 
 }
 
-
-/*function ajax($examen) {
-        $.ajax({
-            type: "POST",
-            url: "http://localhost/GestorExamenes/Examenes/modificardatos?objeto=" + $examen,
-
-            data: $(this).serialize(),
-            success: function (response) {
-                var jsonData = JSON.stringify(response);
-                /!*                        console.log(jsonData);
-
-                                        document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*!/
-            }
-        });
-
-
-}*/

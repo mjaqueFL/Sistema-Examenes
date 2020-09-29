@@ -9,7 +9,7 @@ class Dashboard extends CI_Controller
         $this->load->library('google'); /*Libreria de Google necesaria*/
         $data['google_login_url'] = $this->google->get_login_url();
         if ($this->session->userdata('sess_logged_in') == 0) {
-           redirect('Auth');
+            $this->load->view('home',$data);
         } else {
             $this->load->view('dashboard');
         }

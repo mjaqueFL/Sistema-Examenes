@@ -1,4 +1,4 @@
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,39 +13,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">-->
-
+    <link href="http://localhost/GestorExamenes/css/estilos.css" rel="stylesheet" type="text/css">
 
     <!-- Pon los scripts al final del body -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#modifexamen').submit(function (e) {
-                e.preventDefault();
-                $.ajax({
-                    type: "POST",
-                    /*           url: "http://localhost/GestorExamenes/Modificar/modificar?examen=sistemas informaticos",*/
-                    url: "http://localhost/GestorExamenes/Modificar/modificar?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
-
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        var jsonData = JSON.stringify(response);
-
-                        /*                        console.log(jsonData);
-
-                                                document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*/
-                    }
-                });
-            });
-        });
-    </script>
-    <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
 </head>
 <body>
 
@@ -87,18 +57,22 @@
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
                         <div class="form-group">
+                            <div>Titulo examen</div>
                             <input type="text" name="tituloexamen" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>">
                         </div>
                         <div class="form-group">
+                            <div>Curso examen</div>
                             <input type="text" name="curso" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Curso'] ?>">
                         </div>
                         <div class="form-group">
+                            <div>Asignatura</div>
                             <input type="text" name="asignatura" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Asignatura'] ?>">
                         </div>
                         <div class="form-group">
+                            <div>Email</div>
                             <input type="email" name="email" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Email'] ?>">
                         </div>
@@ -111,16 +85,103 @@
             </form>
         </div><!-- Cierre de Datos Generales -->
 
+
+        <!--Preguntas examen-->
+        <?php
+        if (isset($this->miexamenconcreto[0]['preguntas'])) { //preguntamos si hay preguntas en el examen
+            for ($i = 0; $i < count($this->miexamenconcreto[0]['preguntas']); $i++) { //si hay preguntas en el examen iteramos sobre todas las preguntas
+                ?>
+                <div class="contenedor">
+                    <div class="preguntas">
+                        <?php
+                        echo 'Pregunta:' . $this->miexamenconcreto[0]['preguntas'][$i]['texto']; //mostramos el titulo de la pregunta , da igual el tipo
+                        ?>
+                    </div>
+                    <?php
+                    if (isset($this->miexamenconcreto[0]['preguntas'][$i]['opciones'])) {
+                        for ($j = 0; $j < count($this->miexamenconcreto[0]['preguntas'][$i]['opciones']); $j++) {//si se encuentra que la pregunta es tipo test / respuesta multiple iteramos sobre el nºopciones
+                            if ($this->miexamenconcreto[0]['preguntas'][$i]['tipo'] == 'respuestaMultiple') { // si la pregunta es respuesta multiple que muestre las respuestas en checkbox
+                                ?>
+                                <div class="opciones">
+                                    <input type="checkbox">
+                                    <?php
+                                    echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['texto'];
+                                    ?>
+                                </div>
+                                <?php
+                            } else {
+                                ?>
+                                <div class="opciones">
+                                    <input type="radio">
+                                    <?php
+                                    echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['texto'];
+                                    ?>
+                                </div>
+                                <?php
+                            }
+                        }
+                        ?>
+
+                        <?php
+                    } else {
+                        ?>
+                        <div class="opciones">
+                            <?php
+                            echo $this->miexamenconcreto[0]['preguntas'][$i]['respuesta'];
+                            ?>
+                        </div>
+                        <?php
+
+                    }
+                    ?>
+                </div>
+                <?php
+            }
+        } else {
+            echo "No hay preguntas en el examen";
+        }
+        ?>
+        <!-- Cierre de preguntas examen-->
         <div id="divPreguntas">
             <!-- En este div se crean las nuevas preguntas -->
         </div>
 
         <hr class="sidebar-divider"><!-- Los botones de añadir preguntas y enviar siempre al final -->
         <button id="btnNuevaPregunta">Nueva pregunta</button>
-        <a id="btnEnviar" href="http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>" class="btn btn-danger">Enviar </a
+        <a id="btnEnviar"
+           href="http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>"
+           class="btn btn-danger">Enviar </a
     </div>
 </div>
 <script type="text/javascript" src="http://localhost/GestorExamenes/js/archivo2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#modifexamen').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                /*           url: "http://localhost/GestorExamenes/Modificar/modificar?examen=sistemas informaticos",*/
+                url: "http://localhost/GestorExamenes/Modificar/modificar?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
 
+                data: $(this).serialize(),
+                success: function (response) {
+                    var jsonData = JSON.stringify(response);
+
+                    /*                        console.log(jsonData);
+
+                                            document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*/
+                }
+            });
+        });
+    });
+</script>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
 </body>
 </html>

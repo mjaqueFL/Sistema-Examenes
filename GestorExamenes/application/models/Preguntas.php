@@ -3,8 +3,6 @@
 
 class Preguntas extends CI_Model
 {
-
-
     public function __construct()
     {
         parent::__construct();
@@ -15,9 +13,9 @@ class Preguntas extends CI_Model
         $this->mongo_db->insert('preguntas', $examen);
     }
 
-    public function sacarpreguntas()
+    public function sacarpreguntas($titulo)
     {
-        $resultado = $this->mongo_db->select(['tipo', 'categoria', 'pregunta', 'respuesta'])->get('preguntas');
+        $resultado = $this->mongo_db->where(['Titulo examen' => $titulo])->select(['preguntas'])->get('preguntas');
         return $resultado;
     }
 
@@ -33,6 +31,7 @@ class Preguntas extends CI_Model
         return $resultado;
     }
 
+    //crear documento examen en mongo con Titulo, curso, asignatura, email , barajar
     public function datos($pregunta)
     {
         $this->mongo_db->insert('preguntas', $pregunta);
@@ -41,21 +40,25 @@ class Preguntas extends CI_Model
 
     public function borrarexamenconcreto($examen)
     {
-        $this->mongo_db->where(['Titulo examen' => $examen])->delete('preguntas');
+        $this->mongo_db->where()->delete('preguntas');
 
     }
 
+    //modificar datos examen con AJAX
     public function modificardatos($data, $examen)
     {
         $this->mongo_db->where('Titulo examen', $examen)->set($data)->update('preguntas');
         /*       $this->mongo_db->set(['Titulo examen' => $examen])->where(['Titulo examen' => $examen]);*/
-                return $this->mongo_db->where(['Titulo examen'=>$data['Titulo examen']])->get('preguntas');
+        return $this->mongo_db->where(['Titulo examen' => $data['Titulo examen']])->get('preguntas');
     }
 
-    public function editarexamen($examen,$datos)
+    // crea el array preguntas en mongo
+    public function editarexamen($examen, $datos)
     {
-        $this->mongo_db->where('Titulo examen', $examen)->set($datos)->update('preguntas');
+                $this->mongo_db->where('Titulo examen', $examen)->push($datos)->update('preguntas');
+/*        $this->mongo_db->where('Titulo examen', $examen)->set($datos)->update('preguntas');*/
 
     }
+
 
 }

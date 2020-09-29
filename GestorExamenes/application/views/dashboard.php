@@ -53,7 +53,8 @@
 
                     <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/">Crear examen</a>
 
-                    <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/listarexamenes">Lista examenes</a>
+                    <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/listarexamenes">Lista
+                        examenes</a>
 
                 </div>
             </div>
@@ -65,14 +66,16 @@
                         <img class=" img img-fluid" src="<?= $_SESSION['profile_pic'] ?>">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"> <i
-                                    class="material-icons"><?= $_SESSION['name'] ?></i></span>
+                      <span class="card-title activator grey-text text-darken-4"> <i
+                                  class="material-icons"><p class="text-center"><?= $_SESSION['name'] ?></p></i></span>
                     </div>
-                    <div class="card-reveal">
-                        <p>Email: <?= $_SESSION['email'] ?></p>
-                        <span class="card-title grey-text text-darken-4"><?= $_SESSION['name'] ?><i
-                                    class="material-icons right">close</i></span>
-                    </div>
+                    <a href="<?= base_url()?>auth/logout" class="waves-effect waves-light btn red"><i
+                                class="fa fa-google left"></i>Google logout</a>
+                    <!--                    <div class="card-reveal">
+                        <p class="lead text-justify"><? /*= $_SESSION['email'] */ ?></p>
+                        <span class="card-title grey-text text-darken-4"><? /*= $_SESSION['name'] */ ?><i
+                                    class="material-icons right"></i></span>
+                    </div>-->
                 </div>
             </div>
         <?php } ?>

@@ -86,6 +86,14 @@
                             <div class="form-group">
                                 <input type="email" name="email" class="form-control" placeholder="Email">
                             </div>
+                            <div class="form-group">
+                                <label for="opcionbarajar">
+                                    <select name="barajar">
+                                        <option value="True">True</option>
+                                        <option value="False">False</option>
+                                    </select>
+                                </label>
+                            </div>
                             <button class="btn btn-primary " type="submit">Enviar</button>
                         </div>
                     </div>

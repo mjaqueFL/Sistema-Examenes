@@ -9,7 +9,7 @@ class Modificar extends CI_Controller
         $this->load->helper('url');
 
     }
-
+    //Modificar datos examen con AJAX
     public function modificar()
     {
 

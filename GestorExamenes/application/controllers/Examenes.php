@@ -14,21 +14,28 @@ class Examenes extends CI_Controller
     {
         $this->load->view('alta_examen');
     }
-
+// metodo que recibe las preguntas del examen
     public function modificardatos()
     {
         $nombreexamen = $this->input->get('examen');
-        $jsonrecibido=$this->input->get('j');
-        $preguntas=json_decode($jsonrecibido,true);
+        $jsonrecibido = $this->input->get('j');
+        $preguntas = json_decode($jsonrecibido, true);
         $this->Preguntas->editarexamen($nombreexamen, $preguntas);
     }
+
     public function crearexamen()
     {
+        if ($this->input->post('barajar') === "True") {
+            $barajar = true;
+        } else {
+            $barajar = false;
+        }
         $examen = array(
             'Titulo examen' => $this->input->post('tituloexamen'),
             'Curso' => $this->input->post('tituloexamen'),
             'Asignatura' => $this->input->post('asignatura'),
             'Email' => $this->input->post('email'),
+            'Barajar' => $barajar,
         );
         $this->Preguntas->datos($examen);
         redirect("http://localhost/GestorExamenes/Examenes/examencreado");
@@ -43,8 +50,10 @@ class Examenes extends CI_Controller
     {
         $recoger = $this->input->get('examen');
         $examen = $this->Preguntas->sacarexamenconcreto($recoger);
+        //si mandamos el array completo tal y como lo cogemos de la BBDD, la estructura de las preguntas es std object, no podemos acceder a los datos si no es un array
+       $examen = json_decode(json_encode($examen), true);
         $this->miexamenconcreto = $examen;
-       $this->load->view('estructura2');
+        $this->load->view('estructura2');
     }
 
     public function listarexamenes()
@@ -56,7 +65,6 @@ class Examenes extends CI_Controller
 
 
     }
-
     public function antesborrar()
     {
         $recoger = $this->input->get('examen');
@@ -67,19 +75,19 @@ class Examenes extends CI_Controller
     public function borrarexamen()
     {
         $recoger = $this->input->get('examen');
-       $this->Preguntas->borrarexamenconcreto($recoger);
-       redirect("http://localhost/GestorExamenes/Examenes/listarexamenes");
+        $this->Preguntas->borrarexamenconcreto($recoger);
+        redirect("http://localhost/GestorExamenes/Examenes/listarexamenes");
 
     }
 
-    public function ejemplo()
+    /*public function ejemplo()
     {
-   /*     $miArray = array(1,4,6,8,3,34.8,9,43);
-        print_r(json_encode($miArray));*/
-   /*     $miArray = array("manzana"=>"verde", "uva"=>"Morada", "fresa"=>"roja");
-        print_r(json_encode($miArray));*/
-         $examenes = $this->Preguntas->sacarexamenes();
+             $miArray = array(1,4,6,8,3,34.8,9,43);
+             print_r(json_encode($miArray));
+             $miArray = array("manzana"=>"verde", "uva"=>"Morada", "fresa"=>"roja");
+             print_r(json_encode($miArray));
+        $examenes = $this->Preguntas->sacarexamenes();
         print_r(json_encode($examenes));
 
-    }
+    }*/
 }
