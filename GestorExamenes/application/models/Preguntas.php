@@ -40,7 +40,7 @@ class Preguntas extends CI_Model
 
     public function borrarexamenconcreto($examen)
     {
-        $this->mongo_db->where()->delete('preguntas');
+        $this->mongo_db->where('Titulo examen', $examen)->delete('preguntas');
 
     }
 
@@ -52,11 +52,12 @@ class Preguntas extends CI_Model
         return $this->mongo_db->where(['Titulo examen' => $data['Titulo examen']])->get('preguntas');
     }
 
+
     // crea el array preguntas en mongo
     public function editarexamen($examen, $datos)
     {
-                $this->mongo_db->where('Titulo examen', $examen)->push($datos)->update('preguntas');
-/*        $this->mongo_db->where('Titulo examen', $examen)->set($datos)->update('preguntas');*/
+               /* $this->mongo_db->where('Titulo examen', $examen)->set($datos, $last)->update('preguntas');*/
+        $this->mongo_db->where('Titulo examen', $examen)->push(array('preguntas' => $datos))->update('preguntas');
 
     }
 

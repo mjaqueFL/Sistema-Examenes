@@ -234,15 +234,20 @@ function borrarOpcion(evento) {
 function crearExamen() {
     var examen = {}; //Objeto de examen que pasaremos a JSON
 //Cargamos los datos generales
-    var preguntas = {};
+    examen.titulo = document.getElementsByName('tituloexamen').value;
+    examen.curso = document.getElementsByName('curso').value;
+    examen.asignatura = document.getElementsByName('asignatura').value;
+    examen.email = document.getElementsByName('email').value;
+//... resto de campos
+
+    examen.preguntas = [];
 
     var divsPregunta = document.getElementsByClassName("pregunta"); //Devuelve una HTMLCollection
     let j = 0;
-    var pregunta = {};
     for (let divPregunta of divsPregunta) { //Iteramos sobre las preguntas
-         //Cada pregunta será un objeto
-         Object.assign(preguntas, pregunta);
-        pregunta.id = document.getElementsByName('tituloexamen')[0].value + "-P" + j;
+        var pregunta = {}; //Cada pregunta será un objeto
+        examen.preguntas.push(pregunta); //Añadimos la pregunta al array
+        pregunta.id = document.getElementsByName('tituloexamen').value + "-P" + j;
         pregunta.tipo = divPregunta.getAttribute("data-tipo");
         pregunta.texto = divPregunta.children[1].value; //children[0] es el select
         switch (pregunta.tipo) {
@@ -273,15 +278,13 @@ function crearExamen() {
                 }
                 break;
 
-
         }
-
         j++;
     }
-
     var link = document.getElementById('btnEnviar');
-    var objson = JSON.stringify(preguntas);
+    var objson = JSON.stringify(examen);
     link.href.innerHTML += link.href += "&j=" + objson;
+
 
 }
 
