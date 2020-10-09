@@ -41,7 +41,6 @@ class Preguntas extends CI_Model
     public function borrarexamenconcreto($examen)
     {
         $this->mongo_db->where('Titulo examen', $examen)->delete('preguntas');
-
     }
 
     //modificar datos examen con AJAX
@@ -56,8 +55,18 @@ class Preguntas extends CI_Model
     // crea el array preguntas en mongo
     public function editarexamen($examen, $datos)
     {
-               /* $this->mongo_db->where('Titulo examen', $examen)->set($datos, $last)->update('preguntas');*/
-        $this->mongo_db->where('Titulo examen', $examen)->push(array('preguntas' => $datos))->update('preguntas');
+        /*         $this->mongo_db->where('Titulo examen', $examen)->set($datos, $this->mongo_db->concatArrays('preguntas'))->update('preguntas');*/
+        // print_r($this->mongo_db->where('Titulo examen', $examen)->set($datos, concatArrays['preguntas'])->update('preguntas'));
+        var_dump($this->mongo_db->where('Titulo examen', $examen)->set($datos)->update('preguntas'));
+        /* $this->mongo_db->where('Titulo examen', $examen)->push(array('preguntas' => $datos))->update('preguntas');*/
+
+    }
+
+    /*prueba*/
+    public function borrarpreguntaconcreta($examen, $id)
+    {
+        /* $this->mongo_db->where('Titulo examen', $examen)->set($datos, $last)->update('preguntas');*/
+        var_dump($this->mongo_db->where('Titulo examen', $examen)->pop('preguntas', [$id])->update('preguntas'));
 
     }
 

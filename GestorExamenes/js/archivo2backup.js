@@ -47,6 +47,12 @@ function crearSelect() {
     return select;
 }
 
+function cambiarSelect(elemento) {
+    console.log(elemento);
+    elemento.onchange = cambiarPregunta;
+
+}
+
 function crearOpcion(valor, texto) {
     var opcion = document.createElement('option');
     opcion.setAttribute('value', valor);
@@ -54,7 +60,15 @@ function crearOpcion(valor, texto) {
     return opcion;
 }
 
+function crearTextoPreguntaEstatica() {
+    var iTextoPregunta = document.createElement('input');
+    iTextoPregunta.setAttribute('type', 'text');
+    iTextoPregunta.setAttribute('placeholder', 'Texto de la pregunta');
+    return iTextoPregunta
+}
+
 function cambiarPregunta(evento) {
+
     var opcion = evento.target.value;
     var divPregunta = evento.target.parentNode;
 
@@ -90,6 +104,50 @@ function cambiarPregunta(evento) {
             //Quitamos todos los nodos menos el select, la pregunta y la respuesta (que es común a todos los tipos)
             while (divPregunta.childNodes.length > 2)
                 divPregunta.removeChild(divPregunta.lastChild);
+            divPregunta.appendChild(crearIconoBorrar());
+            crearnuevaopcion2(divPregunta);
+            completarPreguntaRespuestaMultiple(divPregunta);
+            break;
+    }
+}
+
+function cambiarPreguntaestatica(opcion, divPregunta) {
+    switch (opcion) {
+        case 'textoCorto':
+            divPregunta.setAttribute('data-tipo', 'textoCorto');
+            //Quitamos todos los nodos menos el select, la pregunta y la respuesta (que es común a todos los tipos)
+            while (divPregunta.childNodes.length > 2)
+                divPregunta.removeChild(divPregunta.lastChild);
+            divPregunta.appendChild(crearTextoPreguntaEstatica());
+
+            completarPreguntaTextoCorto2(divPregunta);
+            completarPreguntaTextoCorto(divPregunta);
+
+            break;
+        case 'textoLargo':
+            divPregunta.setAttribute('data-tipo', 'textoLargo');
+            //Quitamos todos los nodos menos el select, la pregunta y la respuesta (que es común a todos los tipos)
+            while (divPregunta.childNodes.length > 2)
+                divPregunta.removeChild(divPregunta.lastChild);
+            divPregunta.appendChild(crearTextoPreguntaEstatica());
+            completarPreguntaTextoLargo(divPregunta);
+            break;
+        case 'test':
+            divPregunta.setAttribute('data-tipo', 'test');
+            //Quitamos todos los nodos menos el select, la pregunta y la respuesta (que es común a todos los tipos)
+            while (divPregunta.childNodes.length > 2)
+                divPregunta.removeChild(divPregunta.lastChild);
+            divPregunta.appendChild(crearTextoPreguntaEstatica());
+            divPregunta.appendChild(crearIconoBorrar());
+            crearnuevaopcion(divPregunta);
+            crearPreguntaTest(divPregunta);
+            break;
+        case 'respuestaMultiple':
+            divPregunta.setAttribute('data-tipo', 'respuestaMultiple');
+            //Quitamos todos los nodos menos el select, la pregunta y la respuesta (que es común a todos los tipos)
+            while (divPregunta.childNodes.length > 2)
+                divPregunta.removeChild(divPregunta.lastChild);
+            divPregunta.appendChild(crearTextoPreguntaEstatica());
             divPregunta.appendChild(crearIconoBorrar());
             crearnuevaopcion2(divPregunta);
             completarPreguntaRespuestaMultiple(divPregunta);
@@ -140,7 +198,6 @@ function completarPreguntaTextoLargo(divPregunta) {
 
 function crearPreguntaTest(divPregunta) {
     crearseparacion(divPregunta)
-
 
     var iTextoRespuesta = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta);
@@ -219,6 +276,11 @@ function crearIconoBorrarPregunta(divPregunta) {
 function borrarPregunta(evento) {
     var divPregunta = evento.target.parentNode;
     divPregunta.parentNode.removeChild(divPregunta);
+
+}
+function borrarPreguntaEstatica(elemento) {
+   var divPregunta = elemento.parentNode
+    divPregunta.parentNode.removeChild(divPregunta);
 }
 
 function borrarOpcion(evento) {
@@ -227,8 +289,6 @@ function borrarOpcion(evento) {
         evento.target.previousSibling.remove();
     }
     evento.target.remove();
-
-
 }
 
 function crearExamen() {
@@ -247,7 +307,8 @@ function crearExamen() {
     for (let divPregunta of divsPregunta) { //Iteramos sobre las preguntas
         var pregunta = {}; //Cada pregunta será un objeto
         examen.preguntas.push(pregunta); //Añadimos la pregunta al array
-        pregunta.id = document.getElementsByName('tituloexamen').value + "-P" + j;
+        /*pregunta.id = document.getElementsByName('tituloexamen').children[0].value + "-P" + j;*/
+        pregunta.id = document.getElementsByName('tituloexamen')[0].value + "-P" + j;
         pregunta.tipo = divPregunta.getAttribute("data-tipo");
         pregunta.texto = divPregunta.children[1].value; //children[0] es el select
         switch (pregunta.tipo) {

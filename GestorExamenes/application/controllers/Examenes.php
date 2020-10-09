@@ -17,8 +17,8 @@ class Examenes extends CI_Controller
 // metodo que recibe las preguntas del examen
     public function modificardatos()
     {
-        $nombreexamen = $this->input->get('examen');
-        $jsonrecibido = $this->input->get('j');
+       echo $nombreexamen = $this->input->get('examen');
+        echo $jsonrecibido = $this->input->get('j');
         $preguntas = json_decode($jsonrecibido, true);
         $this->Preguntas->editarexamen($nombreexamen, $preguntas);
     }
@@ -77,6 +77,14 @@ class Examenes extends CI_Controller
         $recoger = $this->input->get('examen');
         $this->Preguntas->borrarexamenconcreto($recoger);
         redirect("http://localhost/GestorExamenes/Examenes/listarexamenes");
+
+    }
+
+    public function borrarpregunta()
+    {
+        echo $posicion = $this->input->get('posicion');
+        echo $examen = $this->input->get('examen');
+        $this->Preguntas->borrarpreguntaconcreta($examen,$posicion);
 
     }
 
