@@ -48,7 +48,7 @@ class Preguntas extends CI_Model
     {
         $this->mongo_db->where('Titulo examen', $examen)->set($data)->update('preguntas');
         /*       $this->mongo_db->set(['Titulo examen' => $examen])->where(['Titulo examen' => $examen]);*/
-        return $this->mongo_db->where(['Titulo examen' => $data['Titulo examen']])->get('preguntas');
+  /*      return $this->mongo_db->where(['Titulo examen' => $data['Titulo examen']])->get('preguntas');*/
     }
 
 

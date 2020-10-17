@@ -12,16 +12,23 @@ class Modificar extends CI_Controller
     //Modificar datos examen con AJAX
     public function modificar()
     {
-
         $data = [
             'Titulo examen' => $this->input->post('tituloexamen'),
             'Curso' => $this->input->post('curso'),
             'Asignatura' => $this->input->post('asignatura'),
             'Email' => $this->input->post('email'),
         ];
+        $this->Preguntas->modificardatos($data,$_GET['nombreexamen']);
 
-       $datos=$this->Preguntas->modificardatos($data,$_GET['examen']);
-        $this->load->view('estructura2');
+        $examen=$this->Preguntas->sacarexamenconcreto($this->input->post('tituloexamen'));
+
+        $examen = json_decode(json_encode($examen), true);
+        $this->miexamenconcreto= $examen;
+     /*   return $examen = json_decode(json_encode($examen), true);*/
+
+/*        $this->load->view('estructura2');*/
+
+       /* $this->load->view('estructura2');*/
     }
-}
 
+}

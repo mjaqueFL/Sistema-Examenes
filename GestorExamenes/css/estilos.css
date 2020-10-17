@@ -2,6 +2,9 @@ body {
     font-family: Monserrat, sans-serif;
 }
 
+.pregunta {
+    margin-top: 15px;
+}
 .pregunta input[type=text] {
     margin: 10px;
 
@@ -34,18 +37,5 @@ body {
 }
 
 #btnEnviar {
-    background-color: #673ab7;
-    position: relative;
-    left: 80%;
-    /*display: block;*/
-    margin: 0 10px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: .25px;
-    line-height: 36px;
-    text-decoration: none;
-    text-transform: none;
-    min-width: 15%;
-    text-align: center;
+
 }

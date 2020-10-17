@@ -78,13 +78,13 @@
                                        required autofocus>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="curso" class="form-control" placeholder="Curso">
+                                <input type="text" name="curso" class="form-control" placeholder="Curso" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="asignatura" class="form-control" placeholder="Asignatura">
+                                <input type="text" name="asignatura" class="form-control" placeholder="Asignatura" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Email">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
                             </div>
                             <div class="form-group">
                                 <label for="opcionbarajar">

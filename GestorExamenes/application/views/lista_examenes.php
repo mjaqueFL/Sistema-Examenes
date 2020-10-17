@@ -85,8 +85,8 @@
                                 <td>
                                     <a href="http://localhost/GestorExamenes/Examenes/crearpreguntas?examen=<?php echo $valor["Titulo examen"] ?>"><img
                                                 src="<?php echo base_url('imagenes/edit.png'); ?>"></a>
-          <!--                          <a href="http://localhost/GestorExamenes/Examenes/listarpreguntasexamen?examen=<?php /*echo $valor["Titulo examen"] */?>"><img
-                                                src="<?php /*echo base_url('imagenes/edit.png'); */?>"></a>-->
+                                    <!--                          <a href="http://localhost/GestorExamenes/Examenes/listarpreguntasexamen?examen=<?php /*echo $valor["Titulo examen"] */ ?>"><img
+                                                src="<?php /*echo base_url('imagenes/edit.png'); */ ?>"></a>-->
                                     <a href="http://localhost/GestorExamenes/Examenes/antesborrar?examen=<?php echo $valor["Titulo examen"] ?>"><img
                                                 src="<?php echo base_url('imagenes/cross.png'); ?>"></a>
                                 </td>

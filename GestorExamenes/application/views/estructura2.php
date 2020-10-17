@@ -56,27 +56,27 @@
             <form method="post" id="modifexamen">
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
-                        <div class="form-group">
-                            <div>Titulo examen</div>
-                            <input type="text" name="tituloexamen" class="form-control"
+                        <div class="form-group col-md-6 col-10 col-xl-12">
+                            <label for="inputTitulo">Titulo examen </label>
+                            <input id="inputTitulo" type="text" name="tituloexamen" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>">
                         </div>
-                        <div class="form-group">
-                            <div>Curso examen</div>
-                            <input type="text" name="curso" class="form-control"
+                        <div class="form-group col-md-6 col-xl-12 col-10">
+                            <label id="inputCurso">Curso</label>
+                            <input id="inputCurso" type="text" name="curso" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Curso'] ?>">
                         </div>
-                        <div class="form-group">
-                            <div>Asignatura</div>
-                            <input type="text" name="asignatura" class="form-control"
+                        <div class="form-group col-md-6 col-xl-12  col-10">
+                            <label id="inputAsignatura">Asignatura</label>
+                            <input id="inputAsignatura" type="text" name="asignatura" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Asignatura'] ?>">
                         </div>
-                        <div class="form-group">
-                            <div>Email</div>
-                            <input type="email" name="email" class="form-control"
+                        <div class="form-group col-md-6 col-xl-12  col-10">
+                            <label id="inputEmail">Email </label>
+                            <input id="inputEmail" type="email" name="email" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Email'] ?>">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-md-6 col-xl-12 col-5">
                             <input type="submit" class=" btn btn-primary">
                         </div>
                     </div>
@@ -85,110 +85,141 @@
             </form>
         </div><!-- Cierre de Datos Generales -->
 
-
-        <!-- Cierre de preguntas examen-->
-
-        <div id="divPreguntas">
-            <!-- En este div se crean las nuevas preguntas -->
-            <form id="formularioenviarexamen"
+        <div class="col">
+            <!-- Cierre de preguntas examen-->
+            <form class="" id="formularioenviarexamen"
                   action="http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>"
                   method="post">
-                <input class="btn btn-primary btn-lg" id="btnEnviar" type="submit" value="Enviar">
+                <div class=" col-xs-12 mb-3 text-center"><input class="btn btn-primary" id="btnEnviar" type="submit"
+                                                                value="Enviar"></div>
 
-                <!--Preguntas examen-->
-                <?php
-                if (isset($this->miexamenconcreto[0]['preguntas']) && sizeof($this->miexamenconcreto[0]['preguntas']) != 0 ) { //preguntamos si hay preguntas en el examen
-                    for ($i = 0; $i < count($this->miexamenconcreto[0]['preguntas']); $i++) { //si hay preguntas en el examen iteramos sobre todas las preguntas
-                        //mostramos el titulo de la pregunta , da igual el tipo
-                        if (isset($this->miexamenconcreto[0]['preguntas'][$i]['opciones'])) {
-                            ?>
-                            <div class="pregunta"
-                                 data-tipo="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['tipo'] ?>">
-                                <select class="" onchange="cambiarPreguntaestatica(this.value, this.parentNode)">
-                                    <option value="textoCorto">Pregunta con Texto Corto</option>
-                                    <option value="textoLargo">Pregunta con Texto Largo</option>
-                                    <option value="test">Pregunta tipo Test</option>
-                                    <option value="respuestaMultiple">Pregunta con Respueta Múltiple</option>
-                                </select>
-                                <label class="list-group-item-primary ml-2">Pregunta:<input required class=""
-                                                                                            type="text"
-                                                                                            value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['texto'] ?>"></label>
-                                <span onclick="borrarPreguntaEstatica(this)" class="spanBorrar"> ✘ </span>
-                                <input type="button" value="nueva opcion">
-                                <?php
-                                for ($j = 0; $j < count($this->miexamenconcreto[0]['preguntas'][$i]['opciones']); $j++) {//si se encuentra que la pregunta es tipo test / respuesta multiple iteramos sobre el nºopciones
-                                    if ($this->miexamenconcreto[0]['preguntas'][$i]['tipo'] == 'respuestaMultiple') { // si la pregunta es respuesta multiple que muestre las respuestas en checkbox
-                                        ?>
-                                        <br>
-                                        <input type="checkbox" name="preguntamultiple">
-                                        <input type="text"
-                                               value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['texto'] ?>"
-                                               required>
-                                        <input type="number"
-                                               value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['puntos'] ?>" required>
-                                        <input type="button" value="borrar opcion">
-
-                                        <?php
-
-                                    } else {
-                                        ?>
-                                        <br>
-                                        <input type="radio" name="preguntatest">
-                                        <label class="list-group-horizontal">Opcion <input  type="text"
-                                                                                           value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['texto'] ?>" required></label>
-                                        <label class="list-group-horizontal">Puntos <input type="number"
-                                                                                           value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['puntos'] ?>" required></label>
-                                        <input type="button" value="borrar opcion">
-                                        <?php
-                                    }
-                                }
+                <div class="container" id="divPreguntas">
+                    <!-- En este div se crean las nuevas preguntas -->
+                    <!--Preguntas examen-->
+                    <?php
+                    if (isset($this->miexamenconcreto[0]['preguntas']) && sizeof($this->miexamenconcreto[0]['preguntas']) != 0) { //preguntamos si hay preguntas en el examen
+                        for ($i = 0; $i < count($this->miexamenconcreto[0]['preguntas']); $i++) { //si hay preguntas en el examen iteramos sobre todas las preguntas
+                            //mostramos el titulo de la pregunta , da igual el tipo
+                            if (isset($this->miexamenconcreto[0]['preguntas'][$i]['opciones'])) {
                                 ?>
-                            </div>
-                            <?php
-                        } else {
-                            ?>
-                            <div class="pregunta"
-                                 data-tipo="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['tipo'] ?>">
-                                <select class="" onchange="cambiarPreguntaestatica(this.value, this.parentNode)">
-                                    <option value="textoCorto">Pregunta con Texto Corto</option>
-                                    <option value="textoLargo">Pregunta con Texto Largo</option>
-                                    <option value="test">Pregunta tipo Test</option>
-                                    <option value="respuestaMultiple">Pregunta con Respueta Múltiple</option>
-                                </select>
-                                <label class="list-group-item-primary ml-2">Pregunta:<input class="list" type="text"
-                                                                                            value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['texto'] ?>"
-                                                                                            required></label>
-                                <span onclick="borrarPreguntaEstatica(this)" class="spanBorrar"> ✘ </span>
-                                <label class="list-group-item-action">Respuesta<input class="list" type="text"
-                                                                                      value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['respuesta'] ?>"
+                                <div class="pregunta"
+                                     data-tipo="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['tipo'] ?>">
+                                    <span onclick="borrarPreguntaEstatica(this)" class="spanBorrar"> ✘ </span>
+                                    <div class="form-group">
+                                        <select class="form-control"
+                                                onchange="cambiarPreguntaestatica(this.value, this.parentNode.parentNode)">
+                                            <option value="textoCorto">Pregunta con Texto Corto</option>
+                                            <option value="textoLargo">Pregunta con Texto Largo</option>
+                                            <option value="test">Pregunta tipo Test</option>
+                                            <option value="respuestaMultiple">Pregunta con Respueta Múltiple</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="input-group-text">Pregunta:
+                                            <input required class="form-group" type="text"
+                                                   value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['texto'] ?>">
+                                        </label>
+                                    </div>
+                                    <input type="button" value="nueva opcion">
+                                    <?php
+                                    for ($j = 0; $j < count($this->miexamenconcreto[0]['preguntas'][$i]['opciones']); $j++) {//si se encuentra que la pregunta es tipo test / respuesta multiple iteramos sobre el nºopciones
+                                        if ($this->miexamenconcreto[0]['preguntas'][$i]['tipo'] == 'respuestaMultiple') { // si la pregunta es respuesta multiple que muestre las respuestas en checkbox
+                                            ?>
+                                            <br>
+                                            <input type="checkbox" name="preguntamultiple">
+                                            <div class="form-group">
+                                                <label class="input-group-text">
+                                                    <input class="form-group" type="text"
+                                                           value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['texto'] ?>"
+                                                           required>
+                                                </label></div>
+                                            <div class="form-group">
+                                                <label class="input-group-text">
+                                                    <input class="form-group" type="number"
+                                                           value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['puntos'] ?>"
+                                                           required>
+                                                </label></div>
+                                            <input type="button" value="borrar opcion">
+
+                                            <?php
+
+                                        } else {
+                                            ?>
+                                            <br>
+                                            <input type="radio" name="preguntatest">
+                                            <label class="input-group-text">Opcion <input type="text"
+                                                                                          value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['texto'] ?>"
+                                                                                          required>
+                                            </label>
+                                            <label class="input-group-text">Puntos <input class="form-control"
+                                                                                          type="number"
+                                                                                          value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['puntos'] ?>"
+                                                                                          required>
+                                            </label>
+                                            <input type="button" value="borrar opcion">
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                                <?php
+                            } else {
+                                ?>
+                                <div class="pregunta"
+                                     data-tipo="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['tipo'] ?>">
+                                    <div class="form-group">
+                                        <select class="form-control"
+                                                onchange="cambiarPreguntaestatica(this.value, this.parentNode)">
+                                            <option value="textoCorto">Pregunta con Texto Corto</option>
+                                            <option value="textoLargo">Pregunta con Texto Largo</option>
+                                            <option value="test">Pregunta tipo Test</option>
+                                            <option value="respuestaMultiple">Pregunta con Respueta Múltiple</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="input-group-text">Pregunta:<input class="form-control" type="text"
+                                                                                        value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['texto'] ?>"
+                                                                                        required></label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="input-group-text">Respuesta<input class="form-control" type="text"
+                                                                                        value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['respuesta'] ?>"
+                                                                                        required></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="input-group-text">Puntos:<input class="form-control" type="number"
+                                                                                      value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['puntos'] ?>"
                                                                                       required></label>
-                                <label class="list-group-item-action">Puntos:<input class="ml-2 list" type="number"
-                                                                                    value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['puntos'] ?>" required></label>
-                            </div>
-                            <?php
+                                    </div>
+                                    <span onclick="borrarPreguntaEstatica(this)" class="spanBorrar btn btn-danger">Borrar pregunta</span>
+                                </div>
+                                <?php
+                            }
                         }
+                        ?>
+                        <?php
+                    } else {
+                        echo "<span id='nohaypreguntas'>No hay preguntas en el examen</span>";
                     }
                     ?>
-                    <?php
-                } else {
-                        echo "<span id='nohaypreguntas'>No hay preguntas en el examen</span>";
-                }
-                ?>
-                <!--          <input hidden type="submit" value="Enviar">-->
-
+                    <!--          <input hidden type="submit" value="Enviar">-->
+                </div>
             </form>
-        </div>
 
-        <hr class="sidebar-divider"><!-- Los botones de añadir preguntas y enviar siempre al final -->
 
-        <button id="btnNuevaPregunta">Nueva pregunta</button>
+            <hr class="sidebar-divider"><!-- Los botones de añadir preguntas y enviar siempre al final -->
 
-        <!--        <a id="btnEnviar"
+            <button id="btnNuevaPregunta">Nueva pregunta</button>
+
+            <!--        <a id="btnEnviar"
            href="http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php /*echo $this->miexamenconcreto[0]['Titulo examen'] */ ?>"
            class="btn btn-danger">Enviar </a>-->
+        </div>
     </div>
 </div>
-<script type="text/javascript" src="http://localhost/GestorExamenes/js/archivo2.js"></script>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -196,21 +227,22 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://localhost/GestorExamenes/js/archivo2.js"></script>
+<script type="text/javascript" src="http://localhost/GestorExamenes/js/ajax.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#modifexamen').submit(function (e) {
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                /*           url: "http://localhost/GestorExamenes/Modificar/modificar?examen=sistemas informaticos",*/
-                url: "http://localhost/GestorExamenes/Modificar/modificar?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
-
+                url: "http://localhost/GestorExamenes/Modificar/modificar?nombreexamen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
                 data: $(this).serialize(),
                 success: function (response) {
-                    var jsonData = JSON.stringify(response);
+                    window.history.pushState("http://localhost/GestorExamenes/Examenes", "estructura2.php", "crearpreguntas?examen=" + document.getElementsByName('tituloexamen')[0].value);
+
+                    /*           var jsonData = JSON.stringify(response);*/
 
                     /*                        console.log(jsonData);
-
                                             document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*/
                 }
             });
@@ -219,6 +251,5 @@
 
     });
 </script>
-<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
 </body>
 </html>

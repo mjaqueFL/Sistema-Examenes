@@ -52,7 +52,7 @@ class Examenes extends CI_Controller
         $examen = $this->Preguntas->sacarexamenconcreto($recoger);
         //si mandamos el array completo tal y como lo cogemos de la BBDD, la estructura de las preguntas es std object, no podemos acceder a los datos si no es un array
        $examen = json_decode(json_encode($examen), true);
-        $this->miexamenconcreto = $examen;
+        $this->miexamenconcreto= $examen;
         $this->load->view('estructura2');
     }
 
