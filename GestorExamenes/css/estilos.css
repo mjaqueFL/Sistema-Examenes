@@ -39,3 +39,13 @@ body {
 #btnEnviar {
 
 }
+@media (max-width: 380px){
+    #btnEnviar {
+        position: fixed;
+        top: 210px;
+        left: 0;
+        width: 28%;
+        height: auto;
+        text-align: center;
+    }
+}

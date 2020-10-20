@@ -1,0 +1,31 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc"]
+  },
+  "source": {
+    "include": ["./"],
+    "includePattern": ".+\\.js$",
+    "excludePattern": "(docs)"
+  },
+  "plugins": [],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true,
+    "systemName": "NAFIDAS",
+    "footer": "Created by Simon Speich",
+    "copyright": "2013",
+    "navType": "vertical",
+    "theme": "spacelab",
+    "linenums": true,
+    "collapseSymbols": true,
+    "inverseNav": false
+  },
+  "opts": {
+    "template": "../ink-docstrap/template",
+    "encoding": "utf8",
+    "destination": "docs/js",
+    "recurse": true,
+    "private": true
+  }
+}

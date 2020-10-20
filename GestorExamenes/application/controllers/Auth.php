@@ -1,8 +1,19 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
+
 //Ignacio Lorenzo Vélez 2ºDAW PROYECTO SISTEMA GESTION EXAMENES
+
+
+/**
+ * Class Auth
+ */
 class Auth extends CI_Controller
 {
+
+
+    /**
+     * Auth constructor.
+     */
     function __construct()
     {
 
@@ -18,13 +29,20 @@ class Auth extends CI_Controller
             $this->load->view('home', $data);
         }
 
-
     }
+
+
+    /**
+     *
+     */
     public function index()
     {
 
     }
 
+    /**
+     *
+     */
     public function oauth2callback()
     {
         /*datos sesion*/
@@ -50,6 +68,10 @@ class Auth extends CI_Controller
 
     }
 
+
+    /**
+     *
+     */
     public function logout()
     {
         /*la funcion por defecto recordaba la sesion y solo se podia loguear con una misma cuenta*/

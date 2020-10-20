@@ -1,8 +1,15 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 //Ignacio Lorenzo Vélez 2ºDAW PROYECTO SISTEMA GESTION EXAMENES
+
+/**
+ * Class Dashboard
+ */
 class Dashboard extends CI_Controller
 {
+    /**
+     * Dashboard constructor.
+     */
     function __construct()
     {
         parent::__construct();
@@ -15,6 +22,9 @@ class Dashboard extends CI_Controller
         }
      }
 
+    /**
+     *
+     */
     public function index()
     {
 

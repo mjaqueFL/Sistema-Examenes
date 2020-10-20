@@ -1,20 +1,34 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 //Ignacio Lorenzo Vélez 2ºDAW PROYECTO SISTEMA GESTION EXAMENES
+
+/**
+ * Class Examenes
+ */
 class Examenes extends CI_Controller
 {
 
+    /**
+     * Examenes constructor.
+     */
     function __construct()
     {
         parent::__construct();
         $this->load->model('Preguntas');
     }
 
+    /**
+     *
+     */
     public function index()
     {
         $this->load->view('alta_examen');
     }
 // metodo que recibe las preguntas del examen
+
+    /**
+     *
+     */
     public function modificardatos()
     {
        echo $nombreexamen = $this->input->get('examen');
@@ -23,6 +37,9 @@ class Examenes extends CI_Controller
         $this->Preguntas->editarexamen($nombreexamen, $preguntas);
     }
 
+    /**
+     *
+     */
     public function crearexamen()
     {
         if ($this->input->post('barajar') === "True") {
@@ -41,11 +58,17 @@ class Examenes extends CI_Controller
         redirect("http://localhost/GestorExamenes/Examenes/examencreado");
     }
 
+    /**
+     *
+     */
     public function examencreado()
     {
         $this->load->view('examen_creado');
     }
 
+    /**
+     *
+     */
     public function crearpreguntas()
     {
         $recoger = $this->input->get('examen');
@@ -56,6 +79,9 @@ class Examenes extends CI_Controller
         $this->load->view('estructura2');
     }
 
+    /**
+     *
+     */
     public function listarexamenes()
     {
 
@@ -65,6 +91,10 @@ class Examenes extends CI_Controller
 
 
     }
+
+    /**
+     *
+     */
     public function antesborrar()
     {
         $recoger = $this->input->get('examen');
@@ -72,6 +102,9 @@ class Examenes extends CI_Controller
         $this->load->view('confirmar_borrado');
     }
 
+    /**
+     *
+     */
     public function borrarexamen()
     {
         $recoger = $this->input->get('examen');
@@ -80,6 +113,9 @@ class Examenes extends CI_Controller
 
     }
 
+    /**
+     *
+     */
     public function borrarpregunta()
     {
         echo $posicion = $this->input->get('posicion');
