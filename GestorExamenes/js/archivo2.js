@@ -1,7 +1,9 @@
-
 window.onload = iniciar;
 document.getElementById("formularioenviarexamen").onsubmit = crearExamen;
 
+/**
+ *
+ */
 function iniciar() {
 
     document.getElementById("btnNuevaPregunta").onclick = crearPregunta;
@@ -17,6 +19,10 @@ function crearPregunta() {
 
 }
 
+/**
+ *
+ * @returns {HTMLDivElement}
+ */
 function crearPreguntaTextoCorto() {
 
     var divPregunta = document.createElement('div');	//Metemos cada pregunta en un div de clase pregunta
@@ -68,7 +74,10 @@ function crearPreguntaTextoCorto() {
     return divPregunta;
 }
 
-
+/**
+ *
+ * @param divPregunta
+ */
 function crearSoloPuntosTextoCorto(divPregunta) {
 
     var div1 = document.createElement('div');
@@ -92,6 +101,10 @@ function crearSoloPuntosTextoCorto(divPregunta) {
 
 }
 
+/**
+ *
+ * @param divPregunta
+ */
 function crearSoloRespuestaTextoCorto(divPregunta) {
 
     var div1 = document.createElement('div');
@@ -363,7 +376,8 @@ function borrarPreguntaEstatica(elemento) {
 
 function borrarOpcion(evento) {
 
-    evento.target.parentNode.remove();
+    evento.target.parentElement.parentElement.remove();
+
 }
 function borrarOpcionEstatica(evento) {
     evento.parentNode.remove();
