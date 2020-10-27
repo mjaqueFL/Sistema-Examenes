@@ -7,7 +7,6 @@ class Modificar extends CI_Controller
         parent::__construct();
         $this->load->model('Preguntas');
         $this->load->helper('url');
-
     }
     //Modificar datos examen con AJAX
     public function modificar()
