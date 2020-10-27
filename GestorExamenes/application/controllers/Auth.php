@@ -37,7 +37,11 @@ class Auth extends CI_Controller
      */
     public function index()
     {
-
+/*        if (file_exists("C:\\xampp\htdocs\\GestorExamenes\\application\controllers\\Instalacion.php"))
+            unlink("C:\\xampp\htdocs\\GestorExamenes\\application\controllers\\Instalacion.php");
+        if (file_exists("C:\\xampp\htdocs\\GestorExamenes\\application\views\\instalacion.php"))
+            unlink("C:\\xampp\htdocs\\GestorExamenes\\application\iews\\instalacion.php"); la linea se descomentará cuando se presente el proyecto, para evitar
+el borrado accidental de los metodos de instalacion    */
     }
 
     /**

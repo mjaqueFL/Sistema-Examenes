@@ -60,7 +60,6 @@ class Instalacion extends CI_Controller
         fwrite($archivoroutes, "\n");
         fwrite($archivoroutes, $texto);
         fclose($archivoroutes);
-        /*      unlink('prueba.html');*/
         redirect("Auth");
 
     }
