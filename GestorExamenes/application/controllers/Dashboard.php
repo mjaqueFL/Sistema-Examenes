@@ -18,7 +18,7 @@ class Dashboard extends CI_Controller
         if ($this->session->userdata('sess_logged_in') == 0) {
             $this->load->view('home',$data);
         } else {
-            $this->load->view('dashboard');
+            $this->load->view('templates/dashboard');
         }
      }
 

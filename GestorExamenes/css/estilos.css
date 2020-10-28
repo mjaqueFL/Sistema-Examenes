@@ -1,5 +1,6 @@
 body {
     font-family: Monserrat, sans-serif;
+    display: flex;
 }
 
 .pregunta {
