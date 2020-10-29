@@ -1,9 +1,6 @@
 <!doctype html>
 <html lang="en">
 <?php
-include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
-?>
-<?php
 include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.php');
 ?>
 <div class="container-fluid">

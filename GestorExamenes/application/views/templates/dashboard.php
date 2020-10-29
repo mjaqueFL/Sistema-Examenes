@@ -62,4 +62,3 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
             </div>
         <?php } ?>
     </ul>
-</div>

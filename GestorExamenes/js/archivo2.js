@@ -152,17 +152,17 @@ function completarPreguntaTextoLargo(divPregunta) {
     div2.classList.add("form-group");
     divPregunta.appendChild(div2);
 
-/*    var iTextoLabelPuntos = document.createElement('label');
-    iTextoLabelPuntos.innerHTML = "Puntos:";
-    iTextoLabelPuntos.classList.add('input-group-text')
-    div2.appendChild(iTextoLabelPuntos);
+    /*    var iTextoLabelPuntos = document.createElement('label');
+        iTextoLabelPuntos.innerHTML = "Puntos:";
+        iTextoLabelPuntos.classList.add('input-group-text')
+        div2.appendChild(iTextoLabelPuntos);
 
-    var iPuntos = document.createElement('input');
-    iTextoLabelPuntos.appendChild(iPuntos);
-    iPuntos.setAttribute('type', 'number');
-    iPuntos.classList.add('form-control');
-    iPuntos.setAttribute('placeholder', 'Puntos');
-    iPuntos.required = true;*/
+        var iPuntos = document.createElement('input');
+        iTextoLabelPuntos.appendChild(iPuntos);
+        iPuntos.setAttribute('type', 'number');
+        iPuntos.classList.add('form-control');
+        iPuntos.setAttribute('placeholder', 'Puntos');
+        iPuntos.required = true;*/
 }
 
 function crearPreguntaTest(divPregunta) {
@@ -171,7 +171,7 @@ function crearPreguntaTest(divPregunta) {
     div.classList.add("form-group")
 
     var iTextoLabelOpcion = document.createElement('label');
-    iTextoLabelOpcion.classList.add('input-group-text' , 'form-row')
+    iTextoLabelOpcion.classList.add('input-group-text', 'form-row')
     iTextoLabelOpcion.innerHTML = "Opcion";
 
     var iTextoRespuesta = document.createElement('input');
@@ -218,7 +218,7 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
     iTextoRespuesta.setAttribute('name', 'preguntamultiple');
 
     var iTextoLabelOpcion = document.createElement('label');
-    iTextoLabelOpcion.classList.add('input-group-text','form-row')
+    iTextoLabelOpcion.classList.add('input-group-text', 'form-row')
     iTextoLabelOpcion.innerHTML = "Opcion";
     div.appendChild(iTextoLabelOpcion);
     iTextoLabelOpcion.appendChild(iTextoRespuesta);
@@ -232,7 +232,7 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
 
     var iTextoLabelPuntos = document.createElement('label');
     iTextoLabelPuntos.innerHTML = "Puntos ";
-    iTextoLabelPuntos.classList.add('input-group-text','form-row')
+    iTextoLabelPuntos.classList.add('input-group-text', 'form-row')
     iTextoLabelOpcion.appendChild(iTextoLabelPuntos);
 
     var iPuntos = document.createElement('input');
@@ -379,6 +379,7 @@ function borrarOpcion(evento) {
     evento.target.parentElement.parentElement.remove();
 
 }
+
 function borrarOpcionEstatica(evento) {
     evento.parentNode.remove();
 }
@@ -555,5 +556,6 @@ function crearExamen() {
     var objson = JSON.stringify(examen);
     link.action.innerHTML += link.action += "&j=" + objson;
     link.submit();
+
 }
 

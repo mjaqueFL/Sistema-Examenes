@@ -1,6 +1,6 @@
 body {
-    font-family: Monserrat, sans-serif;
-    display: flex;
+/*    display: flex;*/
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .pregunta {
@@ -12,7 +12,7 @@ body {
 }
 
 .principal {
-    background-color: #F3F3F3;
+/*    background-color: #F3F3F3;*/
 }
 
 .contenedor {

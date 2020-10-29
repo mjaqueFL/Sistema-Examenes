@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
 <?php
-include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
+include('C:\xampp\htdocs\GestorExamenes\application\views\templates\headauth.php');
 ?>
 <body>
+
 <div align="center">
     <h2>Gestor Examenes</h2>
 </div>
@@ -28,6 +29,5 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
         </div>
     </div>
 </div>
-
 </body>
 </html>
