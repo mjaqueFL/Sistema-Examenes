@@ -1,18 +1,69 @@
 body {
-/*    display: flex;*/
+    /*    display: flex;*/
     font-family: 'Montserrat', sans-serif !important;
+}
+
+#instalacion {
+    background: #F3F3F3;
+    margin: 140px auto 25px;
+    padding: 20px 20px 10px 20px;
+    max-width: 700px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
 }
 
 .pregunta {
     margin-top: 15px;
 }
+
 .pregunta input[type=text] {
     margin: 10px;
 
 }
 
+footer {
+    width: 100%;
+    display: inline-block;
+    height: 70px;
+    background-color: #999;
+}
+
+footer p {
+    padding-left: 10%;
+    color: white;
+    font-size: 15px;
+    line-height: 70px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+footer a {
+    float: left;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer li {
+    display: inline-block;
+    padding-right: 10px;
+    padding-top: 24px;
+    text-transform: uppercase;
+}
+
+footer .copyright {
+    width: 50%;
+    float: left;
+}
+
+.social {
+    width: 50%;
+    float: right;
+}
+
 .principal {
-/*    background-color: #F3F3F3;*/
+    /*    background-color: #F3F3F3;*/
 }
 
 .contenedor {
@@ -40,7 +91,18 @@ body {
 #btnEnviar {
 
 }
-@media (max-width: 380px){
+
+@media (max-width: 1100px) {
+    footer .copyright {
+        width: 40%;
+    }
+
+    footer .social {
+        width: 60%;
+    }
+}
+
+@media (max-width: 380px) {
     #btnEnviar {
         position: fixed;
         top: 210px;
@@ -48,5 +110,25 @@ body {
         width: 28%;
         height: auto;
         text-align: center;
+    }
+    footer p {
+        padding-left: 0;
+        font-size: 1em;
+        letter-spacing: 0;
+    }
+    footer .copyright {
+        font-size: 0.8rem;
+        width: 40%;
+    }
+
+    footer .social {
+        font-size: 0.7rem;
+        width: 60%;
+    }
+    footer li {
+        display: grid;
+        /* padding: 42px; */
+        padding-top: 5px;
+        text-transform: uppercase;
     }
 }

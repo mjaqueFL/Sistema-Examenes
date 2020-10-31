@@ -11,7 +11,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
 
             <div class="col-md-12">
                 <br>
-                <div  class="login-panel panel panel-default">
+                <div class="login-panel panel panel-default">
                     <div class="panel-body">
                         <div class="form-group">
                             <input type="text" name="tituloexamen" class="form-control" placeholder="Titulo examen"
@@ -43,7 +43,10 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
 
         </form>
     </div>
-
+    <?php
+    include('C:\xampp\htdocs\GestorExamenes\application\views\templates\footer.php');
+    ?>
 </div>
+
 </html>
 
