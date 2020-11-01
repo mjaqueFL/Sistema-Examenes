@@ -16,7 +16,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <a class="nav-link" href="http://localhost/GestorExamenes/Dashboard/">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span class="fas fa-fw fa-tachometer-alt"></span>
                 <span>Dashboard</span></a>
         </li>
         <!-- Divider -->
@@ -27,7 +27,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseQuiz"
                aria-expanded="true"
                aria-controls="collapseQuiz">
-                <i class="fas fa-fw fa-chalkboard-teacher"></i>
+                <span class="fas fa-fw fa-chalkboard-teacher"></span>
                 <span>Examenes </span>
             </a>
             <div id="collapseQuiz" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -45,14 +45,14 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
             <div class="col s12 m6 l4 offset-l3 ">
                 <div class="card ">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class=" img img-fluid" src="<?= $_SESSION['profile_pic'] ?>">
+                        <img class=" img img-fluid" src="<?= $_SESSION['profile_pic'] ?>" alt="imagencuenta">
                     </div>
                     <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4"> <i
-                                  class="material-icons"><p class="text-center"><?= $_SESSION['name'] ?></p></i></span>
+                      <span class="card-title activator grey-text text-darken-4"> <span
+                                  class="material-icons"><p class="text-center"><?= $_SESSION['name'] ?></p></span></span>
                     </div>
-                    <a href="<?= base_url()?>auth/logout" class="waves-effect waves-light btn red"><i
-                                class="fa fa-google left"></i>Google logout</a>
+                    <a href="<?= base_url()?>auth/logout" class="waves-effect waves-light btn red"><span
+                                class="fa fa-google left"></span>Google logout</a>
                     <!--                    <div class="card-reveal">
                         <p class="lead text-justify"><? /*= $_SESSION['email'] */ ?></p>
                         <span class="card-title grey-text text-darken-4"><? /*= $_SESSION['name'] */ ?><i

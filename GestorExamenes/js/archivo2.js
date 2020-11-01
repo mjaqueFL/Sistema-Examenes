@@ -174,17 +174,20 @@ function crearPreguntaTest(divPregunta) {
     iTextoLabelOpcion.classList.add('input-group-text', 'form-row')
     iTextoLabelOpcion.innerHTML = "Opcion";
 
+/*
     var iTextoRespuesta = document.createElement('input');
     iTextoRespuesta.setAttribute('type', 'radio');
     iTextoRespuesta.setAttribute('value', 'opcion');
     iTextoRespuesta.setAttribute('name', 'preguntatest');
     iTextoLabelOpcion.appendChild(iTextoRespuesta);
+*/
 
     div.appendChild(iTextoLabelOpcion);
 
     var iTextoRespuesta2 = document.createElement('input');
     iTextoLabelOpcion.appendChild(iTextoRespuesta2);
     iTextoRespuesta2.setAttribute('type', 'text');
+    iTextoRespuesta2.setAttribute('id', 'opciontest');
     iTextoRespuesta2.classList.add('form-control')
     iTextoRespuesta2.setAttribute('placeholder', 'opcion');
     iTextoRespuesta2.required = true;
@@ -212,10 +215,12 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
     var div = document.createElement('div');
     div.classList.add("form-group")
 
+/*
     var iTextoRespuesta = document.createElement('input');
     iTextoRespuesta.setAttribute('type', 'checkbox');
     iTextoRespuesta.setAttribute('value', 'opcion');
     iTextoRespuesta.setAttribute('name', 'preguntamultiple');
+*/
 
     var iTextoLabelOpcion = document.createElement('label');
     iTextoLabelOpcion.classList.add('input-group-text', 'form-row')
@@ -226,6 +231,7 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
     var iTextoRespuesta2 = document.createElement('input');
     iTextoLabelOpcion.appendChild(iTextoRespuesta2);
     iTextoRespuesta2.setAttribute('type', 'text');
+    iTextoRespuesta2.setAttribute('id', 'opcionmultiple');
     iTextoRespuesta2.classList.add('form-control')
     iTextoRespuesta2.setAttribute('placeholder', 'opcion');
     iTextoRespuesta2.required = true;
@@ -528,11 +534,13 @@ function crearExamen() {
             case 'test':
                 pregunta.opciones = [];
                 for (i = 2; i < divPregunta.children.length; i++) {
-                    for (let di of divPregunta.children[i].querySelectorAll('input[name=preguntatest]')) { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
+                    for (let di of divPregunta.children[i].querySelectorAll('input[id=opciontest]')) { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
                         var preguntatest = {}; //cada opcion es un objeto
                         pregunta.opciones.push(preguntatest);
-                        preguntatest.texto = di.nextElementSibling.value;
-                        preguntatest.puntos = di.nextElementSibling.nextElementSibling.children[0].value;
+/*                        preguntatest.texto = di.nextElementSibling.value;
+                        preguntatest.puntos = di.nextElementSibling.nextElementSibling.children[0].value;       */
+                        preguntatest.texto = di.value;
+                        preguntatest.puntos = di.nextElementSibling.children[0].value;
                         /*               console.log(di)*/
                     }
                 }
@@ -540,7 +548,7 @@ function crearExamen() {
             case 'respuestaMultiple':
                 pregunta.opciones = [];
                 for (i = 2; i < divPregunta.children.length; i++) {
-                    for (let di of divPregunta.children[i].querySelectorAll('input[name=preguntamultiple]')) { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
+                    for (let di of divPregunta.children[i].querySelectorAll('input[id=opcionmultiple]')) { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
                         var preguntatest = {}; //cada opcion es un objeto
                         pregunta.opciones.push(preguntatest);
                         preguntatest.texto = di.nextElementSibling.value;
