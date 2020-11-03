@@ -3,37 +3,32 @@
 
 //Ignacio Lorenzo Vélez 2ºDAW PROYECTO SISTEMA GESTION EXAMENES
 
-
 /**
  * Class Auth
  */
 class Auth extends CI_Controller
 {
 
-
     /**
-     * Auth constructor.
+     * Constructor Login Auth
+     *
+     * Cuando el usuario entra en esta clase el programa verifica si ya ha iniciado sesion y
+     * si no te redirige a la vista para iniciar sesion
+     *
+     *
      */
     function __construct()
     {
 
         parent::__construct();
         $this->load->library('google'); /*Libreria de Google necesaria*/
-        $data['google_login_url'] = $this->google->get_login_url();
-        if ($this->session->userdata('sess_logged_in') == 1) {
-            $this->load->view('templates/dashboard');
-
-            /*            $this->load->view('ejemplo');*/
-        } else {
-
-            $this->load->view('home', $data);
-        }
-
+        $this->comprobacion();
     }
 
-
     /**
+     * Eliminacion proceso instalacion
      *
+     * Al ser el controlador por defecto cuando se acaba el proceso de instalacion, aqui se eliminan los archivos de instalacion si existieran
      */
     public function index()
     {
@@ -44,8 +39,12 @@ class Auth extends CI_Controller
 el borrado accidental de los metodos de instalacion    */
     }
 
+
     /**
+     * Inicializa los datos del usuario de Google
      *
+     * Despues de iniciar sesion te redirige a este método, donde se crean los datos, este metodo se tiene que especificar tanto
+     * en /config/google_config.php como en https://console.developers.google.com/
      */
     public function oauth2callback()
     {
@@ -74,7 +73,9 @@ el borrado accidental de los metodos de instalacion    */
 
 
     /**
+     * Logout del usuario
      *
+     * Se invoca este método cuando se va a cerrar sesion, elimina todos los datos de sesion del usuario
      */
     public function logout()
     {
@@ -84,6 +85,21 @@ el borrado accidental de los metodos de instalacion    */
         $this->session->sess_destroy();
         $data['google_login_url'] = $this->google->get_login_url();
         redirect(base_url());
+    }
+
+    /**
+     * Se comprueba el login del usuario
+     *
+     * Si el usuario no está logueado se redirige al controlador Auth, si está logueado el usuario se mantiene en la página
+     */
+    public function comprobacion()
+    {
+        $data['google_login_url'] = $this->google->get_login_url();
+        if ($this->session->userdata('sess_logged_in') == 1) {
+            $this->load->view('templates/dashboard');
+        } else {
+            $this->load->view('home', $data);
+        }
     }
 
 }

@@ -562,7 +562,7 @@ function crearExamen() {
     }
     var link = document.getElementById('formularioenviarexamen');
     var objson = JSON.stringify(examen);
-    link.action.innerHTML += link.action += "&j=" + objson;
+    link.action.innerHTML += link.action += "&examengenerado=" + objson;
     link.submit();
 
 }

@@ -8,11 +8,11 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
     <form method="post" action="http://localhost/GestorExamenes/Instalacion/crearArchivo">
         <div class="form-group">
             <label for="NombreBD">Nombre de la base de datos</label>
-            <input type="email" class="form-control" id="NombreBD" placeholder="Nombre de la base de datos">
+            <input name="nombrebd" type="text" class="form-control" id="NombreBD" placeholder="Nombre de la base de datos">
         </div>
         <div class="form-group">
             <label for="Nombrecoleccion">Nombre de la coleccion</label>
-            <input type="password" class="form-control" id="Nombrecoleccion" placeholder="Password">
+            <input name="nombrecol" type="text" class="form-control" id="Nombrecoleccion" placeholder="Nombrecoleccion">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

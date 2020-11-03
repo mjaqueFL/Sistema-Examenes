@@ -1,25 +1,43 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+ * Class Instalacion
+ */
+
 class Instalacion extends CI_Controller
 {
+    /**
+     * Instalacion constructor.
+     */
     function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * Carga la vista instalacion
+     */
     public function index()
     {
 
         $this->load->view('instalacion');
     }
 
+    /**
+     * Crea archivo de configuracion mongodb
+     *
+     * El metodo recibe el nombre de la base de datos y el nombre de la coleccion, si
+     * se intenta acceder al metodo se genera una base de datos con un nombre por defecto
+     */
     public function crearArchivo()
     {
         $basedatos = $this->input->post("nombrebd");
+        $coleccion=$this->input->post("nombrecol");
         if (empty($basedatos)) {
             $basedatos = "basedatosdefault";
         } // si un listo entra en el metodo se genera una por defecto
         $basedatos = '"' . $basedatos . '"';
+        $coleccion = '"' . $coleccion . '"';
         $myfile = fopen("testfile.php", "w");
         $texto = '<?php';
         fwrite($myfile, $texto);
@@ -55,11 +73,15 @@ class Instalacion extends CI_Controller
         fwrite($myfile, $texto);
         fclose($myfile);
         rename('testfile.php', 'C:\xampp\htdocs\GestorExamenes\application\config\mongo_db.php');
-        $archivoroutes = fopen("C:\\xampp\htdocs\\GestorExamenes\\application\config\\routes.php", "a++");
+        $archivoroutes = fopen("C:\\xampp\htdocs\\GestorExamenes\\application\config\\routes.php", "a+");
         $texto = '$route["default_controller"] = "Auth";';
         fwrite($archivoroutes, "\n");
         fwrite($archivoroutes, $texto);
         fclose($archivoroutes);
+        $modelo = fopen("C:\\xampp\htdocs\\GestorExamenes\\application\models\\Preguntas.php","a+");
+        $texto = 'define("NOMBRECOLECCION",' . $coleccion . ')';
+        fwrite($modelo, $texto);
+        fclose($modelo);
         redirect("Auth");
 
     }

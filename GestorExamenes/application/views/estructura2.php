@@ -196,7 +196,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url: "http://localhost/GestorExamenes/Modificar/modificar?nombreexamen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
+                url: "http://localhost/GestorExamenes/Examenes/modificarajax?nombreexamen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
                 data: $(this).serialize(),
                 success: function (response) {
                     window.history.pushState("http://localhost/GestorExamenes/Examenes", "estructura2.php", "crearpreguntas?examen=" + document.getElementsByName('tituloexamen')[0].value);
