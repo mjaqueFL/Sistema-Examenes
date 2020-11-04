@@ -42,6 +42,9 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
             </div>
         </li>
         <?php if (isset($_SESSION['name'])) { ?>
+            <pre><?php
+                print_r($_SESSION)
+                ?></pre>
             <div class="col s12 m6 l4 offset-l3 ">
                 <div class="card ">
                     <div class="card-image waves-effect waves-block waves-light">

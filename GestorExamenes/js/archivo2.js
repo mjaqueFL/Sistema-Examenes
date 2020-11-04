@@ -1,15 +1,25 @@
+
 window.onload = iniciar;
 document.getElementById("formularioenviarexamen").onsubmit = crearExamen;
 
+
 /**
+ * Cuando se carga la página estructura2.php se inicia este método
  *
+ * Se le asigna al voton nueva pregunta el metodo crearPregunta para que cada vez que se pulse se genere
+ * otro div con una pregunta
  */
 function iniciar() {
-
     document.getElementById("btnNuevaPregunta").onclick = crearPregunta;
-    document.getElementsByName('tituloexamen').value;
 }
 
+/**
+ * Metodo que crea un nuevo div sobre divPreguntas
+ *
+ * Este metodo localiza en el html el divPreguntas y le añade una nueva pregunta
+ * que por defecto es una de textocorto.Tambien oculta el mensaje de "no hay preguntas" cuando añades una
+ * nueva pregunta
+ */
 function crearPregunta() {
     var divPreguntas = document.getElementById("divPreguntas");
     divPreguntas.appendChild(crearPreguntaTextoCorto());
@@ -20,8 +30,10 @@ function crearPregunta() {
 }
 
 /**
+ * Metodo que crea toda la estructura de la pregunta de texto corto
  *
- * @returns {HTMLDivElement}
+ * Este método crea todos los div, label y etiquetas necesarias del div
+ * @returns {HTMLDivElement} Retorna el div con todos los elementos para hacer el append del mismo en divPreguntas
  */
 function crearPreguntaTextoCorto() {
 
@@ -75,8 +87,8 @@ function crearPreguntaTextoCorto() {
 }
 
 /**
- *
- * @param divPregunta
+ * Crea los puntos del div de la pregunta de texto corto
+ * @param divPregunta Recibe el div padre sobre el que se está trabajando
  */
 function crearSoloPuntosTextoCorto(divPregunta) {
 
@@ -102,8 +114,12 @@ function crearSoloPuntosTextoCorto(divPregunta) {
 }
 
 /**
+ * Metodo que  crea la respuesta de la pregunta de texto corto
  *
- * @param divPregunta
+ * Método que crea solo la respuesta de texto corto, que se invoca al
+ * cambiar de pregunta en el select, ya que al hacerlo solo borra respuesta y puntos
+ * y mantiene la pregunta
+ * @param divPregunta Recibe el div padre sobre el que se está trabajando
  */
 function crearSoloRespuestaTextoCorto(divPregunta) {
 
@@ -129,8 +145,16 @@ function crearSoloRespuestaTextoCorto(divPregunta) {
 
 }
 
+/**
+ * Metodo que  crea la respuesta de la pregunta de texto largo
+ *
+ * Método que crea solo la respuesta de texto corto, que se invoca al
+ * cambiar de pregunta en el select, ya que al hacerlo solo borra respuesta y puntos
+ * y mantiene la pregunta
+ * @param divPregunta Recibe el div padre sobre el que se está trabajando
+ */
 
-function completarPreguntaTextoLargo(divPregunta) {
+function crearSoloRespuestaTextoLargo(divPregunta) {
 
     var div1 = document.createElement('div');
     div1.classList.add("form-group");
@@ -147,24 +171,15 @@ function completarPreguntaTextoLargo(divPregunta) {
     iTextoRespuesta.classList.add('form-control');
     iTextoRespuesta.setAttribute('placeholder', 'Texto de la respuesta');
     iTextoRespuesta.required = true;
-
-    var div2 = document.createElement('div');
-    div2.classList.add("form-group");
-    divPregunta.appendChild(div2);
-
-    /*    var iTextoLabelPuntos = document.createElement('label');
-        iTextoLabelPuntos.innerHTML = "Puntos:";
-        iTextoLabelPuntos.classList.add('input-group-text')
-        div2.appendChild(iTextoLabelPuntos);
-
-        var iPuntos = document.createElement('input');
-        iTextoLabelPuntos.appendChild(iPuntos);
-        iPuntos.setAttribute('type', 'number');
-        iPuntos.classList.add('form-control');
-        iPuntos.setAttribute('placeholder', 'Puntos');
-        iPuntos.required = true;*/
 }
 
+/**
+ * Crea el div de la pregunta de tipo test
+ *
+ * Metodo que crea la pregunta de tipo test, con las opciones , los puntos y el boton de borrar opcion,
+ * la opcion añadida se añadirá despues de la ultima opcion
+ * @param divPregunta  Recibe el div padre sobre el que se está trabajando
+ */
 function crearPreguntaTest(divPregunta) {
 
     var div = document.createElement('div');
@@ -203,13 +218,20 @@ function crearPreguntaTest(divPregunta) {
     iPuntos.classList.add('form-control')
     iPuntos.setAttribute('placeholder', 'Puntos');
     iPuntos.required = true;
-    iTextoLabelPuntos.appendChild(crearIconoBorrarPregunta(divPregunta));
+    iTextoLabelPuntos.appendChild(crearIconoBorrarOpcion(divPregunta));
 
     divPregunta.lastElementChild.previousElementSibling.before(div)
 
     /*    divPregunta.getElementById('nuevaopcion').before(div);*/
 }
 
+/**
+ * Crea el div de la pregunta de tipo multiple
+ *
+ * Metodo que crea la pregunta de tipo test, con las opciones , los puntos y el boton de borrar opcion,
+ * la opcion añadida se añadirá despues de la ultima opcion
+ * @param divPregunta  Recibe el div padre sobre el que se está trabajando
+ */
 function completarPreguntaRespuestaMultiple(divPregunta) {
 
     var div = document.createElement('div');
@@ -247,7 +269,7 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
     iPuntos.classList.add('form-control')
     iPuntos.setAttribute('placeholder', 'Puntos');
     iPuntos.required = true;
-    iTextoLabelPuntos.appendChild(crearIconoBorrarPregunta(divPregunta));
+    iTextoLabelPuntos.appendChild(crearIconoBorrarOpcion(divPregunta));
 
 
     divPregunta.lastElementChild.previousElementSibling.before(div)
@@ -257,6 +279,13 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
 
 }
 
+/**
+ * Crea el select del div del tipo de pregunta sobre el que se cree
+ *
+ * Este método crea el select de cualquier tipo de pregunta(tipocorto,tipolargo,test y multiple)
+ *
+ * @returns {HTMLSelectElement} Devuelve el elemento creado sobre el div que está invocando el metodo
+ */
 function crearSelect() {
 
     var select = document.createElement('select');
@@ -269,12 +298,15 @@ function crearSelect() {
     return select;
 }
 
-function cambiarSelect(elemento) {
-    console.log(elemento);
-    elemento.onchange = cambiarPregunta;
-
-}
-
+/**
+ * Metodo que crea los option del select
+ *
+ * Este metodo se invoca 4 veces, una por cada tipo de pregunta y crean los option con cada tipo de pregunta
+ *
+ * @param valor el valor del value de los option del select
+ * @param texto El texto que se muestra en los option
+ * @returns {HTMLOptionElement}
+ */
 function crearOpcion(valor, texto) {
     var opcion = document.createElement('option');
     opcion.setAttribute('value', valor);
@@ -282,6 +314,15 @@ function crearOpcion(valor, texto) {
     return opcion;
 }
 
+/**
+ * Este metodo crea el texto de la pregunta y su input
+ *
+ * Este método es para la pregunta que viene de la base de datos si el examen tiene preguntas ya creadas
+ * Sobre el archivo estructura2 hay un select estático que al cambiar de pregunta borra todo el div con la pregunta
+ *
+ * @param divPregunta  Recibe el div padre sobre el que se está trabajando
+ * @returns {HTMLDivElement} Devuelve el elemento creado sobre el div que está invocando el metodo
+ */
 function crearTextoPreguntaEstatica(divPregunta) {
 
     var div1 = document.createElement('div');
@@ -303,28 +344,14 @@ function crearTextoPreguntaEstatica(divPregunta) {
     return div1;
 }
 
-function crearTextoPreguntaEstaticaArea(divPregunta) {
-
-    var div1 = document.createElement('div');
-    div1.classList.add("form-group");
-    divPregunta.appendChild(div1);
-
-    var iTextoLabelPregunta = document.createElement('label');
-    iTextoLabelPregunta.innerHTML = "Pregunta";
-    iTextoLabelPregunta.classList.add('input-group-text')
-    div1.appendChild(iTextoLabelPregunta);
-
-    var iTextoPregunta = document.createElement('input');
-    iTextoLabelPregunta.appendChild(iTextoPregunta);
-    iTextoPregunta.setAttribute('type', 'text');
-    iTextoPregunta.setAttribute('placeholder', 'Texto de la pregunta');
-    iTextoPregunta.classList.add('form-control');
-    iTextoPregunta.required = true;
-
-    return div1;
-}
-
-function crearnuevaopcion(divPregunta) {
+/**
+ * Metodo que crea el boton nueva opcion
+ *
+ * Este método se invoca solo para las pregunta de tipo test
+ * que crea el boton "nueva opcion" que al ser clicado crea otra pregunta de tipo test
+ * @param divPregunta
+ */
+function crearnuevaopciontest(divPregunta) {
     var iTextoRespuesta2 = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta2);
     iTextoRespuesta2.setAttribute('type', 'button');
@@ -336,8 +363,14 @@ function crearnuevaopcion(divPregunta) {
     });
 
 }
-
-function crearnuevaopcion2(divPregunta) {
+/**
+ * Metodo que crea el boton nueva opcion
+ *
+ * Este método se invoca solo para las preguntas de tipo test y respuesta multiple,
+ * que crea el boton "nueva opcion" que al ser clicado crea otra pregunta de tipo multiple
+ * @param divPregunta Recibe el div padre sobre el que se está trabajando
+ */
+function crearnuevaopcionmultiple(divPregunta) {
     var iTextoRespuesta2 = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta2);
     iTextoRespuesta2.setAttribute('type', 'button')
@@ -349,6 +382,12 @@ function crearnuevaopcion2(divPregunta) {
     });
 }
 
+/**
+ * Metodo que crea el boton de borrar pregunta
+ *
+ * Este metodo crea el boton para borrar la pregunta sobre el que estará este boton
+ * @returns {HTMLSpanElement} Devuelve el elemento creado sobre el div que está invocando el metodo
+ */
 
 function crearIconoBorrar() {
     var spanBorrar = document.createElement('span');
@@ -359,7 +398,14 @@ function crearIconoBorrar() {
     return spanBorrar;
 }
 
-function crearIconoBorrarPregunta(divPregunta) {
+/**
+ * Este método crea el boton de borrar opcion
+ *
+ * Este boton estará sobre cada opcion que se cree sobre una pregunta de tipo test/multiple
+ * @param divPregunta Recibe el div padre sobre el que se está trabajando
+ * @returns {HTMLInputElement} Devuelve el elemento creado sobre el div que está invocando el metodo
+ */
+function crearIconoBorrarOpcion(divPregunta) {
     var iTextoRespuesta2 = document.createElement('input');
     divPregunta.appendChild(iTextoRespuesta2);
     iTextoRespuesta2.setAttribute('type', 'button')
@@ -369,28 +415,62 @@ function crearIconoBorrarPregunta(divPregunta) {
     return iTextoRespuesta2;
 }
 
+/**
+ * Crea el metodo que borra la opcion
+ *
+ * Este metodo recoge el evento del boton borraropcion y borra el div que contiene la opcion
+ * @param evento tipo de evento que se ha producido
+ */
 function borrarPregunta(evento) {
+    console.log(evento);
     var divPregunta = evento.target.parentNode;
     divPregunta.parentNode.removeChild(divPregunta);
 
 }
 
+/**
+ * Hace lo mismo que el borrarPregunta pero sobre las preguntas que vienen de la base de datos
+ *
+ * Este método es como el borrarPregunta pero se invoca desde el archivo estructura2
+ * @param elemento Recibe el elemento que está invocando al metodo
+ */
 function borrarPreguntaEstatica(elemento) {
     var divPregunta = elemento.parentNode
     divPregunta.parentNode.removeChild(divPregunta);
 }
 
+/**
+ * Crea el metodo que borra el div que contiene la opcion de la pregunta
+ *
+ * Este metodo se invoca al pulsar el boton "borraropcion" que borrara el div que contiene
+ * el boton
+ * @param evento recibe el evento del boton
+ */
 function borrarOpcion(evento) {
 
     evento.target.parentElement.parentElement.remove();
 
 }
 
+/**
+ * Crea el metodo que borra el div que contiene la opcion de la pregunta desde el archivo estructura2
+ *
+ * Este metodo se invoca al pulsar el boton "borraropcion" que borrara el div que contiene
+ * el boton
+ * @param evento recibe el evento del boton
+ */
 function borrarOpcionEstatica(evento) {
     evento.parentNode.remove();
 }
 
-
+/**
+ * Metodo que cambia la estructura del div de cada pregunta
+ *
+ * Este método se invoca al cambiar de tipo de pregunta en el select option
+ * y dependiendo del tipo de pregunta se cargan unos metodos u otros que crearan
+ * los elementos de ese div de esa pregunta
+ * @param evento recibe el tipo de evento del select
+ */
 function cambiarPregunta(evento) {
 
     var opcion = evento.target.value;
@@ -416,7 +496,7 @@ function cambiarPregunta(evento) {
             while (divPregunta.childNodes.length > 2)
                 divPregunta.removeChild(divPregunta.lastChild);
 
-            completarPreguntaTextoLargo(divPregunta);
+            crearSoloRespuestaTextoLargo(divPregunta);
             crearSoloPuntosTextoCorto(divPregunta)
             divPregunta.appendChild(crearIconoBorrar());
             break;
@@ -426,7 +506,7 @@ function cambiarPregunta(evento) {
             while (divPregunta.childNodes.length > 2)
                 divPregunta.removeChild(divPregunta.lastChild);
 
-            crearnuevaopcion(divPregunta);
+            crearnuevaopciontest(divPregunta);
             divPregunta.appendChild(crearIconoBorrar());
             crearPreguntaTest(divPregunta);
 
@@ -437,7 +517,7 @@ function cambiarPregunta(evento) {
             while (divPregunta.childNodes.length > 2)
                 divPregunta.removeChild(divPregunta.lastChild);
 
-            crearnuevaopcion2(divPregunta);
+            crearnuevaopcionmultiple(divPregunta);
             divPregunta.appendChild(crearIconoBorrar());
             completarPreguntaRespuestaMultiple(divPregunta);
 
@@ -445,6 +525,17 @@ function cambiarPregunta(evento) {
     }
 }
 
+/**
+ * Metodo que cambia la estructura del div de cada pregunta
+ *
+ * Este método se invoca al cambiar de tipo de pregunta en el select option
+ * y dependiendo del tipo de pregunta se cargan unos metodos u otros que crearan
+ * los elementos de ese div de esa pregunta
+ *
+ * Este metodo se usa para los select estáticos en estructura2 para las preguntas que vienen
+ * de la base de datos
+ * @param evento recibe el tipo de evento del select
+ */
 function cambiarPreguntaestatica(opcion, divPregunta) {
     console.log(opcion);
     console.log(divPregunta);
@@ -467,7 +558,7 @@ function cambiarPreguntaestatica(opcion, divPregunta) {
                 divPregunta.removeChild(divPregunta.lastChild);
 
             crearTextoPreguntaEstatica(divPregunta);
-            completarPreguntaTextoLargo(divPregunta);
+            crearSoloRespuestaTextoLargo(divPregunta);
             crearSoloPuntosTextoCorto(divPregunta)
             divPregunta.appendChild(crearIconoBorrar());
 
@@ -480,7 +571,7 @@ function cambiarPreguntaestatica(opcion, divPregunta) {
                 divPregunta.removeChild(divPregunta.lastChild);
 
             crearTextoPreguntaEstatica(divPregunta);
-            crearnuevaopcion(divPregunta);
+            crearnuevaopciontest(divPregunta);
             divPregunta.appendChild(crearIconoBorrar());
             crearPreguntaTest(divPregunta);
 
@@ -492,7 +583,7 @@ function cambiarPreguntaestatica(opcion, divPregunta) {
                 divPregunta.removeChild(divPregunta.lastChild);
 
             crearTextoPreguntaEstatica(divPregunta);
-            crearnuevaopcion2(divPregunta);
+            crearnuevaopcionmultiple(divPregunta);
             divPregunta.appendChild(crearIconoBorrar());
             completarPreguntaRespuestaMultiple(divPregunta);
 
@@ -500,6 +591,13 @@ function cambiarPreguntaestatica(opcion, divPregunta) {
     }
 }
 
+/**
+ * Metodo que crea el examen
+ *
+ * Este metodo se invoca al enviar el examen, y va iterando sobre cada pregunta del formulario y va guardando
+ * los datos en un objeto, que posteriormente se convierte a formato JSON y se envia a mongo
+ *
+ */
 function crearExamen() {
     var examen = {}; //Objeto de examen que pasaremos a JSON
 //Cargamos los datos generales
