@@ -15,7 +15,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                         <div class="form-group">
                             <label for="tituloexamen">
                                 TITULO EXAMEN
-                                <input id="tituloexamen" type="text" name="tituloexamen" class="form-control"
+                                <input id="tituloexamen" size="100" type="text" name="tituloexamen" class="form-control"
                                        placeholder="Titulo examen"
                                        required autofocus>
                             </label>

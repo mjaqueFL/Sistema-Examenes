@@ -78,10 +78,10 @@ class Instalacion extends CI_Controller
         fwrite($archivoroutes, "\n");
         fwrite($archivoroutes, $texto);
         fclose($archivoroutes);
-        $modelo = fopen("C:\\xampp\htdocs\\GestorExamenes\\application\models\\Preguntas.php","a+");
+/*        $modelo = fopen("C:\\xampp\htdocs\\GestorExamenes\\application\models\\Preguntas.php","a+");
         $texto = 'define("NOMBRECOLECCION",' . $coleccion . ')';
         fwrite($modelo, $texto);
-        fclose($modelo);
+        fclose($modelo);*/
         redirect("Auth");
 
     }

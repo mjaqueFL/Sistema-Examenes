@@ -6,7 +6,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
 <body>
 <div class="container-fluid">
     <div class="col">
-        <h3>Datos Generales</h3>
+        <h3 class="mt-4">Datos Generales</h3>
         <form method="post" id="modifexamen">
             <div class="login-panel panel panel-default">
                 <div class="panel-body">
@@ -67,7 +67,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                                 <div class="form-group">
                                     <label for="seleccionartipopregunta">
                                         <select id="seleccionartipopregunta" class="form-control"
-                                                onchange="cambiarPreguntaestatica(this.value, this.parentNode.parentNode)">
+                                                onchange="cambiarPreguntaestatica(this.value, this.parentNode.parentNode.parentNode)">
                                             <option value="textoCorto">Pregunta con Texto Corto</option>
                                             <option value="textoLargo">Pregunta con Texto Largo</option>
                                             <option value="test">Pregunta tipo Test</option>
@@ -87,7 +87,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                                         ?>
                                         <div class="form-group">
                                             <label for="opcionmultiple" class="input-group-text form-row">Opcion
-<!--                                                <input class="opcionmultiple" hidden type="checkbox" name="preguntamultiple">-->
+                                                <!--                                                <input class="opcionmultiple" hidden type="checkbox" name="preguntamultiple">-->
                                                 <input id="opcionmultiple" class="form-control " type="text"
                                                        value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['texto'] ?>"
                                                        required>
@@ -107,16 +107,17 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                                     } else {
                                         ?>
                                         <div class="form-group">
-                                            <label for="opciontest" class="input-group-text">Opcion
-<!--                                                <input hidden  type="radio" name="preguntatest">-->
+                                            <label for="opciontest" class="input-group-text form-row">Opcion
+                                                <!--                                                <input hidden  type="radio" name="preguntatest">-->
                                                 <input id="opciontest" class="form-control " type="text"
                                                        value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['texto'] ?>"
                                                        required>
-                                                <label class="input-group-text">Puntos <input class="form-control"
-                                                                                              type="number"
-                                                                                              value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['puntos'] ?>"
-                                                                                              required>
-                                                    <input class=" btn btn-outline-warning"
+                                                <label class="input-group-text form-row">Puntos <input
+                                                            class="form-control"
+                                                            type="number"
+                                                            value="<?php echo $this->miexamenconcreto[0]['preguntas'][$i]['opciones'][$j]['puntos'] ?>"
+                                                            required>
+                                                    <input class=" btn btn-secondary"
                                                            onclick="borrarOpcionEstatica(this)" type="button"
                                                            value="Borrar opcion">
                                                 </label>
@@ -140,7 +141,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                                 <div class="form-group">
                                     <label for="cambiarpreguntasestatica">
                                         <select id="cambiarpreguntasestatica" class="form-control"
-                                                onchange="cambiarPreguntaestatica(this.value, this.parentNode.parentNode)">
+                                                onchange="cambiarPreguntaestatica(this.value, this.parentNode.parentNode.parentNode)">
                                             <option value="textoCorto">Pregunta con Texto Corto</option>
                                             <option value="textoLargo">Pregunta con Texto Largo</option>
                                             <option value="test">Pregunta tipo Test</option>

@@ -35,7 +35,7 @@ class Auth extends CI_Controller
 /*        if (file_exists("C:\\xampp\htdocs\\GestorExamenes\\application\controllers\\Instalacion.php"))
             unlink("C:\\xampp\htdocs\\GestorExamenes\\application\controllers\\Instalacion.php");
         if (file_exists("C:\\xampp\htdocs\\GestorExamenes\\application\views\\instalacion.php"))
-            unlink("C:\\xampp\htdocs\\GestorExamenes\\application\iews\\instalacion.php"); la linea se descomentará cuando se presente el proyecto, para evitar
+            unlink("C:\\xampp\htdocs\\GestorExamenes\\application\views\\instalacion.php"); la linea se descomentará cuando se presente el proyecto, para evitar
 el borrado accidental de los metodos de instalacion    */
     }
 
@@ -86,12 +86,6 @@ el borrado accidental de los metodos de instalacion    */
         $data['google_login_url'] = $this->google->get_login_url();
         redirect(base_url());
     }
-
-    /**
-     * Se comprueba el login del usuario
-     *
-     * Si el usuario no está logueado se redirige al controlador Auth, si está logueado el usuario se mantiene en la página
-     */
     public function comprobacion()
     {
         $data['google_login_url'] = $this->google->get_login_url();

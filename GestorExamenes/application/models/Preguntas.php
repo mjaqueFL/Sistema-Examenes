@@ -69,6 +69,4 @@ class Preguntas extends CI_Model
         var_dump($this->mongo_db->where('Titulo examen', $examen)->pop('preguntas', [$id])->update('preguntas'));
 
     }
-
-
 }

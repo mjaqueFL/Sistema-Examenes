@@ -237,18 +237,10 @@ function completarPreguntaRespuestaMultiple(divPregunta) {
     var div = document.createElement('div');
     div.classList.add("form-group")
 
-/*
-    var iTextoRespuesta = document.createElement('input');
-    iTextoRespuesta.setAttribute('type', 'checkbox');
-    iTextoRespuesta.setAttribute('value', 'opcion');
-    iTextoRespuesta.setAttribute('name', 'preguntamultiple');
-*/
-
     var iTextoLabelOpcion = document.createElement('label');
     iTextoLabelOpcion.classList.add('input-group-text', 'form-row')
     iTextoLabelOpcion.innerHTML = "Opcion";
     div.appendChild(iTextoLabelOpcion);
-    iTextoLabelOpcion.appendChild(iTextoRespuesta);
 
     var iTextoRespuesta2 = document.createElement('input');
     iTextoLabelOpcion.appendChild(iTextoRespuesta2);
@@ -460,7 +452,7 @@ function borrarOpcion(evento) {
  * @param evento recibe el evento del boton
  */
 function borrarOpcionEstatica(evento) {
-    evento.parentNode.remove();
+    evento.parentElement.parentElement.remove();
 }
 
 /**
@@ -546,7 +538,6 @@ function cambiarPreguntaestatica(opcion, divPregunta) {
             while (divPregunta.childNodes.length > 2)
                 divPregunta.removeChild(divPregunta.lastChild);
 
-            crearTextoPreguntaEstatica(divPregunta);
             crearSoloRespuestaTextoCorto(divPregunta);
             crearSoloPuntosTextoCorto(divPregunta);
             divPregunta.appendChild(crearIconoBorrar());
@@ -557,7 +548,7 @@ function cambiarPreguntaestatica(opcion, divPregunta) {
             while (divPregunta.childNodes.length > 2)
                 divPregunta.removeChild(divPregunta.lastChild);
 
-            crearTextoPreguntaEstatica(divPregunta);
+
             crearSoloRespuestaTextoLargo(divPregunta);
             crearSoloPuntosTextoCorto(divPregunta)
             divPregunta.appendChild(crearIconoBorrar());
@@ -649,8 +640,8 @@ function crearExamen() {
                     for (let di of divPregunta.children[i].querySelectorAll('input[id=opcionmultiple]')) { //iterar sobre las opciones de las preguntas multiples , el input con el name=preguntatest está en la posicion 5
                         var preguntatest = {}; //cada opcion es un objeto
                         pregunta.opciones.push(preguntatest);
-                        preguntatest.texto = di.nextElementSibling.value;
-                        preguntatest.puntos = di.nextElementSibling.nextElementSibling.children[0].value;
+                        preguntatest.texto = di.value;
+                        preguntatest.puntos = di.nextElementSibling.children[0].value;
                         /*               console.log(di)*/
                     }
                 }
