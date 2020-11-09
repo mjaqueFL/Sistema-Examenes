@@ -5,6 +5,26 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
 ?>
 <body>
 <div class="container-fluid">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Datos cambiados!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Datos del examen cambiados
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="col">
         <h3 class="mt-4">Datos Generales</h3>
         <form method="post" id="modifexamen">
@@ -48,11 +68,30 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
 
     <div class="col">
         <!-- Cierre de preguntas examen-->
-        <form class="" id="formularioenviarexamen"
-              action="http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>"
+        <form  id="formularioenviarexamen"
               method="post">
             <div class=" col-xs-12 mb-3 text-center"><input class="btn btn-success" id="btnEnviar" type="submit"
                                                             value="Enviar"></div>
+            <!-- Modal -->
+            <div class="modal fade" id="enviarexamen" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Preguntas enviadas</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Preguntas del examen cambiadas
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container" id="divPreguntas">
                 <!-- En este div se crean las nuevas preguntas -->
                 <!--Preguntas examen-->
@@ -201,6 +240,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                 data: $(this).serialize(),
                 success: function (response) {
                     window.history.pushState("http://localhost/GestorExamenes/Examenes", "estructura2.php", "crearpreguntas?examen=" + document.getElementsByName('tituloexamen')[0].value);
+                    $("#exampleModalCenter").modal('show');
 
                     /*           var jsonData = JSON.stringify(response);*/
 
@@ -208,6 +248,23 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                                             document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*/
                 }
             });
+        });
+        $('#formularioenviarexamen').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>",
+                data: {data: crearExamen()},
+                success: function (response) {
+                    $("#enviarexamen").modal('show');
+
+                    /*           var jsonData = JSON.stringify(response);*/
+
+                    /*                        console.log(jsonData);
+                                            document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*/
+                }
+            });
+
         });
 
 

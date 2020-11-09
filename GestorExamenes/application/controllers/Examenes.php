@@ -5,8 +5,7 @@
 /**
  * Class Examenes
  */
-
- class Examenes extends CI_Controller
+class Examenes extends CI_Controller
 {
 
     /**
@@ -38,9 +37,9 @@
      */
     public function modificardatos()
     {
-       echo $nombreexamen = $this->input->get('examen');
-        echo $jsonrecibido = $this->input->get('examengenerado');
-        $preguntas = json_decode($jsonrecibido, true);
+        $nombreexamen = $this->input->get('examen');
+        $data = $this->input->post('data');
+        $preguntas = json_decode($data, true);
         $this->Preguntas->editarexamen($nombreexamen, $preguntas);
     }
 
@@ -58,12 +57,12 @@
             'Asignatura' => $this->input->post('asignatura'),
             'Email' => $this->input->post('email'),
         ];
-        $this->Preguntas->modificardatos($data,$_GET['nombreexamen']);
+        $this->Preguntas->modificardatos($data, $_GET['nombreexamen']);
 
-        $examen=$this->Preguntas->sacarexamenconcreto($this->input->post('tituloexamen'));
+        $examen = $this->Preguntas->sacarexamenconcreto($this->input->post('tituloexamen'));
 
         $examen = json_decode(json_encode($examen), true);
-        $this->miexamenconcreto= $examen;
+        $this->miexamenconcreto = $examen;
         /*   return $examen = json_decode(json_encode($examen), true);*/
 
         /*        $this->load->view('estructura2');*/
@@ -115,6 +114,7 @@
 
 
     }
+
     /**
      * Carga vista comprobacion borrado
      *
@@ -136,7 +136,12 @@
     {
         $recoger = $this->input->get('examen');
         $this->Preguntas->borrarexamenconcreto($recoger);
-        redirect("http://localhost/GestorExamenes/Examenes/listarexamenes");
+        $this->borrado = true;
+        $examenes = $this->Preguntas->sacarexamenes();
+
+        $this->misexamenes = $examenes;
+        /*           redirect("http://localhost/GestorExamenes/Examenes/listarexamenes");*/
+        $this->load->view("lista_examenes");
 
     }
 
@@ -151,8 +156,8 @@
         $recoger = $this->input->get('examen');
         $examen = $this->Preguntas->sacarexamenconcreto($recoger);
         //si mandamos el array completo tal y como lo cogemos de la BBDD, la estructura de las preguntas es std object, no podemos acceder a los datos si no es un array
-       $examen = json_decode(json_encode($examen), true);
-        $this->miexamenconcreto= $examen;
+        $examen = json_decode(json_encode($examen), true);
+        $this->miexamenconcreto = $examen;
         $this->load->view('estructura2');
     }
 
@@ -165,7 +170,7 @@
     { //Codeigniter no deja extender de varias clases y al crear objeto no salen los metodos de la otra clase, asi que repetiré este metodo comprobacion en todos los sitios ¯\_(ツ)_/¯
         $data['google_login_url'] = $this->google->get_login_url();
         if ($this->session->userdata('sess_logged_in') == 0) {
-           redirect(Auth::class);
+            redirect(Auth::class);
         }
     }
 }

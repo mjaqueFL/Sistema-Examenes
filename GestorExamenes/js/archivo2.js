@@ -649,10 +649,12 @@ function crearExamen() {
         }
         j++;
     }
-    var link = document.getElementById('formularioenviarexamen');
+/*    var link = document.getElementById('formularioenviarexamen');
     var objson = JSON.stringify(examen);
     link.action.innerHTML += link.action += "&examengenerado=" + objson;
-    link.submit();
+    link.submit();*/
+    var objson=JSON.stringify(examen);
+    return objson;
 
 }
 

@@ -5,6 +5,15 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
 ?>
 <div class="container-fluid">
     <div class="container">
+        <?php
+        if (isset($this->borrado)) {
+            ?>
+            <div class="alert alert-danger" role="alert">
+                Examen borrado con exito
+            </div>
+            <?php
+        }
+        ?>
         <h3>Lista examenes</h3>
         <div class="row">
 
