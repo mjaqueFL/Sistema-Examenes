@@ -23,21 +23,21 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                         <div class="form-group">
                             <label for="curso">
                                 CURSO
-                                <input id="curso" type="text" name="curso" class="form-control" placeholder="Curso"
+                                <input id="curso" size="100"  type="text" name="curso" class="form-control" placeholder="Curso"
                                        required>
                             </label>
                         </div>
                         <div class="form-group">
                             <label for="asignatura">
                                 ASIGNATURA
-                                <input id="asignatura" type="text" name="asignatura" class="form-control"
+                                <input id="asignatura" size="100"  type="text" name="asignatura" class="form-control"
                                        placeholder="Asignatura" required>
                             </label>
                         </div>
                         <div class="form-group">
                             <label for="email" id="email">
                                 EMAIL
-                                <input id="email" type="email" name="email" class="form-control"
+                                <input id="email" size="100"  type="email" name="email" class="form-control"
                                        value="<?php echo $_SESSION['email'] ?>" required readonly="readonly"> <!--disabled no manda datos,
                               readonly si los manda y no permite que se escriba sobre el campo-->
                             </label>

@@ -1,22 +1,9 @@
 <?php
-
-
 class Preguntas extends CI_Model
 {
     public function __construct()
     {
         parent::__construct();
-    }
-
-    public function crearexamen($examen)
-    {
-        $this->mongo_db->insert('preguntas', $examen);
-    }
-
-    public function sacarpreguntas($titulo)
-    {
-        $resultado = $this->mongo_db->where(['Titulo examen' => $titulo])->select(['preguntas'])->get('preguntas');
-        return $resultado;
     }
 
     public function sacarexamenes()
@@ -32,9 +19,9 @@ class Preguntas extends CI_Model
     }
 
     //crear documento examen en mongo con Titulo, curso, asignatura, email , barajar
-    public function datos($pregunta)
+    public function crearexamen($examen)
     {
-        $this->mongo_db->insert('preguntas', $pregunta);
+        $this->mongo_db->insert('preguntas', $examen);
 
     }
 
@@ -55,18 +42,7 @@ class Preguntas extends CI_Model
     // crea el array preguntas en mongo
     public function editarexamen($examen, $datos)
     {
-        /*         $this->mongo_db->where('Titulo examen', $examen)->set($datos, $this->mongo_db->concatArrays('preguntas'))->update('preguntas');*/
-        // print_r($this->mongo_db->where('Titulo examen', $examen)->set($datos, concatArrays['preguntas'])->update('preguntas'));
        $this->mongo_db->where('Titulo examen', $examen)->set($datos)->update('preguntas');
-        /* $this->mongo_db->where('Titulo examen', $examen)->push(array('preguntas' => $datos))->update('preguntas');*/
-
-    }
-
-    /*prueba*/
-    public function borrarpreguntaconcreta($examen, $id)
-    {
-        /* $this->mongo_db->where('Titulo examen', $examen)->set($datos, $last)->update('preguntas');*/
-        var_dump($this->mongo_db->where('Titulo examen', $examen)->pop('preguntas', [$id])->update('preguntas'));
 
     }
 }

@@ -4,7 +4,7 @@
 include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.php');
 ?>
 <div class="container-fluid">
-    <div class="container">
+    <div class="tablaexamen">
         <?php
         if (isset($this->borrado)) {
             ?>
@@ -15,18 +15,17 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
         }
         ?>
         <h3>Lista examenes</h3>
-        <div class="row">
-
-            <div class="col-md-12">
-                <br>
-                <table class="table table-bordered">
-                    <tbody>
+        <div class="table-responsive-sm">
+            <table class="table">
+                <thead>
                     <tr>
                         <th>Titulo examen</th>
                         <th>Curso</th>
                         <th>Asignatura</th>
                         <th>Accion</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <?php
                         foreach ($this->misexamenes as $valor) {
@@ -36,27 +35,21 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                             echo '<td>' . $valor['Asignatura'] . '</td>';
                             ?>
                             <td>
-                                <a href="http://localhost/GestorExamenes/Examenes/crearpreguntas?examen=<?php echo $valor["Titulo examen"] ?>"><img
-                                            src="<?php echo base_url('imagenes/edit.png'); ?>" alt="editarexamen"></a>
-                                <!--                          <a href="http://localhost/GestorExamenes/Examenes/listarpreguntasexamen?examen=<?php /*echo $valor["Titulo examen"] */ ?>"><img
-                                                src="<?php /*echo base_url('imagenes/edit.png'); */ ?>"></a>-->
-                                <a href="http://localhost/GestorExamenes/Examenes/antesborrar?examen=<?php echo $valor["Titulo examen"] ?>"><img
-                                            src="<?php echo base_url('imagenes/cross.png'); ?>" alt="borrarexamen"></a>
+                                <a href="http://localhost/GestorExamenes/Examenes/crearpreguntas?examen=<?php echo $valor["Titulo examen"] ?>"><span
+                                            class="fas fa-edit fa-lg"></span>
+
+                                </a>
+                                <a href="http://localhost/GestorExamenes/Examenes/antesborrar?examen=<?php echo $valor["Titulo examen"] ?>"><span
+                                            class="fas fa-times fa-lg"></span></a>
                             </td>
                             <?php
-                            echo '<br>';
                             echo '</tr>';
                         }
-
                         ?>
                     </tr>
-                    </tbody>
-                </table>
-
-            </div>
-
+                </tbody>
+            </table>
         </div>
-        <br><br><br><br>
 
     </div>
 </div>

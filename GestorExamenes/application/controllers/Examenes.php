@@ -59,15 +59,10 @@ class Examenes extends CI_Controller
         ];
         $this->Preguntas->modificardatos($data, $_GET['nombreexamen']);
 
-        $examen = $this->Preguntas->sacarexamenconcreto($this->input->post('tituloexamen'));
+/*        $examen = $this->Preguntas->sacarexamenconcreto($this->input->post('tituloexamen'));
 
         $examen = json_decode(json_encode($examen), true);
-        $this->miexamenconcreto = $examen;
-        /*   return $examen = json_decode(json_encode($examen), true);*/
-
-        /*        $this->load->view('estructura2');*/
-
-        /* $this->load->view('estructura2');*/
+        $this->miexamenconcreto = $examen;*/
     }
 
     /**
@@ -90,7 +85,7 @@ class Examenes extends CI_Controller
             'Email' => $this->input->post('email'),
             'Barajar' => $barajar,
         );
-        $this->Preguntas->datos($examen);
+        $this->Preguntas->crearexamen($examen);
         redirect("http://localhost/GestorExamenes/Examenes/examencreado");
     }
 

@@ -33,9 +33,13 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
             <div id="collapseQuiz" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
 
-                    <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/">Crear examen</a>
+                    <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/"><img
+                                class="imgcrearexamen" src="/GestorExamenes/imagenes/examen.svg"
+                                alt="imagenaltaexamen"/>Crear examen</a>
 
-                    <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/listarexamenes">Lista
+                    <a class="collapse-item" href="http://localhost/GestorExamenes/Examenes/listarexamenes"><img
+                                class="imgcrearexamen" src="/GestorExamenes/imagenes/listaexamen.svg"
+                                alt="imagenlistaexamen"/>Lista
                         examenes</a>
 
                 </div>
@@ -44,20 +48,24 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\head.php');
         <?php if (isset($_SESSION['name'])) { ?>
             <div class="col s12 m6 l4 offset-l3 ">
                 <div class="card ">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class=" img img-fluid" src="<?= $_SESSION['profile_pic'] ?>" alt="imagencuenta">
-                    </div>
                     <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4"> <span
-                                  class="material-icons"><p class="text-center"><?= $_SESSION['name'] ?></p></span></span>
+                        <?php
+                        if (http_response_code(403)) {
+                            ?>
+                            <span class="p-2 fa-user fas fa-lg"></span>
+                            <?php
+                        } else {
+                            ?>
+                            <img class=" img img-fluid" src="<?= $_SESSION['profile_pic'] ?>" alt="imagencuenta">
+                            <?php
+                        }
+                        ?>
+                        <p class="text-center"><?= $_SESSION['name'] ?>
+
+                        </p>
                     </div>
-                    <a href="<?= base_url()?>auth/logout" class="waves-effect waves-light btn red"><span
-                                class="fa fa-google left"></span>Google logout</a>
-                    <!--                    <div class="card-reveal">
-                        <p class="lead text-justify"><? /*= $_SESSION['email'] */ ?></p>
-                        <span class="card-title grey-text text-darken-4"><? /*= $_SESSION['name'] */ ?><i
-                                    class="material-icons right"></i></span>
-                    </div>-->
+                    <a href="<?= base_url() ?>auth/logout" class="btn btn-info"><span
+                                class="float-left fas fa-sign-out-alt"></span>Google logout</a>
                 </div>
             </div>
         <?php } ?>

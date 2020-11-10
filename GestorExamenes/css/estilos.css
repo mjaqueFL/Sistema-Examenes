@@ -87,6 +87,18 @@ footer .copyright {
     width: 100%;
     word-break: break-word;
 }
+/*.tablaexamen {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0;
+    border: solid #f7f7f9;
+    border-width: .2rem 0 0;
+}*/
+
+.imgcrearexamen {
+    width: 30px;
+    height: auto;
+}
 
 #btnEnviar {
 
