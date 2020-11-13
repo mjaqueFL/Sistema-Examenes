@@ -30,30 +30,30 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
         <form method="post" id="modifexamen">
             <div class="login-panel panel panel-default">
                 <div class="panel-body">
-                    <div class="form-group col-md-6 col-10 col-xl-12">
+                    <div class="form-group ">
                         <label for="inputTitulo">
                             Titulo examen
-                            <input id="inputTitulo" type="text" name="tituloexamen" class="form-control"
+                            <input size="100" id="inputTitulo" type="text" name="tituloexamen" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>">
                         </label>
                     </div>
-                    <div class="form-group col-md-6 col-xl-12 col-10">
+                    <div class="form-group ">
                         <label for="inputCurso">
                             Curso
-                            <input id="inputCurso" type="text" name="curso" class="form-control"
+                            <input size="100" id="inputCurso" type="text" name="curso" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Curso'] ?>">
                         </label>
                     </div>
-                    <div class="form-group col-md-6 col-xl-12  col-10">
+                    <div class="form-group ">
                         <label for="inputAsignatura">
                             Asignatura
-                            <input id="inputAsignatura" type="text" name="asignatura" class="form-control"
+                            <input size="100" id="inputAsignatura" type="text" name="asignatura" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Asignatura'] ?>">
                         </label>
                     </div>
-                    <div class="form-group col-md-6 col-xl-12  col-10">
+                    <div class="form-group ">
                         <label for="inputEmail">Email
-                            <input id="inputEmail" type="email" name="email" class="form-control"
+                            <input readonly="readonly" size="100" id="inputEmail" type="email" name="email" class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Email'] ?>">
                         </label>
                     </div>

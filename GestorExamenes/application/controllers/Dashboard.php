@@ -37,7 +37,10 @@ class Dashboard extends CI_Controller
     { //Codeigniter no deja extender de varias clases y al crear objeto no salen los metodos de la otra clase, asi que repetiré este metodo comprobacion en todos los sitios ¯\_(ツ)_/¯
         $data['google_login_url'] = $this->google->get_login_url();
         if ($this->session->userdata('sess_logged_in') == 0) {
-            redirect(Auth::class);
+            if (file_exists("C:\\xampp\htdocs\\GestorExamenes\\application\controllers\\Instalacion.php")) {
+                redirect(Instalacion::class);
+            } else
+                redirect(Auth::class);
         }
     }
 }

@@ -2,6 +2,9 @@ body {
     /*    display: flex;*/
     font-family: 'Montserrat', sans-serif !important;
 }
+#bodyauth {
+    background-color: #F3F3F3;
+}
 
 #instalacion {
     background: #F3F3F3;
@@ -102,6 +105,9 @@ footer .copyright {
 
 #btnEnviar {
 
+}
+.fa-google {
+    padding:  10px;
 }
 
 @media (max-width: 1100px) {

@@ -44,6 +44,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                         </div>
                         <div class="form-group">
                             <label for="opcionbarajar">
+                                Barajar Examen?
                                 <select id="opcionbarajar" name="barajar">
                                     <option value="True">True</option>
                                     <option value="False">False</option>

@@ -3,31 +3,16 @@
 <?php
 include('C:\xampp\htdocs\GestorExamenes\application\views\templates\headauth.php');
 ?>
-<body>
+<body id="bodyauth" class="text-center">
+<form  class=" border form-signin">
+    <img class="img img-fluid mb-4" src="https://www.entramar.mvl.edu.ar/wp-content/uploads/2015/07/Tests-icon.png" alt=""/>
+    <h1 class="h3 mb-3 font-weight-bold">GESTOR EXAMENES</h1>
+    <a  href="<?= $google_login_url ?>" class="waves-effect waves-light btn red"><span
+                class="fa fa-google left fa-2x""></span>LOGIN
+        GOOGLE</a><!--Redirige al autenticador de google-->
+    <p class="mt-5 mb-3 font-weight-bold ">By:-Nacho</p>
+</form>
 
-<div align="center">
-    <h2>Gestor Examenes</h2>
-</div>
-<div class="container">
-    <div class="row">
-        <a class="btn btn-large">By:-Nacho</a>
-        <div class="col s12 m6 offset-m3 l6 offset-l3">
 
-            <?php
-            if ($this->session->userdata('sess_logged_in') == 0) {
-                ?>
-                <a href="<?= $google_login_url ?>" class="waves-effect waves-light btn red"><span
-                            class="fa fa-google left"></span>Haz click para hacer login con
-                    GOOGLE</a><!--Redirige al autenticador de google-->
-            <?php } else {
-                ?>
-                <a href="<?= base_url() ?>auth/logout" class="waves-effect waves-light btn red"><span
-                            class="fa fa-google left"></span>Google logout</a>
-            <?php }
-            ?>
-
-        </div>
-    </div>
-</div>
 </body>
 </html>
