@@ -5,7 +5,7 @@
     <div class="social">
         <ul class="list-unstyled">
             <li>
-                <a class="cookie"  href="Cookies.html">Política de Cookies</a>
+                <a class="cookie"  href="<?php echo base_url() ?>Legal/cookies">Política de Cookies</a>
             </li>
             <li>
                 <a class="privacidad" href="Privacidad.html">Política de privacidad</a>

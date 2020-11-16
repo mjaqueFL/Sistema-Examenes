@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <?php
-include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.php');
+include('templates/dashboard.php');
 ?>
 <body>
 <div class="container-fluid">
@@ -13,9 +13,9 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                 click en "Volver a lista de examenes" ,si quiere volver a la lista de examenes
             </div>
             <a class="btn btn-danger"
-               href="http://localhost/GestorExamenes/Examenes/borrarexamen?examen=<?php echo $this->borrarexamen ?>">Borrar
+               href="<?php echo base_url() ?>Examenes/borrarexamen?examen=<?php echo $this->borrarexamen ?>">Borrar
                 examen</a>
-            <a class="btn btn-success" href="http://localhost/GestorExamenes/Examenes/listarexamenes">Volver a lista de
+            <a class="btn btn-success" href="<?php echo base_url() ?>Examenes/listarexamenes">Volver a lista de
                 examenes</a>
         </div>
     </div>

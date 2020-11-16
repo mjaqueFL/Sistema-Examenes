@@ -16,6 +16,7 @@ class Examenes extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->helper('url');
         $this->load->library('google'); /*Libreria de Google necesaria*/
         $this->load->model('Preguntas');
         $this->comprobacion();
@@ -59,10 +60,6 @@ class Examenes extends CI_Controller
         ];
         $this->Preguntas->modificardatos($data, $_GET['nombreexamen']);
 
-        /*        $examen = $this->Preguntas->sacarexamenconcreto($this->input->post('tituloexamen'));
-
-                $examen = json_decode(json_encode($examen), true);
-                $this->miexamenconcreto = $examen;*/
     }
 
     /**
@@ -86,7 +83,7 @@ class Examenes extends CI_Controller
             'Barajar' => $barajar,
         );
         $this->Preguntas->crearexamen($examen);
-        redirect("http://localhost/GestorExamenes/Examenes/examencreado");
+        redirect(base_url() . 'Examenes/examencreado');
     }
 
     /**
@@ -164,11 +161,13 @@ class Examenes extends CI_Controller
     public function comprobacion()
     { //Codeigniter no deja extender de varias clases y al crear objeto no salen los metodos de la otra clase, asi que repetiré este metodo comprobacion en todos los sitios ¯\_(ツ)_/¯
         $data['google_login_url'] = $this->google->get_login_url();
-        if ($this->session->userdata('sess_logged_in') == 0) {
-            if (file_exists("C:\\xampp\htdocs\\GestorExamenes\\application\controllers\\Instalacion.php")) {
-                redirect(Instalacion::class);
-            } else
+        if (file_exists(APPPATH . 'controllers\Instalacion.php')) {
+            redirect(Instalacion::class);
+        } else {
+            if ($this->session->userdata('sess_logged_in') == 0) {
                 redirect(Auth::class);
+            }
         }
     }
+
 }

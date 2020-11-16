@@ -1,13 +1,12 @@
 <!doctype html>
 <html lang="en">
 <?php
-include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.php');
-
+include('templates/dashboard.php');
 ?>
 <div class="container-fluid">
     <h3>Alta examen</h3>
     <div class="row">
-        <form method="post" action="http://localhost/GestorExamenes/Examenes/crearexamen">
+        <form method="post" action="<?php echo base_url()?>Examenes/crearexamen">
             <div class="col-md-12">
                 <br>
                 <div class="login-panel panel panel-default">
@@ -55,14 +54,11 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
                     </div>
                 </div>
                 <br>
-                <a class=" btn btn-danger" href="http://localhost/GestorExamenes/Dashboard">Cancelar </a>
+                <a class=" btn btn-danger" href="<?php echo base_url() ?>Dashboard">Cancelar</a>
             </div>
 
         </form>
     </div>
-    <?php
-    include('C:\xampp\htdocs\GestorExamenes\application\views\templates\footer.php');
-    ?>
 </div>
 
 </html>

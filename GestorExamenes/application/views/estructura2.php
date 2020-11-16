@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <?php
-include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.php');
+include('templates/dashboard.php');
 ?>
 <body>
 <div class="container-fluid">
@@ -236,16 +236,18 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url: "http://localhost/GestorExamenes/Examenes/modificarajax?nombreexamen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
+                url:"<?php echo base_url()?>Examenes/modificarajax?nombreexamen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
                 data: $(this).serialize(),
                 success: function (response) {
-                    window.history.pushState("http://localhost/GestorExamenes/Examenes", "estructura2.php", "crearpreguntas?examen=" + document.getElementsByName('tituloexamen')[0].value);
+                    window.history.pushState("<?php echo base_url()?>Examenes", "estructura2.php", "crearpreguntas?examen=" + document.getElementsByName('tituloexamen')[0].value);
                     $("#exampleModalCenter").modal('show');
-
-                    /*           var jsonData = JSON.stringify(response);*/
-
-                    /*                        console.log(jsonData);
-                                            document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*/
+                    $('#exampleModalCenter').on('hidden.bs.modal', function () {
+                        location.reload();
+                    })
+            /*        setTimeout(function()
+                    {
+                        location.reload();  //Refresh page
+                    }, 5000);*/
                 }
             });
         });
@@ -253,15 +255,11 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url: "http://localhost/GestorExamenes/Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen'] ?>",
+                url:"<?php echo base_url()?>Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
                 data: {data: crearExamen()},
                 success: function (response) {
                     $("#enviarexamen").modal('show');
 
-                    /*           var jsonData = JSON.stringify(response);*/
-
-                    /*                        console.log(jsonData);
-                                            document.getElementsByName("tituloexamen").innerHTML = jsonData[0].Curso;*/
                 }
             });
 
@@ -277,7 +275,7 @@ include('C:\xampp\htdocs\GestorExamenes\application\views\templates\dashboard.ph
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-<script type="text/javascript" src="http://localhost/GestorExamenes/js/archivo2.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/archivo2.js"></script>
 
 </body>
 </html>

@@ -15,6 +15,7 @@ class Dashboard extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->helper('url');
         $this->load->library('google'); /*Libreria de Google necesaria*/
         $this->comprobacion();
     }
@@ -34,13 +35,17 @@ class Dashboard extends CI_Controller
      * Si el usuario no está logueado se redirige al controlador Auth, si está logueado el usuario se mantiene en la página
      */
     public function comprobacion()
-    { //Codeigniter no deja extender de varias clases y al crear objeto no salen los metodos de la otra clase, asi que repetiré este metodo comprobacion en todos los sitios ¯\_(ツ)_/¯
+    {
+        //Codeigniter no deja extender de varias clases y al crear objeto no salen los metodos de la otra clase, asi que repetiré este metodo comprobacion en todos los sitios ¯\_(ツ)_/¯
         $data['google_login_url'] = $this->google->get_login_url();
-        if ($this->session->userdata('sess_logged_in') == 0) {
-            if (file_exists("C:\\xampp\htdocs\\GestorExamenes\\application\controllers\\Instalacion.php")) {
-                redirect(Instalacion::class);
-            } else
+
+        if (file_exists(APPPATH . 'controllers\Instalacion.php')) {
+            redirect(Instalacion::class);
+        } else {
+            if ($this->session->userdata('sess_logged_in') == 0) {
                 redirect(Auth::class);
+            }
         }
     }
+
 }

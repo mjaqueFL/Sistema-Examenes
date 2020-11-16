@@ -1,5 +1,5 @@
 <?php
-require_once('head.php');
+require_once('templates/head.php');
 ?>
 <div id="wrapper">
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -13,7 +13,7 @@ require_once('head.php');
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="<?php echo base_url()?>Dashboard">
+            <a class="nav-link" href="<?php echo base_url() ?>Dashboard">
                 <span class="fas fa-fw fa-tachometer-alt"></span>
                 <span>Dashboard</span></a>
         </li>
@@ -31,7 +31,7 @@ require_once('head.php');
             <div id="collapseQuiz" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
 
-                    <a class="collapse-item" href="<?php echo base_url()?>Examenes/"><img
+                    <a class="collapse-item" href="<?php echo base_url() ?>Examenes/"><img
                                 class="imgcrearexamen" src="/GestorExamenes/imagenes/examen.svg"
                                 alt="imagenaltaexamen"/>Crear examen</a>
 
@@ -68,5 +68,5 @@ require_once('head.php');
         <?php } ?>
     </ul>
     <?php
-    include('footer.php');
+    include('templates/footer.php');
     ?>

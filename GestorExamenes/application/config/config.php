@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/GestorExamenes/';
 
 /*
 |--------------------------------------------------------------------------
@@ -499,5 +499,3 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 //esta variable se generará en la instalacion, para las pruebas la pongo a pelo
-
-define("COLECCION","backupexamenes ");
