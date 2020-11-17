@@ -67,6 +67,3 @@ require_once('head.php');
             </div>
         <?php } ?>
     </ul>
-    <?php
-    include('footer.php');
-    ?>

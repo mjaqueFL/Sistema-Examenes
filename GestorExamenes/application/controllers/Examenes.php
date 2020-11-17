@@ -132,7 +132,6 @@ class Examenes extends CI_Controller
         $examenes = $this->Preguntas->sacarexamenes();
 
         $this->misexamenes = $examenes;
-        /*           redirect("http://localhost/GestorExamenes/Examenes/listarexamenes");*/
         $this->load->view("lista_examenes");
 
     }

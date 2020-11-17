@@ -229,7 +229,6 @@ include('templates/dashboard.php');
            class="btn btn-danger">Enviar </a>-->
     </div>
 </div>
-
 <script type="text/javascript">
     $(document).ready(function () {
         $('#modifexamen').submit(function (e) {

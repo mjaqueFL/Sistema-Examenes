@@ -20,5 +20,15 @@ include('templates/dashboard.php');
         </div>
     </div>
 </div>
+<?php
+include 'templates/footer.php'
+?>
+<?php
+include 'templates/comprobacionescookie.php'
+?>
+<?php
+include 'templates/divcookie.php'
+?>
+
 </body>
 </html>
