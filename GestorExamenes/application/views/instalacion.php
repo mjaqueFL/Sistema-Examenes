@@ -12,7 +12,7 @@ include('templates/head.php');
         </div>
         <div class="form-group">
             <label for="Nombrecoleccion">Nombre de la coleccion</label>
-            <input name="nombrecol" required type="text" class="form-control" id="Nombrecoleccion" placeholder="Nombrecoleccion">
+            <input name="nombrecol" required type="text" class="form-control" id="Nombrecoleccion" placeholder="Nombre Colección">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
