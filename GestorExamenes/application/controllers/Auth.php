@@ -33,12 +33,12 @@ class Auth extends CI_Controller
      */
     public function index()
     {
-/*        if (file_exists(APPPATH . 'controllers\Instalacion.php'))
+        if (file_exists(APPPATH . 'controllers\Instalacion.php'))
             unlink(APPPATH . 'controllers\Instalacion.php');
         if (file_exists(APPPATH . 'views\instalacion.php')) {
             unlink(APPPATH . 'views\instalacion.php');
 
-        }*/
+        }
         /*la linea se descomentará cuando se presente el proyecto, para evitar
         el borrado accidental de los metodos de instalacion    */
     }

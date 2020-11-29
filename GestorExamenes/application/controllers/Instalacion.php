@@ -73,13 +73,13 @@ class Instalacion extends CI_Controller
         $texto = '$config["mongo_db"]["default"]["legacy_support"] = TRUE;';
         fwrite($myfile, $texto);
         fclose($myfile);
-        rename('testfile.php', APPPATH . '\config\mongo_db.php');
-        $archivoroutes = fopen(APPPATH . '\config\routes.php', "a+");
+        rename('testfile.php', APPPATH . DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'mongo_db.php');
+        $archivoroutes = fopen(APPPATH . DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'routes.php', "a+");
         $texto = '$route["default_controller"] = "Auth";';
         fwrite($archivoroutes, "\n");
         fwrite($archivoroutes, $texto);
         fclose($archivoroutes);
-        $modelo = fopen(APPPATH . '\config\config.php',"a+");
+        $modelo = fopen(APPPATH . DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php',"a+");
         $texto = 'define("COLECCION",' . $coleccion . ');';
         fwrite($modelo, "\n");
         fwrite($modelo, $texto);
