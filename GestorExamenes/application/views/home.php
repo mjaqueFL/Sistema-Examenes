@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="en">
+<head>
+    <title>Login Gestor Examenes</title>
+</head>
 <?php
 include('templates/headauth.php');
 ?>

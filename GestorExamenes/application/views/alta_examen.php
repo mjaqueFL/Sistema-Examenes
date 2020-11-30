@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="en">
+<head>
+    <title>Alta Examenes-GestorExamenes</title>
+</head>
 <?php
 include('templates/dashboard.php');
 ?>
-<body>
+
 <div class="container-fluid">
     <h3>Alta examen</h3>
     <div class="row">
@@ -71,7 +74,5 @@ include 'templates/comprobacionescookie.php'
 <?php
 include 'templates/divcookie.php'
 ?>
-
-</body>
 </html>
 

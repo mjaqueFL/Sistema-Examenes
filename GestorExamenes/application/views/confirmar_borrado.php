@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="en">
+<head>
+    <title>Confirmar borrado examen-Gestor Examenes</title>
+</head>
 <?php
 include('templates/dashboard.php');
 ?>

@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Dashboard</title>
+</head>
 <?php
 require_once('head.php');
 ?>
@@ -67,3 +72,4 @@ require_once('head.php');
             </div>
         <?php } ?>
     </ul>
+</html>

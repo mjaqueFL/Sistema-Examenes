@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="en">
+<head>
+    <title>Modificar Examen-Gestor Examenes</title>
+</head>
 <?php
 include('templates/dashboard.php');
 ?>
@@ -11,7 +14,7 @@ include('templates/dashboard.php');
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Datos cambiados!</h5>
+                    <h1 class="modal-title" id="exampleModalLongTitle">Datos cambiados!</h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -26,7 +29,7 @@ include('templates/dashboard.php');
         </div>
     </div>
     <div class="col">
-        <h3 class="mt-4">Datos Generales</h3>
+        <h2 class="mt-4">Datos Generales</h2>
         <form method="post" id="modifexamen">
             <div class="login-panel panel panel-default">
                 <div class="panel-body">

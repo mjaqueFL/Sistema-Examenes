@@ -3,7 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Aplicacion Code igniter</title>
     <link href="<?php echo base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>css/estilos.css" rel="stylesheet">
