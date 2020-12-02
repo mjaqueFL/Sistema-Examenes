@@ -3,14 +3,13 @@
 //Ignacio Lorenzo Vélez 2ºDAW PROYECTO SISTEMA GESTION EXAMENES
 
 /**
- * Class Dashboard
+ * Class Legal
  */
 class Legal extends CI_Controller
 {
     /**
-     * Constructor dashboard
+     * Legal constructor.
      *
-     * Se carga la libreria de google y se comprueba que el usuario está logueado para el acceso por URL
      */
     function __construct()
     {
@@ -20,21 +19,33 @@ class Legal extends CI_Controller
 
     }
 
+    /**
+     *
+     */
     public function index()
     {
     }
 
+    /**
+     * Carga la página de la política de cookies
+     */
     function cookies()
     {
         $this->load->view('cookies');
     }
 
+    /**
+     * Carga la política de privacidad
+     */
     function privacidad()
     {
         $this->load->view('privacidad');
 
     }
 
+    /**
+     * Carga el aviso legal
+     */
     function legal()
     {
         $this->load->view('avisolegal');

@@ -241,7 +241,7 @@ include('templates/dashboard.php');
                 url:"<?php echo base_url()?>Examenes/modificarajax?nombreexamen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
                 data: $(this).serialize(),
                 success: function (response) {
-                    window.history.pushState("<?php echo base_url()?>Examenes", "estructura2.php", "crearpreguntas?examen=" + document.getElementsByName('tituloexamen')[0].value);
+                    window.history.pushState("<?php echo base_url()?>Examenes", "modificar_examen.php", "crearpreguntas?examen=" + document.getElementsByName('tituloexamen')[0].value);
                     $("#exampleModalCenter").modal('show');
                     $('#exampleModalCenter').on('hidden.bs.modal', function () {
                         location.reload();

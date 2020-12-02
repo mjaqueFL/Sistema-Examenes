@@ -39,7 +39,9 @@ class Examenes extends CI_Controller
     public function modificardatos()
     {
         $nombreexamen = $this->input->get('examen');
-        $data = $this->input->post('data');
+/*        $data = $this->input->post('data');*/
+/*        $data =filter_input(INPUT_POST,'data',FILTER_SANITIZE_STRING);   */
+        $data =strip_tags( $this->input->post('data'));
         $preguntas = json_decode($data, true);
         $this->Preguntas->editarexamen($nombreexamen, $preguntas);
     }
@@ -53,10 +55,10 @@ class Examenes extends CI_Controller
     public function modificarajax()
     {
         $data = [
-            'Titulo examen' => $this->input->post('tituloexamen'),
-            'Curso' => $this->input->post('curso'),
-            'Asignatura' => $this->input->post('asignatura'),
-            'Email' => $this->input->post('email'),
+            'Titulo examen' => strip_tags($this->input->post('tituloexamen')),
+            'Curso' => strip_tags($this->input->post('curso')),
+            'Asignatura' => strip_tags($this->input->post('asignatura')),
+            'Email' => strip_tags($this->input->post('email')),
         ];
         $this->Preguntas->modificardatos($data, $_GET['nombreexamen']);
 
@@ -76,11 +78,27 @@ class Examenes extends CI_Controller
             $barajar = false;
         }
         $examen = array(
-            'Titulo examen' => $this->input->post('tituloexamen'),
+            'Titulo examen' => strip_tags($this->input->post('tituloexamen')),
+            'Curso' => strip_tags($this->input->post('curso')),
+            'Asignatura' => strip_tags($this->input->post('asignatura')),
+            'Email' => strip_tags($this->input->post('email')),
+            'Barajar' => $barajar,
+            /*                        'Titulo examen' => filter_input(INPUT_POST,$this->input->post('tituloexamen'),FILTER_SANITIZE_STRING),
+                                    'Curso' => filter_input(INPUT_POST,$this->input->post('curso'),FILTER_SANITIZE_STRING),
+                                    'Asignatura' =>filter_input(INPUT_POST,$this->input->post('asignatura'),FILTER_SANITIZE_STRING),
+                                    'Email' => filter_input(INPUT_POST,$this->input->post('email'),FILTER_SANITIZE_STRING),
+                                    'Barajar' => $barajar,*/
+/*            'Titulo examen' => filter_input(INPUT_POST,$this->input->post('tituloexamen'),FILTER_SANITIZE_SPECIAL_CHARS),
+            'Curso' => filter_input(INPUT_POST,$this->input->post('curso'),FILTER_SANITIZE_SPECIAL_CHARS),
+            'Asignatura' =>filter_input(INPUT_POST,$this->input->post('asignatura'),FILTER_SANITIZE_SPECIAL_CHARS),
+            'Email' => filter_input(INPUT_POST,$this->input->post('email'),FILTER_SANITIZE_SPECIAL_CHARS),
+            'Barajar' => $barajar*/
+
+/*            'Titulo examen' => $this->input->post('tituloexamen'),
             'Curso' => $this->input->post('curso'),
             'Asignatura' => $this->input->post('asignatura'),
             'Email' => $this->input->post('email'),
-            'Barajar' => $barajar,
+            'Barajar' => $barajar,*/
         );
         $this->Preguntas->crearexamen($examen);
         redirect(base_url() . 'Examenes/examencreado');
@@ -95,7 +113,7 @@ class Examenes extends CI_Controller
     }
 
     /**
-     *
+     * Muestra los examenes de la base de datos con la coleccion especificada en el proceso de instalacion
      */
     public function listarexamenes()
     {
@@ -103,8 +121,6 @@ class Examenes extends CI_Controller
         $examenes = $this->Preguntas->sacarexamenes();
         $this->misexamenes = $examenes;
         $this->load->view('lista_examenes');
-
-
     }
 
     /**
@@ -149,9 +165,15 @@ class Examenes extends CI_Controller
         //si mandamos el array completo tal y como lo cogemos de la BBDD, la estructura de las preguntas es std object, no podemos acceder a los datos si no es un array
         $examen = json_decode(json_encode($examen), true);
         $this->miexamenconcreto = $examen;
-        $this->load->view('estructura2');
-    }
+        if (empty($this->miexamenconcreto)) {
+            $this->load->view('mensaje_error');
+            /*exit(0);*/
+        } else {
+            $this->load->view('modificar_examen');
+        }
 
+
+    }
     /**
      * Se comprueba el login del usuario
      *

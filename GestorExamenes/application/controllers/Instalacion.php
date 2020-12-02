@@ -3,7 +3,6 @@
 /**
  * Class Instalacion
  */
-
 class Instalacion extends CI_Controller
 {
     /**
@@ -31,13 +30,17 @@ class Instalacion extends CI_Controller
      */
     public function crearArchivo()
     {
-        $basedatos = $this->input->post("nombrebd");
-        $coleccion=$this->input->post("nombrecol");
+        $basedatos = filter_input(INPUT_POST, $this->input->post("nombrebd"), FILTER_SANITIZE_STRING);
+        $coleccion = filter_input(INPUT_POST, $this->input->post("nombrecol"), FILTER_SANITIZE_STRING);
         if (empty($basedatos)) {
             $basedatos = "basedatosdefault";
-        } // si un listo entra en el metodo se genera una por defecto
+        }
+        if (empty($coleccion)) {
+            $coleccion = "colecciondefault";
+        }
+        // si un listo entra en el metodo se genera una por defecto
         $basedatos = '"' . $basedatos . '"';
-        $basedatos=str_replace(' ', '', $basedatos);
+        $basedatos = str_replace(' ', '', $basedatos);
         $coleccion = '"' . $coleccion . '"';
         $myfile = fopen("testfile.php", "w");
         $texto = '<?php';
@@ -73,13 +76,13 @@ class Instalacion extends CI_Controller
         $texto = '$config["mongo_db"]["default"]["legacy_support"] = TRUE;';
         fwrite($myfile, $texto);
         fclose($myfile);
-        rename('testfile.php', APPPATH . DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'mongo_db.php');
-        $archivoroutes = fopen(APPPATH . DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'routes.php', "a+");
+        rename('testfile.php', APPPATH . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'mongo_db.php');
+        $archivoroutes = fopen(APPPATH . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'routes.php', "a+");
         $texto = '$route["default_controller"] = "Auth";';
         fwrite($archivoroutes, "\n");
         fwrite($archivoroutes, $texto);
         fclose($archivoroutes);
-        $modelo = fopen(APPPATH . DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php',"a+");
+        $modelo = fopen(APPPATH . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'config.php', "a+");
         $texto = 'define("COLECCION",' . $coleccion . ');';
         fwrite($modelo, "\n");
         fwrite($modelo, $texto);

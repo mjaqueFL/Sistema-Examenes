@@ -4,7 +4,7 @@ document.getElementById("formularioenviarexamen").onsubmit = crearExamen;
 
 
 /**
- * Cuando se carga la página estructura2.php se inicia este método
+ * Cuando se carga la página modificar_examen.php se inicia este método
  *
  * Se le asigna al voton nueva pregunta el metodo crearPregunta para que cada vez que se pulse se genere
  * otro div con una pregunta
@@ -310,7 +310,7 @@ function crearOpcion(valor, texto) {
  * Este metodo crea el texto de la pregunta y su input
  *
  * Este método es para la pregunta que viene de la base de datos si el examen tiene preguntas ya creadas
- * Sobre el archivo estructura2 hay un select estático que al cambiar de pregunta borra todo el div con la pregunta
+ * Sobre el archivo modificarexamen hay un select estático que al cambiar de pregunta borra todo el div con la pregunta
  *
  * @param divPregunta  Recibe el div padre sobre el que se está trabajando
  * @returns {HTMLDivElement} Devuelve el elemento creado sobre el div que está invocando el metodo
@@ -423,7 +423,7 @@ function borrarPregunta(evento) {
 /**
  * Hace lo mismo que el borrarPregunta pero sobre las preguntas que vienen de la base de datos
  *
- * Este método es como el borrarPregunta pero se invoca desde el archivo estructura2
+ * Este método es como el borrarPregunta pero se invoca desde el archivo modificar_examen
  * @param elemento Recibe el elemento que está invocando al metodo
  */
 function borrarPreguntaEstatica(elemento) {
@@ -445,7 +445,7 @@ function borrarOpcion(evento) {
 }
 
 /**
- * Crea el metodo que borra el div que contiene la opcion de la pregunta desde el archivo estructura2
+ * Crea el metodo que borra el div que contiene la opcion de la pregunta desde el archivo modificar_examen
  *
  * Este metodo se invoca al pulsar el boton "borraropcion" que borrara el div que contiene
  * el boton
@@ -524,7 +524,7 @@ function cambiarPregunta(evento) {
  * y dependiendo del tipo de pregunta se cargan unos metodos u otros que crearan
  * los elementos de ese div de esa pregunta
  *
- * Este metodo se usa para los select estáticos en estructura2 para las preguntas que vienen
+ * Este metodo se usa para los select estáticos en modificar_examen para las preguntas que vienen
  * de la base de datos
  * @param evento recibe el tipo de evento del select
  */
