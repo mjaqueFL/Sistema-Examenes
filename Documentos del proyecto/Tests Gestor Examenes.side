@@ -1,0 +1,4587 @@
+{
+  "id": "202bd161-92b4-4b31-b6f5-f359cca3e897",
+  "version": "2.0",
+  "name": "Tests Gestor Examenes",
+  "url": "http://localhost/GestorExamenes",
+  "tests": [{
+    "id": "c85b6f69-66cf-4ce6-9b7f-1422cd22ae76",
+    "name": "Alta",
+    "commands": []
+  }, {
+    "id": "03fbc6fd-6d2d-45c9-b8b3-2298b2efebf0",
+    "name": "4-Login Correcto",
+    "commands": [{
+      "id": "ac242a48-36a7-4cda-a640-413b320f3524",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b794147c-7848-439d-8092-88dfd3a15a7a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc3f1e76-7564-4949-997b-92e9ce244458",
+      "comment": "",
+      "command": "click",
+      "target": "css=.waves-effect",
+      "targets": [
+        ["css=.waves-effect", "css:finder"],
+        ["xpath=//a[contains(text(),'LOGIN\n        GOOGLE')]", "xpath:link"],
+        ["xpath=//body[@id='bodyauth']/form/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2FGestorExamenes%2Fauth%2Foauth2callback&client_id=699526078858-snv81f52abi35p37234gp1pjjdk9p78v.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&approval_prompt=auto')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d524f016-e317-4bca-93ec-35297e5c4074",
+      "comment": "",
+      "command": "click",
+      "target": "css=.JDAKTe:nth-child(2) #profileIdentifier",
+      "targets": [
+        ["css=.JDAKTe:nth-child(2) #profileIdentifier", "css:finder"],
+        ["xpath=(//div[@id='profileIdentifier'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[2]/div/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/div/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba87ee9e-473c-40c5-a9c9-d863e3c7967d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.I0VJ4d .whsOnd", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='password']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d182a1b-2640-4184-a83e-88456289e1c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb",
+      "targets": [
+        ["css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb", "css:finder"],
+        ["xpath=//div[@id='passwordNext']/div/button/div[2]", "xpath:idRelative"],
+        ["xpath=//button/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c3caf691-ac36-412c-b7e9-5f78f4e50f64",
+    "name": "1-Acceso a la instalacion",
+    "commands": [{
+      "id": "a8636d82-061e-4258-95b1-0336a1ca9c53",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8b660ba-3459-47b2-b19a-dd488e6e2680",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0f4b2c8d-7f5d-4f96-8f21-eb5e45b00907",
+    "name": "2-Nombre de base de datos vacio",
+    "commands": [{
+      "id": "72e601d2-1b16-4da3-9db7-71dbe27a3f57",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc399689-1127-48be-8639-d81599817967",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8d4547d-1f28-4422-97f3-0bcf6d1a015d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5a4b6282-cbc9-4b7e-ad4c-4a6dbed41071",
+    "name": "3-Nombre de la colección vacío",
+    "commands": [{
+      "id": "fec9d9b6-5e5b-41d0-a2f5-f0c439120fa6",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49ad9467-47db-45f5-ade6-0f6432680a0f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b84d9fcd-47b8-4b3e-88b2-32b0c227ed13",
+      "comment": "",
+      "command": "click",
+      "target": "id=NombreBD",
+      "targets": [
+        ["id=NombreBD", "id"],
+        ["name=nombrebd", "name"],
+        ["css=#NombreBD", "css:finder"],
+        ["xpath=//input[@id='NombreBD']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0396314c-e731-4f19-9390-e905c0baf49c",
+      "comment": "",
+      "command": "type",
+      "target": "id=NombreBD",
+      "targets": [
+        ["id=NombreBD", "id"],
+        ["name=nombrebd", "name"],
+        ["css=#NombreBD", "css:finder"],
+        ["xpath=//input[@id='NombreBD']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "b601d9ea-2b89-46d2-8dd5-7a61ef29505a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a6909784-fa35-435c-8b29-87213e8dd32d",
+    "name": "4-Instalación correcta",
+    "commands": [{
+      "id": "4c3c8fa1-7941-4354-9bf1-be92965275f0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afbe0100-93a6-41ab-b0a6-b809048585ee",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "324e4146-7f82-451b-aaf0-fa45de94253a",
+      "comment": "",
+      "command": "click",
+      "target": "id=NombreBD",
+      "targets": [
+        ["id=NombreBD", "id"],
+        ["name=nombrebd", "name"],
+        ["css=#NombreBD", "css:finder"],
+        ["xpath=//input[@id='NombreBD']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4eeae47-f031-406c-bc1c-e4ab0abdc94b",
+      "comment": "",
+      "command": "type",
+      "target": "id=NombreBD",
+      "targets": [
+        ["id=NombreBD", "id"],
+        ["name=nombrebd", "name"],
+        ["css=#NombreBD", "css:finder"],
+        ["xpath=//input[@id='NombreBD']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Examenes"
+    }, {
+      "id": "17680bc1-d492-4e33-9211-4b5d72bbb65d",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nombrecoleccion",
+      "targets": [
+        ["id=Nombrecoleccion", "id"],
+        ["name=nombrecol", "name"],
+        ["css=#Nombrecoleccion", "css:finder"],
+        ["xpath=//input[@id='Nombrecoleccion']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ba17db0-312d-4e2a-9b84-e3f42b05f6f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nombrecoleccion",
+      "targets": [
+        ["id=Nombrecoleccion", "id"],
+        ["name=nombrecol", "name"],
+        ["css=#Nombrecoleccion", "css:finder"],
+        ["xpath=//input[@id='Nombrecoleccion']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "backupexamenes"
+    }, {
+      "id": "6fbb3e39-b638-46c3-978e-b805f7264b1c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//body[@id='instalacion']/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fbe88d57-a55d-41dd-9235-1ee9f19821d3",
+    "name": "5-Proceso instalacion borrado",
+    "commands": [{
+      "id": "50105a4a-8e55-4573-a513-bfa80446129e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/instalacion",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a54a973-7e93-4166-91e2-7c59360d02cd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "689908eb-c9fd-4738-8046-ebf7ca26b4b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7db39fda-5c6e-4b4c-864e-631878515d6d",
+    "name": "1-Correo vacio",
+    "commands": [{
+      "id": "ae9a60e7-d724-4efa-aa6d-5ede10684ffe",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37728fb2-ccac-4a8d-934c-f9d0dd17882c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbb7db96-d5e6-4858-a7f3-9e4268e8a2d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa",
+      "targets": [
+        ["css=.fa", "css:finder"],
+        ["xpath=//body[@id='bodyauth']/form/a/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adcc76cc-380e-4b55-8bb3-68f10ac6b6eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.BHzsHc",
+      "targets": [
+        ["css=.BHzsHc", "css:finder"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[6]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//li[6]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0d53d58-0f40-43ea-891b-313efd261d4a",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.VmOpGe",
+      "targets": [
+        ["css=.VmOpGe", "css:finder"],
+        ["xpath=//body[@id='yDmH0d']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0495047e-3d6e-4438-8c21-56fbfbd25ef8",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.VmOpGe",
+      "targets": [
+        ["css=.VmOpGe", "css:finder"],
+        ["xpath=//body[@id='yDmH0d']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26463124-4840-4ade-bbe4-1f7efaff4dbe",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.VmOpGe",
+      "targets": [
+        ["css=.VmOpGe", "css:finder"],
+        ["xpath=//body[@id='yDmH0d']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7737874-0e88-45f5-ae6f-ea0e6a1ee466",
+      "comment": "",
+      "command": "click",
+      "target": "css=.H2SoFe",
+      "targets": [
+        ["css=.H2SoFe", "css:finder"],
+        ["xpath=//body[@id='yDmH0d']/div", "xpath:idRelative"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bd0973f-b71b-460f-83e0-068c2c160b48",
+      "comment": "",
+      "command": "type",
+      "target": "id=identifierId",
+      "targets": [
+        ["id=identifierId", "id"],
+        ["name=identifier", "name"],
+        ["css=#identifierId", "css:finder"],
+        ["xpath=//input[@id='identifierId']", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13882a29-dc23-454f-a726-4b8ba768172e",
+      "comment": "",
+      "command": "click",
+      "target": "id=headingSubtext",
+      "targets": [
+        ["id=headingSubtext", "id"],
+        ["css=#headingSubtext", "css:finder"],
+        ["xpath=//div[@id='headingSubtext']", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07bcda8c-4107-4665-aeed-e74213ac6b45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb",
+      "targets": [
+        ["css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb", "css:finder"],
+        ["xpath=//div[@id='identifierNext']/div/button/div[2]", "xpath:idRelative"],
+        ["xpath=//button/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d4a7317c-402e-4872-99d0-44f94dd75514",
+    "name": "2-password vacia",
+    "commands": [{
+      "id": "f015c046-6bc4-4903-927c-b6fc88c57a94",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5c8631f-a6f0-427a-befd-d921139a7c3a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e52d5eca-6ae3-4a73-83db-9b6ce9222c5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.waves-effect",
+      "targets": [
+        ["css=.waves-effect", "css:finder"],
+        ["xpath=//a[contains(text(),'LOGIN\n        GOOGLE')]", "xpath:link"],
+        ["xpath=//body[@id='bodyauth']/form/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2FGestorExamenes%2Fauth%2Foauth2callback&client_id=699526078858-snv81f52abi35p37234gp1pjjdk9p78v.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&approval_prompt=auto')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c20a2b83-26e5-4f73-a357-b3168ec4624b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.eARute > .lCoei",
+      "targets": [
+        ["css=.eARute > .lCoei", "css:finder"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[6]/div", "xpath:idRelative"],
+        ["xpath=//li[6]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8490303a-5795-4d3c-9e11-bf2727c3b5b3",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "-166,340"
+    }, {
+      "id": "a201559d-7c2e-4a4a-a492-2bfcbb58646e",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "-166,340"
+    }, {
+      "id": "b9f21a77-c646-47a0-9460-e75baa7eae01",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "-166,340"
+    }, {
+      "id": "91b05d35-09cf-4385-a03f-8cc56cc7a28c",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15cfb30b-4983-4d7b-827c-0634ed0e4187",
+      "comment": "",
+      "command": "type",
+      "target": "id=identifierId",
+      "targets": [
+        ["id=identifierId", "id"],
+        ["name=identifier", "name"],
+        ["css=#identifierId", "css:finder"],
+        ["xpath=//input[@id='identifierId']", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "holamundo"
+    }, {
+      "id": "c16b2dd7-4756-4be5-8ebf-4c4f43d7a684",
+      "comment": "",
+      "command": "click",
+      "target": "css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb",
+      "targets": [
+        ["css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb", "css:finder"],
+        ["xpath=//div[@id='identifierNext']/div/button/div[2]", "xpath:idRelative"],
+        ["xpath=//button/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d681f59-343b-4afa-99ef-d1212ae75683",
+      "comment": "",
+      "command": "click",
+      "target": "css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb",
+      "targets": [
+        ["css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb", "css:finder"],
+        ["xpath=//div[@id='passwordNext']/div/button/div[2]", "xpath:idRelative"],
+        ["xpath=//button/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a7f5e62e-6329-4f77-9d36-bc9ced899c0e",
+    "name": "3-login incorrecto",
+    "commands": [{
+      "id": "34a1dce5-1109-4d8d-8b44-e1b32fb89ef6",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fd2e84f-4814-49fe-8837-6b48f75843dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1889ef5f-c560-404a-a571-a3f2cdc610d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.waves-effect",
+      "targets": [
+        ["css=.waves-effect", "css:finder"],
+        ["xpath=//a[contains(text(),'LOGIN\n        GOOGLE')]", "xpath:link"],
+        ["xpath=//body[@id='bodyauth']/form/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2FGestorExamenes%2Fauth%2Foauth2callback&client_id=699526078858-snv81f52abi35p37234gp1pjjdk9p78v.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&approval_prompt=auto')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d5fabd8-1d90-4195-8d3c-6d78a81255fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.eARute > .lCoei",
+      "targets": [
+        ["css=.eARute > .lCoei", "css:finder"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[6]/div", "xpath:idRelative"],
+        ["xpath=//li[6]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc0cb010-c0a1-41dc-a526-bdef2f94a083",
+      "comment": "",
+      "command": "click",
+      "target": "css=.H2SoFe",
+      "targets": [
+        ["css=.H2SoFe", "css:finder"],
+        ["xpath=//body[@id='yDmH0d']/div", "xpath:idRelative"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a34193de-9b07-432a-8b79-821c2dd1b63a",
+      "comment": "",
+      "command": "type",
+      "target": "id=identifierId",
+      "targets": [
+        ["id=identifierId", "id"],
+        ["name=identifier", "name"],
+        ["css=#identifierId", "css:finder"],
+        ["xpath=//input[@id='identifierId']", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ilorenzovelez.guadalupe@alumnado.fundacionloyola.net"
+    }, {
+      "id": "ef77635f-c875-49bd-80b5-e3e5bbbb6836",
+      "comment": "",
+      "command": "type",
+      "target": "id=identifierId",
+      "targets": [
+        ["id=identifierId", "id"],
+        ["name=identifier", "name"],
+        ["css=#identifierId", "css:finder"],
+        ["xpath=//input[@id='identifierId']", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ilorenzovelez.guadalupe@alumnado.fundacionloyola.net"
+    }, {
+      "id": "7d854b52-c768-4ebf-9840-584dc56994ec",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=identifierId",
+      "targets": [
+        ["id=identifierId", "id"],
+        ["name=identifier", "name"],
+        ["css=#identifierId", "css:finder"],
+        ["xpath=//input[@id='identifierId']", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "32efc895-7587-4b04-a494-4519bdfdfdaf",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ab4cf59-3107-405b-9ac6-8433b4d89133",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ksBjEc > .VfPpkd-RLmnJb",
+      "targets": [
+        ["css=.ksBjEc > .VfPpkd-RLmnJb", "css:finder"],
+        ["xpath=//div[@id='forgotPassword']/div/button/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35c31e26-f38a-435e-a320-6488e4c8ecf0",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.I0VJ4d .whsOnd", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='password']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "aaaaaaaa"
+    }, {
+      "id": "8fae447e-03fa-4a97-9f88-6228f9e28507",
+      "comment": "",
+      "command": "click",
+      "target": "css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb",
+      "targets": [
+        ["css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb", "css:finder"],
+        ["xpath=//div[@id='passwordNext']/div/button/div[2]", "xpath:idRelative"],
+        ["xpath=//button/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a124753-fee1-4a1d-b581-b511643ce91c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3d4f7782-2a17-45dd-b19e-551eb83b0f83",
+    "name": "1-Acceso denegado a Examenes",
+    "commands": [{
+      "id": "2ed6cd09-cb71-4278-a760-e645ea4e2f07",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/Examenes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bdc2af7-4049-472f-95ec-f30dfb2c199c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "36a8037a-d1c5-4bda-8b30-ee890cdef4b9",
+    "name": "0-Acceso denegado a Dashboard",
+    "commands": [{
+      "id": "6474e12f-da2e-45f7-bf36-de2ed23f2cb4",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/Dashboard",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6607e4b5-b909-4340-b030-bdce8bcf85b6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4b759442-df29-4ea9-96c3-23f0266736a5",
+    "name": "1-AltaExamenTituloVacio",
+    "commands": [{
+      "id": "3e0f87f5-068a-42ba-a042-ab4d47087567",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70749d11-aba8-4a07-9446-29fa287f8739",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e440375-afa7-4e30-ab4c-300b00d04e7d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e82fa33f-c5e0-4edb-9238-df711efcf300",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear examen",
+      "targets": [
+        ["linkText=Crear examen", "linkText"],
+        ["css=.collapse-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear examen')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear examen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "738c24f2-157a-44b4-bfe8-ccbaac9c779a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f29f8ea9-d96c-4f6d-9ba6-edb78015599d",
+    "name": "2-Alta de examen con curso vacio",
+    "commands": [{
+      "id": "9654bd58-69e9-481c-998f-bcf711b3e572",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "420d3af7-b221-4e49-8186-d46a414d8aef",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4557578-6b6f-4969-91a6-35ee04404ef9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d77f455-c427-485e-b9f1-7eb439362d6b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear examen",
+      "targets": [
+        ["linkText=Crear examen", "linkText"],
+        ["css=.collapse-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear examen')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear examen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f0eccea-2d1a-4182-a0ca-a420815b791d",
+      "comment": "",
+      "command": "type",
+      "target": "id=tituloexamen",
+      "targets": [
+        ["id=tituloexamen", "id"],
+        ["name=tituloexamen", "name"],
+        ["css=#tituloexamen", "css:finder"],
+        ["xpath=//input[@id='tituloexamen']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "A"
+    }, {
+      "id": "35d119f4-19a4-4cfb-b73b-6a3a73c4f115",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "119c977e-5607-4194-8cf0-837d4968d6d9",
+    "name": "3-Crear Examen asignatura vacia",
+    "commands": [{
+      "id": "3c7f5ee7-7815-450d-9b3b-42d411f77f2d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b5bc13c-d815-4fa1-8d1a-1aa2abe64a56",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9cb495f-482b-4b49-9be2-b9ec0c842d0f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14890fd9-353b-41e0-9a44-7eced4266a14",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear examen",
+      "targets": [
+        ["linkText=Crear examen", "linkText"],
+        ["css=.collapse-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear examen')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear examen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77cbb513-c658-436e-9e16-ce0991d60711",
+      "comment": "",
+      "command": "type",
+      "target": "id=tituloexamen",
+      "targets": [
+        ["id=tituloexamen", "id"],
+        ["name=tituloexamen", "name"],
+        ["css=#tituloexamen", "css:finder"],
+        ["xpath=//input[@id='tituloexamen']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "264e6c3b-9a5c-4d69-be49-a26f46176364",
+      "comment": "",
+      "command": "click",
+      "target": "id=curso",
+      "targets": [
+        ["id=curso", "id"],
+        ["name=curso", "name"],
+        ["css=#curso", "css:finder"],
+        ["xpath=//input[@id='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "092eac69-69e4-41c0-a8f6-861bdcafa1ab",
+      "comment": "",
+      "command": "type",
+      "target": "id=curso",
+      "targets": [
+        ["id=curso", "id"],
+        ["name=curso", "name"],
+        ["css=#curso", "css:finder"],
+        ["xpath=//input[@id='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "dfc05908-1f30-4585-a399-9d6987f5df94",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5833c2a5-7442-4d1f-8eb5-83534c1ca6ef",
+    "name": "4-Cancelar alta examen",
+    "commands": [{
+      "id": "f184d208-32c0-4bd3-887e-876a0ce1fb6d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1cc9367f-3d6c-4131-bc7e-b2c3781d223b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "497678af-d503-4883-b436-1bacb10edb54",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4883f941-392d-4645-976b-9735f157a619",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear examen",
+      "targets": [
+        ["linkText=Crear examen", "linkText"],
+        ["css=.collapse-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear examen')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear examen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c1e4ee7-cd4f-4e92-b768-b9e1f5616390",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancelar",
+      "targets": [
+        ["linkText=Cancelar", "linkText"],
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancelar')]", "xpath:link"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost/GestorExamenes/Dashboard'])[2]", "xpath:href"],
+        ["xpath=//form/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cancelar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e774b952-0ea6-40b8-8693-d36fb278e7c7",
+    "name": "5-Alta examen correcta",
+    "commands": [{
+      "id": "db7b6c75-2cc8-48f1-8412-3ce3ac02d63d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1afce6bc-e95f-49da-9d23-359cce911da5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5777cd26-30ca-4291-a47e-2f97d990fe88",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ae13e7e-06c9-4f36-94e0-fafa915a2a5f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear examen",
+      "targets": [
+        ["linkText=Crear examen", "linkText"],
+        ["css=.collapse-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear examen')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear examen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e1d77ba-88bf-4cc8-899e-dc56735d23b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=tituloexamen",
+      "targets": [
+        ["id=tituloexamen", "id"],
+        ["name=tituloexamen", "name"],
+        ["css=#tituloexamen", "css:finder"],
+        ["xpath=//input[@id='tituloexamen']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "528f13c5-cda8-443a-96eb-e4a93dad0489",
+      "comment": "",
+      "command": "type",
+      "target": "id=tituloexamen",
+      "targets": [
+        ["id=tituloexamen", "id"],
+        ["name=tituloexamen", "name"],
+        ["css=#tituloexamen", "css:finder"],
+        ["xpath=//input[@id='tituloexamen']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Sistemas Informaticos"
+    }, {
+      "id": "f696a7f1-7888-454c-a2fd-e358c3881ef3",
+      "comment": "",
+      "command": "type",
+      "target": "id=curso",
+      "targets": [
+        ["id=curso", "id"],
+        ["name=curso", "name"],
+        ["css=#curso", "css:finder"],
+        ["xpath=//input[@id='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "1º"
+    }, {
+      "id": "955afc64-f753-49af-ba29-6efa20355711",
+      "comment": "",
+      "command": "click",
+      "target": "id=curso",
+      "targets": [
+        ["id=curso", "id"],
+        ["name=curso", "name"],
+        ["css=#curso", "css:finder"],
+        ["xpath=//input[@id='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc58b4e9-de56-470d-9b74-8d744eba4edc",
+      "comment": "",
+      "command": "type",
+      "target": "id=curso",
+      "targets": [
+        ["id=curso", "id"],
+        ["name=curso", "name"],
+        ["css=#curso", "css:finder"],
+        ["xpath=//input[@id='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "1ºDAW"
+    }, {
+      "id": "c6d57396-c37a-417b-aa38-e8991206ad8b",
+      "comment": "",
+      "command": "click",
+      "target": "id=asignatura",
+      "targets": [
+        ["id=asignatura", "id"],
+        ["name=asignatura", "name"],
+        ["css=#asignatura", "css:finder"],
+        ["xpath=//input[@id='asignatura']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04d6d1ee-ccdd-4a1d-ab95-79161d4121b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=asignatura",
+      "targets": [
+        ["id=asignatura", "id"],
+        ["name=asignatura", "name"],
+        ["css=#asignatura", "css:finder"],
+        ["xpath=//input[@id='asignatura']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/input", "xpath:position"]
+      ],
+      "value": "Sistemas Informaticos"
+    }, {
+      "id": "d948d4cc-2500-4c12-84e9-94b275ccae0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93dd4fe4-c2e3-48dc-990b-73fc786064df",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Abrir lista de examenes",
+      "targets": [
+        ["linkText=Abrir lista de examenes", "linkText"],
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'Abrir lista de examenes')]", "xpath:link"],
+        ["xpath=//div[@id='wrapper']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes'])[2]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Abrir lista de examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "946c24b8-bd3c-49b3-8689-55c5ee70b5f8",
+    "name": "1-Listar Examenes",
+    "commands": [{
+      "id": "8f0224c7-d4ee-458f-85c7-4f24c50a3b46",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3655779-9701-4bec-8c30-537a590c6df1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f736311-e6f2-407a-aa90-0e94527a3f5c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e926e2f5-6591-4237-b267-66b38b6413be",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "05399c0a-1163-42ae-bd3f-856e2d9769e8",
+    "name": "1-Cancelar borrado examen",
+    "commands": [{
+      "id": "0e33c0c1-ea3b-415e-af27-ec8fe7fdaf3a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d2d22fa-d3c2-4b36-9a1d-7b3e87da3566",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9da50f73-89a6-4f31-be67-950176b42f39",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fede1f07-2fd0-44f0-a371-0addcdaec70f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b8ea313-f60c-412d-af87-9ace188c7450",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-times",
+      "targets": [
+        ["css=.fa-times", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d409112-d9c5-4663-a9a4-144ab4ecec74",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Volver a lista de\n                examenes')]", "xpath:link"],
+        ["xpath=//div[@id='wrapper']/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes'])[2]", "xpath:href"],
+        ["xpath=//div/div/div/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "91a0ba7a-262f-4963-ae4e-c2d7db972bf6",
+    "name": "2-Borrar examen",
+    "commands": [{
+      "id": "375c2956-100f-4ab0-ac92-b768ccc1480e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1fdb6b4-ce74-462f-9961-3929a9aeb8b0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29dc1850-fe19-4288-a216-13c2a12e1b22",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7835cc90-fcf5-4ad1-9619-a8988581cf84",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "776d248e-8808-4a51-bccb-c4c763526a18",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-times",
+      "targets": [
+        ["css=.fa-times", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cf0339d-bdaa-4093-a795-051885b39e1c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'Borrar\n                examen')]", "xpath:link"],
+        ["xpath=//div[@id='wrapper']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/borrarexamen?examen=Sistemas Informaticos']", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4fa83473-ce25-42d0-8296-2dfa7809ea06",
+    "name": "1-Alta examen correcta ME",
+    "commands": [{
+      "id": "e11f15ba-e82c-4afa-b110-b9c4b9d56b23",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05724923-450b-4f27-a02a-0780cc910266",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50c9c8a2-ade9-493b-b4ff-757e7796c414",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fd91204-4a9c-43cd-8aa6-b180dcb7c791",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear examen",
+      "targets": [
+        ["linkText=Crear examen", "linkText"],
+        ["css=.collapse-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear examen')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear examen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ef03870-92fc-4cb6-8cd7-dfd86d08823e",
+      "comment": "",
+      "command": "click",
+      "target": "id=tituloexamen",
+      "targets": [
+        ["id=tituloexamen", "id"],
+        ["name=tituloexamen", "name"],
+        ["css=#tituloexamen", "css:finder"],
+        ["xpath=//input[@id='tituloexamen']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8ca6a81-f5c4-4818-97c3-b350b9917ba0",
+      "comment": "",
+      "command": "type",
+      "target": "id=tituloexamen",
+      "targets": [
+        ["id=tituloexamen", "id"],
+        ["name=tituloexamen", "name"],
+        ["css=#tituloexamen", "css:finder"],
+        ["xpath=//input[@id='tituloexamen']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Sistemas Informaticos"
+    }, {
+      "id": "47d34642-82f8-439e-9d28-a9fb7f254721",
+      "comment": "",
+      "command": "type",
+      "target": "id=curso",
+      "targets": [
+        ["id=curso", "id"],
+        ["name=curso", "name"],
+        ["css=#curso", "css:finder"],
+        ["xpath=//input[@id='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "1º"
+    }, {
+      "id": "1fe65f3e-af29-4e5d-86c8-71712edfb0b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=curso",
+      "targets": [
+        ["id=curso", "id"],
+        ["name=curso", "name"],
+        ["css=#curso", "css:finder"],
+        ["xpath=//input[@id='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20c50d6c-74b8-4d6a-9040-df814785b5d3",
+      "comment": "",
+      "command": "type",
+      "target": "id=curso",
+      "targets": [
+        ["id=curso", "id"],
+        ["name=curso", "name"],
+        ["css=#curso", "css:finder"],
+        ["xpath=//input[@id='curso']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "1ºDAW"
+    }, {
+      "id": "08cf97cf-546c-4cab-9f71-942956bf4e0e",
+      "comment": "",
+      "command": "click",
+      "target": "id=asignatura",
+      "targets": [
+        ["id=asignatura", "id"],
+        ["name=asignatura", "name"],
+        ["css=#asignatura", "css:finder"],
+        ["xpath=//input[@id='asignatura']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9df1159e-c463-40df-9a87-818ca0b256e7",
+      "comment": "",
+      "command": "type",
+      "target": "id=asignatura",
+      "targets": [
+        ["id=asignatura", "id"],
+        ["name=asignatura", "name"],
+        ["css=#asignatura", "css:finder"],
+        ["xpath=//input[@id='asignatura']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/input", "xpath:position"]
+      ],
+      "value": "Sistemas Informaticos"
+    }, {
+      "id": "abb45b78-d965-474a-b59e-869947b8dfc0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/form/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "66d4e103-9043-4e2e-b56d-c3ab19a6dc55",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Abrir lista de examenes",
+      "targets": [
+        ["linkText=Abrir lista de examenes", "linkText"],
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'Abrir lista de examenes')]", "xpath:link"],
+        ["xpath=//div[@id='wrapper']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes'])[2]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Abrir lista de examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8185ec98-47e9-4933-9125-93a59d583124",
+    "name": "2-Modificacion de datos generales",
+    "commands": [{
+      "id": "0ce5a313-659e-47d4-bf3b-5773a916d1d1",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4572a6e-37cf-47c7-9450-59f7777eedc5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f33ac7d-0093-459e-8ff6-202acdc3a69b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e20aa0c7-246b-48fb-84b3-9a104e54189f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4767211f-aa2c-488a-9569-e299c0e44cb5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b78103f-0651-4d8d-9806-ed99494e4125",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputTitulo",
+      "targets": [
+        ["id=inputTitulo", "id"],
+        ["name=tituloexamen", "name"],
+        ["css=#inputTitulo", "css:finder"],
+        ["xpath=//input[@id='inputTitulo']", "xpath:attributes"],
+        ["xpath=//form[@id='modifexamen']/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4008ebb-e749-459b-82d0-27b5563a2b73",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputTitulo",
+      "targets": [
+        ["id=inputTitulo", "id"],
+        ["name=tituloexamen", "name"],
+        ["css=#inputTitulo", "css:finder"],
+        ["xpath=//input[@id='inputTitulo']", "xpath:attributes"],
+        ["xpath=//form[@id='modifexamen']/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Sistemas Informaticos 1ºDAW"
+    }, {
+      "id": "13ea8330-50d2-4395-8161-7edd2a6b5144",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='modifexamen']/div/div/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0284f19f-a965-4d32-9825-ebd773471509",
+      "comment": "",
+      "command": "click",
+      "target": "css=#exampleModalCenter .btn",
+      "targets": [
+        ["css=#exampleModalCenter .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cerrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e7879cda-711c-4094-8f02-cc97cba32105",
+    "name": "3-Cancelar alta pregunta texto corto",
+    "commands": [{
+      "id": "f7db68f6-bb4f-4504-a96e-cb9b7ca9a3b9",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bb50ce0-7dcf-43b7-83d5-f3c70e732b90",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "618b94e8-9759-45a0-b736-5bfdb71ea50d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9242c0df-88e3-456a-90bf-d0b64c0079ef",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d7acb34-1666-4826-be55-5f73f5d87e7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0cd3b9b-dec9-4909-8482-90972f51ab9d",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "914f19e4-d403-485d-af32-72f4c1640ce8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.spanBorrar",
+      "targets": [
+        ["css=.spanBorrar", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Borrar pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0b14bc99-6748-4bb4-9fe6-01f5cda7b6e7",
+    "name": "4-Alta pregunta texto corto",
+    "commands": [{
+      "id": "58cae084-154c-478b-b6e3-377b94ee53fb",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2e4a846-892d-4264-a2d2-bde9feae13fd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c303aa9-a0bb-4bec-8561-a80136cb46c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24661402-6aa9-4b88-8e49-aa269a8d9190",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "134222f1-37f2-47ef-aa8d-33b66a053aaa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4042804a-6f0a-4c8e-aeb6-3c2c589d3851",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1c51800-062e-45f2-961c-9ec16e2a3cde",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(2) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(2) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2896514f-d0f5-472f-9bd9-9c84a6b25387",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(2) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(2) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta1"
+    }, {
+      "id": "3dfb5bde-02e7-4be9-add0-3f5ea8bd9bdd",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(3) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(3) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/label/input", "xpath:position"]
+      ],
+      "value": "Respuesta1"
+    }, {
+      "id": "dbb62fe8-656e-4675-b967-83f8efdf5573",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(4) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(4) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=//input[@type='number']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[4]/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "f00e1c66-bb01-46c5-8a28-14e48e316aaa",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fabf26a3-a21d-4ab9-af79-96bb6457e35f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "786813fd-7607-4c73-8423-fb2f2adc1559",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cb7b9e7-2ca9-42c8-bc6b-a177c5e23bc1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#enviarexamen .btn",
+      "targets": [
+        ["css=#enviarexamen .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='enviarexamen']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "44ffd90e-d96b-433a-841b-48f42e9de95d",
+    "name": "5-Cancelar alta pregunta texto largo",
+    "commands": [{
+      "id": "f337f3a0-d802-40f4-99dd-1f5985639f94",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e509445d-799a-4529-b199-4b034d5c3340",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "985dcf4b-a208-4feb-a846-58da4ac51289",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03576155-c7e9-49a2-9305-d6c8279fabf3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a056fef-04fc-4394-832d-044c0a4bc143",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fa3e1b6-89c9-409a-8d40-70261998024f",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "83920f20-fe02-4027-986c-5fe4fc1e9321",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "70cf05ea-3831-4744-8138-7c37a4ca51e3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3778b235-dc6b-44f9-a74d-63ae47437c7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27aa7d14-7aac-4f56-9353-ed4efe65bf40",
+      "comment": "",
+      "command": "select",
+      "target": "css=.form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta con Texto Largo"
+    }, {
+      "id": "4bb5342e-f7ab-4d51-b123-502d29ddd2b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efb86d53-d37f-4773-84de-2fe9682c7dd7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(2) > .spanBorrar",
+      "targets": [
+        ["css=.pregunta:nth-child(2) > .spanBorrar", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "62a78463-7aa8-47c0-bb40-33bd2beb799e",
+    "name": "6-Alta pregunta texto largo",
+    "commands": [{
+      "id": "82202690-8af6-438f-84f5-3197d85c8482",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ef86475-b94b-4005-9575-9022bae6089c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "258a2ae3-be6c-4dd3-9081-acfd2e8a547c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.collapsed > span:nth-child(2)",
+      "targets": [
+        ["css=.collapsed > span:nth-child(2)", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "adb6bceb-d6d4-4fa3-bb9c-6d410b55a2ae",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f227bf0-91f0-4be5-bebd-2ffbfd19a68f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05ae3538-f186-48ab-9fb1-1a8809783ec7",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52c2eb50-6f05-4908-8b07-6d03b90ca14f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a5c34a2-9ee0-47fe-8829-f8922b8ecc95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52c4225f-e3ec-484e-a13a-b4c4378628ba",
+      "comment": "",
+      "command": "select",
+      "target": "css=.form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta con Texto Largo"
+    }, {
+      "id": "26008055-29a9-4052-83f9-aa2cbd86ae53",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48364274-bc6b-4551-a163-e8560cd20c1a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8848bde0-b7bf-4a5b-af2e-1ece39c0bef3",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta2"
+    }, {
+      "id": "cbe9d948-cbf4-468e-aa9c-1349027fd8f8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(2) > .form-group:nth-child(3) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(2) > .form-group:nth-child(3) .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[3]/label/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Respuesta2"
+    }, {
+      "id": "8767a166-0508-4705-8606-73989bd18401",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(2) > .form-group:nth-child(4) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(2) > .form-group:nth-child(4) .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "80577c55-3e66-415c-8e11-45e916739c13",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04fc9f72-7746-4d65-9467-a216baeb812d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#enviarexamen .btn",
+      "targets": [
+        ["css=#enviarexamen .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='enviarexamen']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "929ac92d-eed8-4c7c-80d9-a06fce4d2114",
+    "name": "7-Cancelar alta pregunta test",
+    "commands": [{
+      "id": "08cd08ca-7aaf-422c-a61f-558d3792403b",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5149789d-9e7c-4bbd-a8fc-0c34e74c8b49",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "807bc7d5-eed7-4a46-9c9a-6a70a5612ebd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4521d74f-79e1-4e47-b189-c0a84f6fd368",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db9e7b68-db02-4abb-8b6d-790837f745b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23223b47-b466-479e-9240-9445cb58fd87",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b43e9d0f-3e5f-4f08-87bb-e7c812e70e1f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(3) > .spanBorrar",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .spanBorrar", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e102ae40-fd98-4872-85aa-4a479974ae91",
+    "name": "8-Borrar opcion alta pregunta test",
+    "commands": [{
+      "id": "876d6eb1-5876-4c04-a3da-7a817d46fd02",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3510ea9b-7bf9-42c5-9f8f-fec795c1ba0b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "270c82c5-00c1-40bb-8ad5-883014ff3668",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5663588a-977f-44a6-b80d-94220545ae4a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef7b5be1-d33e-4901-89b8-99da27ff63a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "076769be-e889-4e93-9a6c-f0992fd8b4f7",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c9a192e-17d7-4cac-a3fa-51462570cb3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d54f8993-1d6f-4b38-857d-78c183d90de7",
+      "comment": "",
+      "command": "select",
+      "target": "css=.form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta tipo Test"
+    }, {
+      "id": "647c1c65-f6f6-44f2-9a75-7b5766570977",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22095cd5-39d6-458a-b407-57f9b998dbdd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-secondary:nth-child(2)",
+      "targets": [
+        ["css=.btn-secondary:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Borrar opcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/label/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e07be94c-6b21-4254-a924-e1453512da5e",
+    "name": "9-Alta pregunta test",
+    "commands": [{
+      "id": "204a3803-34ea-41ae-ab14-2448f679bcf5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a08dd95-f9e8-4455-a5ea-0a8153a60002",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6e618d5-8cf6-4a3a-aab9-b91f33c15a1a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.collapsed > span:nth-child(2)",
+      "targets": [
+        ["css=.collapsed > span:nth-child(2)", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8fab2e4-fc63-4674-ad9d-165d2f3dd29b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "402e9d59-a56f-45ae-9fa3-cef0abb42964",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e698d461-cfd7-4fa8-8f30-f2ead0f305b4",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "214b2795-278f-48ba-ad40-275e82932a16",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3ef6ffa-cac0-4317-acee-d0895d098721",
+      "comment": "",
+      "command": "select",
+      "target": "css=.form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta tipo Test"
+    }, {
+      "id": "14935bba-bc35-418f-b39e-a6fde1af1995",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "376e77f8-eb8f-4aaa-8a2d-cc36527eb723",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(3) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82b02813-5849-489f-aaea-96a469296dcb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(3) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta3"
+    }, {
+      "id": "e4abb80a-e0f6-4675-88e9-9034849d48c4",
+      "comment": "",
+      "command": "click",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e28b46ea-b9fa-4e07-871d-e91b5a6cf58d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "486e3ac6-c3c0-431f-a764-d0e9348ffacb",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a13fb373-d5ca-424d-856b-304bea4e99ed",
+      "comment": "",
+      "command": "click",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fddd6aa8-eed2-46bb-8b28-eecf0f85560d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0036de01-ec0e-49f8-a4af-b711ee678684",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4952cd8-8c55-4b70-9ac9-21a140322417",
+      "comment": "",
+      "command": "click",
+      "target": "id=opciontest",
+      "targets": [
+        ["id=opciontest", "id"],
+        ["css=.form-group:nth-child(3) #opciontest", "css:finder"],
+        ["xpath=//input[@id='opciontest']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8e5fcb0-beb4-49b9-adc5-dcf5628a999e",
+      "comment": "",
+      "command": "type",
+      "target": "id=opciontest",
+      "targets": [
+        ["id=opciontest", "id"],
+        ["css=.form-group:nth-child(3) #opciontest", "css:finder"],
+        ["xpath=//input[@id='opciontest']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion1"
+    }, {
+      "id": "a7d57f40-22db-44a3-960f-52374a9c7a9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(3) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(3) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/label/input", "xpath:idRelative"],
+        ["xpath=//label/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f52bb9c9-9a63-44fb-926c-dcbc9ee29dd2",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(3) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(3) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/label/input", "xpath:idRelative"],
+        ["xpath=//label/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "5b09abd6-f87b-4481-9623-def8a6bcd606",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4) #opciontest",
+      "targets": [
+        ["css=.form-group:nth-child(4) #opciontest", "css:finder"],
+        ["xpath=(//input[@id='opciontest'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3170f20b-a329-4093-b70b-1d3c2e3382b8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(4) #opciontest",
+      "targets": [
+        ["css=.form-group:nth-child(4) #opciontest", "css:finder"],
+        ["xpath=(//input[@id='opciontest'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion2"
+    }, {
+      "id": "7bbf67a7-a8ac-457d-a2f5-e82889265d7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[4]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/label/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1aafd711-a969-444e-8784-2b521923099a",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[4]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/label/label/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "fdad70c4-ae65-4405-ad04-e13e1f6c697d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(5) #opciontest",
+      "targets": [
+        ["css=.form-group:nth-child(5) #opciontest", "css:finder"],
+        ["xpath=(//input[@id='opciontest'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[5]/label/input", "xpath:idRelative"],
+        ["xpath=//div[5]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62ba177a-d934-46f3-a4eb-6a8e31751783",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(5) #opciontest",
+      "targets": [
+        ["css=.form-group:nth-child(5) #opciontest", "css:finder"],
+        ["xpath=(//input[@id='opciontest'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[5]/label/input", "xpath:idRelative"],
+        ["xpath=//div[5]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion3"
+    }, {
+      "id": "576930e3-1873-4e3c-ab4e-9f38a1d945cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[5]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[5]/label/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bf52724-5882-4c2c-a57c-282ee9aab904",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[5]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[5]/label/label/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "e6add771-0612-41e2-9137-a8837a62c235",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a123b98c-a23d-4c39-80ba-21d3ff193210",
+      "comment": "",
+      "command": "click",
+      "target": "css=#enviarexamen .btn",
+      "targets": [
+        ["css=#enviarexamen .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='enviarexamen']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a494d032-94ca-4d21-8029-d7bde7c52ef3",
+    "name": "10-Cancelar alta respuesta multiple",
+    "commands": [{
+      "id": "3960141e-c811-466d-a4b3-eff5c9ae6306",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5c5f717-86b6-456f-bdf3-829b3f6e207f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e2de9ce-2f4d-4007-bbc7-06775c4e5e2f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "39f09dec-3200-4387-abe3-c0faa2aab7c5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ba6d531-5adf-4788-acaa-876e3e1ec2ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d26d55b9-aabd-44e2-bc11-ade7bcb03894",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8baf53a8-77ce-4837-8f0a-b052056defcc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72b38100-0c80-4167-b4a9-008765bbb923",
+      "comment": "",
+      "command": "select",
+      "target": "css=.form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta con Respueta Múltiple"
+    }, {
+      "id": "47902134-6522-412e-8b48-5ed4d162b43e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e82e40e-3e81-42bb-94ec-6ff05de87980",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > .spanBorrar",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .spanBorrar", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a61b9fde-c539-4386-8420-3f640fd3e2f5",
+    "name": "11-Borrar opcion alta pregunta respuesta multiple",
+    "commands": [{
+      "id": "2ff7f04e-e94d-4e31-bc86-b8720a65d94a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ed2fce8-6604-414e-b3bb-86aa9537ee78",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82bbd31d-50f1-4563-a085-c522b768dec4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4690a19-4617-4cfb-aa24-c3fadc751e7d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44b7de17-94d0-4e65-b4a2-fae972cabc72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cf0733f-42e6-44ab-947b-dc170be25485",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fdbe78a-f3a1-4556-a52a-7c0becfd8d6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a2e817d-d777-401a-88af-31b9c137c511",
+      "comment": "",
+      "command": "select",
+      "target": "css=.form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta con Respueta Múltiple"
+    }, {
+      "id": "11dc100b-8a92-4fbb-b8d9-1331ade50a7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fce7b55e-3eab-4674-8578-c946601f58ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > .form-group .btn",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group .btn", "css:finder"],
+        ["xpath=(//input[@value='Borrar opcion'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[3]/label/label/input[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/label/label/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "95a6cd1e-4bd6-40b9-a856-ea4b84258bf0",
+    "name": "12-Alta pregunta respuesta multiple",
+    "commands": [{
+      "id": "13e3a6c2-378b-4c16-9c03-7f42f8eb7c43",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e2fc480-de12-42eb-b0d6-b681790c241a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "befc147e-b616-44fd-81ec-659d8e700197",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f62e810-3e6d-41a6-80de-f4260c5b767f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5efcff1-a570-4451-a127-613b26a8f722",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0394d63f-d3af-4935-a0e0-31207cfe9dcf",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86adf346-a46d-486e-ac30-7bf816fa307c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3854d7e-441d-41b2-befa-5629a0e75944",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "818945a1-665f-46a5-8a4f-ca37cfa2930c",
+      "comment": "",
+      "command": "select",
+      "target": "css=.form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta con Respueta Múltiple"
+    }, {
+      "id": "1c69121c-48a0-4cdb-8f66-9cc737c71d88",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .form-control",
+      "targets": [
+        ["css=.form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57cfcb41-9adb-4875-9990-40fbe6d63387",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77c24aa0-ae95-4d48-90f1-996e61879539",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(4) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta4"
+    }, {
+      "id": "726cb0d4-fca6-46e5-883f-273f506614b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "293c468d-84cb-4b73-9706-534d4362e33b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e560536-645b-40cf-8960-8692546aeae5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pregunta:nth-child(4) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62f30bed-22b7-462a-a235-9b0f881bd172",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.pregunta:nth-child(4) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1201df6-b1d6-4db3-a233-88c25800ca6a",
+      "comment": "",
+      "command": "click",
+      "target": "id=opcionmultiple",
+      "targets": [
+        ["id=opcionmultiple", "id"],
+        ["css=.form-group:nth-child(3) #opcionmultiple", "css:finder"],
+        ["xpath=//input[@id='opcionmultiple']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20011eb8-0d40-4507-982b-675fa2a26169",
+      "comment": "",
+      "command": "type",
+      "target": "id=opcionmultiple",
+      "targets": [
+        ["id=opcionmultiple", "id"],
+        ["css=.form-group:nth-child(3) #opcionmultiple", "css:finder"],
+        ["xpath=//input[@id='opcionmultiple']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion1"
+    }, {
+      "id": "8f218a88-f218-4ed7-b4d0-d1ce4bc28427",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(4) > .form-group:nth-child(3) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group:nth-child(3) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[3]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/label/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "c324bb7f-7567-4485-b4fe-88fae4a79561",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(4) #opcionmultiple",
+      "targets": [
+        ["css=.form-group:nth-child(4) #opcionmultiple", "css:finder"],
+        ["xpath=(//input[@id='opcionmultiple'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion2"
+    }, {
+      "id": "ef31d51c-adc4-41be-be83-b1acce60a7f4",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(4) > .form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[4]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/label/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "b398fa23-8cdc-4938-a21d-45052666c7d0",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(5) #opcionmultiple",
+      "targets": [
+        ["css=.form-group:nth-child(5) #opcionmultiple", "css:finder"],
+        ["xpath=(//input[@id='opcionmultiple'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[5]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[5]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion3"
+    }, {
+      "id": "7f95728f-d3e7-4ab3-8d35-d5522d36ef9d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(4) > .form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[5]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[5]/label/label/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "2c1ee506-e0b8-4260-9c1f-8ad21f43c697",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "569ec643-0988-44bd-8699-a0ec9de7bee5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#enviarexamen .btn",
+      "targets": [
+        ["css=#enviarexamen .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='enviarexamen']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9c69832d-f5cc-4f81-8b76-e35df519ff43",
+    "name": "13-Modificación múltiple de preguntas",
+    "commands": [{
+      "id": "f06fa8eb-f9b6-44ed-ae87-5c53b610728e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11590a78-1155-4f29-99fe-e2fc5ca9a9cc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42e848a9-6c79-49cc-b896-3d778f91d826",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "129c9073-e43f-42f9-92ce-9f42cf229e11",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e75d9494-d033-42b7-a666-c321cc7491cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fdfa5df-945e-4699-a490-3f1168386a92",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(1) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(1) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@value='Pregunta1']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa684d45-81aa-4d36-a363-d4e8c8bd2afb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(1) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(1) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@value='Pregunta1']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta1TC"
+    }, {
+      "id": "7c17e574-d5fa-493e-b9ab-10d823bfaca4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@value='Pregunta2']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99a8bf30-c495-4dac-bb8a-8c178cc408b9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(2) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@value='Pregunta2']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta2TL"
+    }, {
+      "id": "a187de8b-1465-4a3f-8e6c-8d8b7031fa8b",
+      "comment": "",
+      "command": "click",
+      "target": "id=textopregunta",
+      "targets": [
+        ["id=textopregunta", "id"],
+        ["css=.pregunta:nth-child(3) #textopregunta", "css:finder"],
+        ["xpath=//input[@id='textopregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f9fd2ea-771e-423e-aeb9-13da5756c353",
+      "comment": "",
+      "command": "type",
+      "target": "id=textopregunta",
+      "targets": [
+        ["id=textopregunta", "id"],
+        ["css=.pregunta:nth-child(3) #textopregunta", "css:finder"],
+        ["xpath=//input[@id='textopregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta3Test"
+    }, {
+      "id": "2f3af0f5-464e-4069-9f79-8f08e71f265e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) #textopregunta",
+      "targets": [
+        ["css=.pregunta:nth-child(4) #textopregunta", "css:finder"],
+        ["xpath=(//input[@id='textopregunta'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bf5baa5-69c3-4b66-86a4-03f7a8ab1878",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(4) #textopregunta",
+      "targets": [
+        ["css=.pregunta:nth-child(4) #textopregunta", "css:finder"],
+        ["xpath=(//input[@id='textopregunta'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta4Multiple"
+    }, {
+      "id": "0b423219-4c12-4c68-9360-647f41fcf4b5",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce3c1e28-5a2b-4cad-a63c-3d0eeb149b79",
+      "comment": "",
+      "command": "click",
+      "target": "css=#enviarexamen .btn",
+      "targets": [
+        ["css=#enviarexamen .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='enviarexamen']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "534dce56-e294-4cae-84b4-da06b0b4c951",
+    "name": "14-Borrado múltiple de preguntas",
+    "commands": [{
+      "id": "c33ff732-4e58-4879-9454-2b56b7267b46",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26566c1a-17ab-4c03-8ba5-c6f6b12e8acf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39788f1b-9453-4636-9003-8e55e893b9b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56721fa1-4c5c-42f0-a38a-06db1c70e45e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6191e22-8a22-4ae0-a872-44c5c78c10a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1df31c5a-6af3-4313-bfb1-ccc170b99394",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(1) > .spanBorrar",
+      "targets": [
+        ["css=.pregunta:nth-child(1) > .spanBorrar", "css:finder"],
+        ["xpath=//span[@onclick='borrarPreguntaEstatica(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Borrar pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b241e1cf-720d-4cf6-b743-3faab652e9f2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.spanBorrar:nth-child(5)",
+      "targets": [
+        ["css=.spanBorrar:nth-child(5)", "css:finder"],
+        ["xpath=//span[@onclick='borrarPreguntaEstatica(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Borrar pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11685faa-0bfd-4ef9-bf74-6699d4ef4518",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(1) > .spanBorrar",
+      "targets": [
+        ["css=.pregunta:nth-child(1) > .spanBorrar", "css:finder"],
+        ["xpath=//span[@onclick='borrarPreguntaEstatica(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Borrar pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fd7e151-79a1-4457-bb1d-ec34c9ac8370",
+      "comment": "",
+      "command": "click",
+      "target": "css=.spanBorrar",
+      "targets": [
+        ["css=.spanBorrar", "css:finder"],
+        ["xpath=//span[@onclick='borrarPreguntaEstatica(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Borrar pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "016caad9-fa57-47a8-b87a-4b4b88d127b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b476129-564c-4266-b3f3-8d6c705fab81",
+      "comment": "",
+      "command": "click",
+      "target": "css=#enviarexamen .btn",
+      "targets": [
+        ["css=#enviarexamen .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='enviarexamen']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "451a3306-c6ad-4c1c-8da3-5af0736f2304",
+    "name": "15-Creación múltiple de preguntas",
+    "commands": [{
+      "id": "271e81d8-47fd-4c5b-9915-72f419991d15",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/GestorExamenes/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8324290a-786c-454c-881f-14d4050b4596",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15f72396-2d96-4ff0-937e-0f251a46e88c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Examenes",
+      "targets": [
+        ["linkText=Examenes", "linkText"],
+        ["css=.collapsed", "css:finder"],
+        ["xpath=//ul[@id='accordionSidebar']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4034c6ba-d971-4a15-b44c-cbbe6e8dfd53",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lista examenes",
+      "targets": [
+        ["linkText=Lista examenes", "linkText"],
+        ["css=.collapse-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Lista examenes')]", "xpath:link"],
+        ["xpath=//div[@id='collapseQuiz']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost/GestorExamenes/Examenes/listarexamenes']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Lista examenes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02b2e02e-66e7-485c-97e3-4836605311a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div/div/div/table/tbody/tr[2]/td[4]/a/span", "xpath:idRelative"],
+        ["xpath=//td[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f8bfeeb-8f76-4453-badc-8aace3fcc565",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "724064fc-e79a-4e0a-beb7-c0362d05a13c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(2) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(2) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1999aec-2fdb-44ff-8d97-09bc1a89327f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(2) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(2) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta1"
+    }, {
+      "id": "844e8ba0-804a-4560-863d-93a47e83b286",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(3) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(3) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae236f2e-6509-4179-a3f2-e4c85c7637cc",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(3) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(3) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/label/input", "xpath:position"]
+      ],
+      "value": "Respuesta1"
+    }, {
+      "id": "5d96512d-6f20-49e5-8948-905f4f819401",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(4) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=//input[@type='number']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[4]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b390a47b-b26d-4ea2-9e06-0dc71674d91a",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(4) > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(4) > .input-group-text > .form-control", "css:finder"],
+        ["xpath=//input[@type='number']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[4]/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "f96d7f66-13b1-462d-85a8-6a1dbedcaccc",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94b512f9-4818-443f-8f62-91d88ad76882",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e431b0a9-54a8-4eac-8e2a-d638f4951e3b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e29cdd6-cec1-447f-ae7d-ae28d3a517bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(3) > .form-group > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fd53997-8e52-429c-b70e-84a29ed54ba4",
+      "comment": "",
+      "command": "select",
+      "target": "css=.pregunta:nth-child(3) > .form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta con Texto Largo"
+    }, {
+      "id": "638e2c74-ff66-425a-b959-bd573c325588",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(3) > .form-group > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48a07199-de30-4c14-8ee3-95e4c15d5cb3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(3) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e6d12f3-e036-4a97-aff9-121843b520f4",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(3) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta2"
+    }, {
+      "id": "12d30362-5223-47ec-a0bd-5fe51c80c872",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(3) > .form-group:nth-child(3) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group:nth-child(3) .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[3]/label/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e38d2f98-6d34-4164-9c95-7512cf4cd377",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(3) > .form-group:nth-child(3) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group:nth-child(3) .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[3]/label/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Respuesta2"
+    }, {
+      "id": "682bf9f0-ce18-42bc-8808-19f975de0320",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(3) > .form-group:nth-child(4) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group:nth-child(4) .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "932a635a-9e9c-4b9a-b6ae-95e01ab294e1",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(3) > .form-group:nth-child(4) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(3) > .form-group:nth-child(4) .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[2]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "6ef3dfba-4e2d-414c-8432-b5effe6f77cf",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa537b2d-c293-4e8d-981c-916ec665d527",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "336673ea-1432-4925-8c32-843ac0ee29c1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a14c7dfd-4143-4d3e-a2a7-02a0da907808",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > .form-group > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5966084f-0661-4093-aa9b-579537dd03ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > .form-group > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a59d4f23-9ae7-4726-8cb8-6cf018b39b98",
+      "comment": "",
+      "command": "select",
+      "target": "css=.pregunta:nth-child(4) > .form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta tipo Test"
+    }, {
+      "id": "5916b064-4613-456a-acc9-777a806745c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > .form-group > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "140e961a-a8ba-49bb-859f-0f72a64deb5c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(4) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7260e309-f646-4e6c-9efe-15bf794dcc89",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(4) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(4) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta3"
+    }, {
+      "id": "6d2cd8ee-a420-47f0-a671-603ece1e4661",
+      "comment": "",
+      "command": "click",
+      "target": "id=opciontest",
+      "targets": [
+        ["id=opciontest", "id"],
+        ["css=#opciontest", "css:finder"],
+        ["xpath=//input[@id='opciontest']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0d0ef6b-0875-4ead-9b0d-a721c54f4d94",
+      "comment": "",
+      "command": "type",
+      "target": "id=opciontest",
+      "targets": [
+        ["id=opciontest", "id"],
+        ["css=#opciontest", "css:finder"],
+        ["xpath=//input[@id='opciontest']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/label/input", "xpath:position"]
+      ],
+      "value": "opcion1"
+    }, {
+      "id": "8fb65829-7248-460e-bf4b-e91bca7bdcb4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-group-text:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.input-group-text:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/label/input", "xpath:idRelative"],
+        ["xpath=//label/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03f83a04-6eb6-43a9-82bd-2548d67d0360",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-group-text:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.input-group-text:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[3]/label/label/input", "xpath:idRelative"],
+        ["xpath=//label/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "af7d60c5-682a-4817-b1e7-1ae97d7816b7",
+      "comment": "",
+      "command": "click",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d7294b6-2bba-436a-8654-c6ca6a81f6d8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5aeeb7b-5033-431f-b650-3df8185b4373",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b97f78ab-0ffb-424b-a36d-62f7631fd256",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4) #opciontest",
+      "targets": [
+        ["css=.form-group:nth-child(4) #opciontest", "css:finder"],
+        ["xpath=(//input[@id='opciontest'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94f2b405-f7d6-4264-8d09-4c6e8a5da91a",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(4) #opciontest",
+      "targets": [
+        ["css=.form-group:nth-child(4) #opciontest", "css:finder"],
+        ["xpath=(//input[@id='opciontest'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": "opcion2"
+    }, {
+      "id": "f554eb7e-db93-42dc-af14-25aa94581265",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[4]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/label/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd0e925c-43d5-4a7b-8978-6811acd652b9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[4]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/label/label/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "efcf14ac-f00d-4964-b952-a108f993eade",
+      "comment": "",
+      "command": "click",
+      "target": "id=nuevaopcion",
+      "targets": [
+        ["id=nuevaopcion", "id"],
+        ["css=#nuevaopcion", "css:finder"],
+        ["xpath=//input[@id='nuevaopcion']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f66eeeb7-8964-4267-bf3d-8661e6f88794",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(5) #opciontest",
+      "targets": [
+        ["css=.form-group:nth-child(5) #opciontest", "css:finder"],
+        ["xpath=(//input[@id='opciontest'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[5]/label/input", "xpath:idRelative"],
+        ["xpath=//div[5]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2edf5e49-d46c-45e0-bde9-98f756da7b54",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(5) #opciontest",
+      "targets": [
+        ["css=.form-group:nth-child(5) #opciontest", "css:finder"],
+        ["xpath=(//input[@id='opciontest'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[5]/label/input", "xpath:idRelative"],
+        ["xpath=//div[5]/label/input", "xpath:position"]
+      ],
+      "value": "opcion3"
+    }, {
+      "id": "2a93977b-782f-441e-9d11-4aca193031ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[5]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[5]/label/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40601608-a2a1-4b8a-8c8f-bdb901ed6265",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[3]/div[5]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[5]/label/label/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "49e941ad-b78d-41ee-a6da-e8fc457dde27",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnNuevaPregunta",
+      "targets": [
+        ["id=btnNuevaPregunta", "id"],
+        ["css=#btnNuevaPregunta", "css:finder"],
+        ["xpath=//button[@id='btnNuevaPregunta']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nueva pregunta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73a1bd44-4a03-4cf9-8e9d-ce7856fa77cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(5) > .form-group > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > .form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div[4]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3e88f0a-417b-41ea-a2a3-7b15a3b256f6",
+      "comment": "",
+      "command": "select",
+      "target": "css=.pregunta:nth-child(5) > .form-group > .form-control",
+      "targets": [],
+      "value": "label=Pregunta con Respueta Múltiple"
+    }, {
+      "id": "9f1c3731-b7c0-4e8f-940a-5de4017ffc01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(5) > .form-group > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > .form-group > .form-control", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div[4]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0aa71fc2-28fa-493d-b314-730e8988c317",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(5) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6a29ae7-a63b-47fd-b041-05714f095c4e",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(5) > .form-group:nth-child(2) .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "Pregunta4"
+    }, {
+      "id": "231fca19-102b-419c-affc-a5febceb6d59",
+      "comment": "",
+      "command": "click",
+      "target": "id=wrapper",
+      "targets": [
+        ["id=wrapper", "id"],
+        ["css=#wrapper", "css:finder"],
+        ["xpath=//div[@id='wrapper']", "xpath:attributes"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "549aa299-a048-4a2f-b721-68a14055043b",
+      "comment": "",
+      "command": "type",
+      "target": "id=opcionmultiple",
+      "targets": [
+        ["id=opcionmultiple", "id"],
+        ["css=#opcionmultiple", "css:finder"],
+        ["xpath=//input[@id='opcionmultiple']", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion1"
+    }, {
+      "id": "75b6c63b-a53e-414c-8dfc-b70325b17174",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(5) .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(5) .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[3]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/label/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "fecdeff5-8be9-4729-a65e-bcb943bf1314",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(5) .input-group-text > .input-group-text",
+      "targets": [
+        ["css=.pregunta:nth-child(5) .input-group-text > .input-group-text", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[3]/label/label", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/label/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f858ad86-2526-4e90-9ae6-dfb741ce6c38",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(5) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a9ed8e0-f656-4b70-a7ed-7348541b1c15",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pregunta:nth-child(5) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6188afdd-cb26-4b3a-a4a6-7308ddd61db1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.pregunta:nth-child(5) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96c000f7-48f3-43ae-b4be-7a22ee359fca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(5) > .form-group:nth-child(4) > .input-group-text",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > .form-group:nth-child(4) > .input-group-text", "css:finder"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[4]/label", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4db48d3-0b8c-4a0e-871a-f9d60ff98f2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4) #opcionmultiple",
+      "targets": [
+        ["css=.form-group:nth-child(4) #opcionmultiple", "css:finder"],
+        ["xpath=(//input[@id='opcionmultiple'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2600b7d6-32ea-4ee3-b559-db7412a4edb0",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(4) #opcionmultiple",
+      "targets": [
+        ["css=.form-group:nth-child(4) #opcionmultiple", "css:finder"],
+        ["xpath=(//input[@id='opcionmultiple'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[4]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion2"
+    }, {
+      "id": "ef666e85-9fef-4cf8-aa2a-6a1e29651f7b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(5) > .form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > .form-group:nth-child(4) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[4]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/label/label/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "eca41076-27a9-4a46-b04b-9907509424ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pregunta:nth-child(5) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a4a4c4c-814d-4479-803a-6ba5e4cf6e86",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pregunta:nth-child(5) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1767e3a5-0681-4439-a35d-e0b56f93ad49",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.pregunta:nth-child(5) > #nuevaopcion",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > #nuevaopcion", "css:finder"],
+        ["xpath=(//input[@id='nuevaopcion'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5a04c63-2a90-4223-9b0e-1fac8e31dce4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(5) #opcionmultiple",
+      "targets": [
+        ["css=.form-group:nth-child(5) #opcionmultiple", "css:finder"],
+        ["xpath=(//input[@id='opcionmultiple'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[5]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[5]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aacfad4a-c76d-468a-9da4-5a577577a960",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-group:nth-child(5) #opcionmultiple",
+      "targets": [
+        ["css=.form-group:nth-child(5) #opcionmultiple", "css:finder"],
+        ["xpath=(//input[@id='opcionmultiple'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[5]/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[5]/label/input", "xpath:position"]
+      ],
+      "value": "Opcion3"
+    }, {
+      "id": "d0f5803d-7826-426f-84c3-3a576ccc28e9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.pregunta:nth-child(5) > .form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control",
+      "targets": [
+        ["css=.pregunta:nth-child(5) > .form-group:nth-child(5) > .input-group-text > .input-group-text > .form-control", "css:finder"],
+        ["xpath=(//input[@type='number'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='divPreguntas']/div[4]/div[5]/label/label/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[5]/label/label/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "7ed6f2be-9506-4ea5-babb-fb1a33fb4c3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEnviar",
+      "targets": [
+        ["id=btnEnviar", "id"],
+        ["css=#btnEnviar", "css:finder"],
+        ["xpath=//input[@id='btnEnviar']", "xpath:attributes"],
+        ["xpath=//form[@id='formularioenviarexamen']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18343659-24a7-4690-ad73-4f56d7b0048d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#enviarexamen .btn",
+      "targets": [
+        ["css=#enviarexamen .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='enviarexamen']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5a34bb2f-f6cd-4446-b351-100438679305",
+    "name": "1-Instalacion",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c3caf691-ac36-412c-b7e9-5f78f4e50f64", "0f4b2c8d-7f5d-4f96-8f21-eb5e45b00907", "5a4b6282-cbc9-4b7e-ad4c-4a6dbed41071", "a6909784-fa35-435c-8b29-87213e8dd32d", "fbe88d57-a55d-41dd-9235-1ee9f19821d3"]
+  }, {
+    "id": "116406d5-4a87-49f8-9633-59a8386e6d0e",
+    "name": "2-Login Google",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7db39fda-5c6e-4b4c-864e-631878515d6d", "d4a7317c-402e-4872-99d0-44f94dd75514", "a7f5e62e-6329-4f77-9d36-bc9ced899c0e", "03fbc6fd-6d2d-45c9-b8b3-2298b2efebf0"]
+  }, {
+    "id": "e44066f9-4574-4bf3-a2bb-c12ad75a5e78",
+    "name": "0-Acceso URL Denegado controlador Examenes",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["36a8037a-d1c5-4bda-8b30-ee890cdef4b9", "3d4f7782-2a17-45dd-b19e-551eb83b0f83"]
+  }, {
+    "id": "644f5dea-8c27-4eda-b846-f79bc504583e",
+    "name": "3A-Gestión examenes-Alta examen",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4b759442-df29-4ea9-96c3-23f0266736a5", "f29f8ea9-d96c-4f6d-9ba6-edb78015599d", "119c977e-5607-4194-8cf0-837d4968d6d9", "5833c2a5-7442-4d1f-8eb5-83534c1ca6ef", "e774b952-0ea6-40b8-8693-d36fb278e7c7"]
+  }, {
+    "id": "4451d8b3-6c32-4f87-aec7-73926ac3843f",
+    "name": "3B-Gestion exámenes-Listar Examenes",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["946c24b8-bd3c-49b3-8689-55c5ee70b5f8"]
+  }, {
+    "id": "bc886f7e-2f9a-4859-b864-eca36942a9f9",
+    "name": "3C-Gestion exámenes-Borrar examenes",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["05399c0a-1163-42ae-bd3f-856e2d9769e8", "91a0ba7a-262f-4963-ae4e-c2d7db972bf6"]
+  }, {
+    "id": "00120954-895f-4fbb-a2d6-d46d75afde95",
+    "name": "3D-Gestion exámenes-Modificar examenes",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4fa83473-ce25-42d0-8296-2dfa7809ea06", "8185ec98-47e9-4933-9125-93a59d583124", "e7879cda-711c-4094-8f02-cc97cba32105", "0b14bc99-6748-4bb4-9fe6-01f5cda7b6e7", "44ffd90e-d96b-433a-841b-48f42e9de95d", "62a78463-7aa8-47c0-bb40-33bd2beb799e", "929ac92d-eed8-4c7c-80d9-a06fce4d2114", "e102ae40-fd98-4872-85aa-4a479974ae91", "e07be94c-6b21-4254-a924-e1453512da5e", "a494d032-94ca-4d21-8029-d7bde7c52ef3", "a61b9fde-c539-4386-8420-3f640fd3e2f5", "95a6cd1e-4bd6-40b9-a856-ea4b84258bf0", "9c69832d-f5cc-4f81-8b76-e35df519ff43", "534dce56-e294-4cae-84b4-da06b0b4c951", "451a3306-c6ad-4c1c-8da3-5af0736f2304"]
+  }],
+  "urls": ["http://localhost/", "http://localhost/GestorExamenes", "http://localhost/GestorExamenes/instalacion", "http://localhost/GestorExamenes/"],
+  "plugins": []
+}
