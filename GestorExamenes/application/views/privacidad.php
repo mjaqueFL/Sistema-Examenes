@@ -33,7 +33,8 @@ include 'templates/dashboard.php'
                             responsables de esta web. Como usuario, es importante que conozcas estos términos antes
                             de
                             continuar tu navegación.
-                            Ignacio Lorenzo-Gestor Examenes.Como responsable de esta web, asume el compromiso de procesar la
+                            Ignacio Lorenzo-Gestor Examenes.Como responsable de esta web, asume el compromiso de
+                            procesar la
                             información
                             de nuestros usuarios y clientes con plenas garantías y cumplir con los requisitos
                             nacionales
@@ -55,7 +56,8 @@ include 'templates/dashboard.php'
                                     la facturación y entrega correspondiente.
                                 </li>
                                 <li class="ng-binding">Remitir periódicamente comunicaciones sobre servicios, eventos y
-                                    noticias relacionadas con las actividades desarrolladas por Ignacio Lorenzo-Gestor Examenes, por
+                                    noticias relacionadas con las actividades desarrolladas por Ignacio Lorenzo-Gestor
+                                    Examenes, por
                                     cualquier medio (teléfono, correo postal o email), salvo que se indique lo contrario
                                     o
                                     el usuario se oponga o revoque su consentimiento.
@@ -77,7 +79,8 @@ include 'templates/dashboard.php'
 
                             <h3>Categorías de datos – ¿Qué datos tratamos?</h3>
 
-                            <p class="ng-binding">Derivada de las finalidades antes mencionadas, en Ignacio Lorenzo-Gestor Examenes
+                            <p class="ng-binding">Derivada de las finalidades antes mencionadas, en Ignacio
+                                Lorenzo-Gestor Examenes
                                 gestionamos las siguientes categorías de datos:</p>
                             <ul>
                                 <li>Datos identificativos</li>
@@ -86,11 +89,13 @@ include 'templates/dashboard.php'
                                     facilite
                                     datos de terceros, manifiesta contar con el consentimiento de estos y se compromete
                                     a
-                                    trasladarle la información contenida en esta cláusula, eximiendo a Ignacio Lorenzo-Gestor Examenes
+                                    trasladarle la información contenida en esta cláusula, eximiendo a Ignacio
+                                    Lorenzo-Gestor Examenes
                                     de
                                     cualquier responsabilidad en este sentido.
                                 </li>
-                                <li class="ng-binding">No obstante, Ignacio Lorenzo-Gestor Examenes podrá llevar a cabo las
+                                <li class="ng-binding">No obstante, Ignacio Lorenzo-Gestor Examenes podrá llevar a cabo
+                                    las
                                     verificaciones
                                     para constatar este hecho, adoptando las medidas de diligencia debida que
                                     correspondan,
@@ -119,7 +124,8 @@ include 'templates/dashboard.php'
 
                             <h3>Plazo de Conservación de los Datos – ¿Por cuánto tiempo conservaremos tus datos?</h3>
 
-                            <p class="ng-binding">Ignacio Lorenzo-Gestor Examenes conservará los datos personales de los usuarios
+                            <p class="ng-binding">Ignacio Lorenzo-Gestor Examenes conservará los datos personales de los
+                                usuarios
                                 únicamente
                                 durante el tiempo necesario para la realización de las finalidades para las que fueron
                                 recogidos, mientras no revoque los consentimientos otorgados. Posteriormente, en caso de
@@ -130,13 +136,16 @@ include 'templates/dashboard.php'
                             <h3>Destinatarios ¿A qué destinatarios se comunicarán tus datos?</h3>
 
                             <p class="ng-binding">Tus datos podrán ser accedidos por aquellos proveedores que prestan
-                                servicios a Ignacio Lorenzo-Gestor Examenes, tales como servicios de alojamiento, herramientas de
+                                servicios a Ignacio Lorenzo-Gestor Examenes, tales como servicios de alojamiento,
+                                herramientas de
                                 marketing
                                 y sistemas de contenido u otros profesionales, cuando dicha comunicación sea necesaria
                                 normativamente, o para la ejecución de los servicios contratados.<br><br>
-                                Ignacio Lorenzo-Gestor Examenes, ha suscrito los correspondientes contratos de encargo de tratamiento
+                                Ignacio Lorenzo-Gestor Examenes, ha suscrito los correspondientes contratos de encargo
+                                de tratamiento
                                 con
-                                cada uno de los proveedores que prestan servicios a Ignacio Lorenzo-Gestor Examenes, con el objetivo de
+                                cada uno de los proveedores que prestan servicios a Ignacio Lorenzo-Gestor Examenes, con
+                                el objetivo de
                                 garantizar que dichos proveedores tratarán tus datos de conformidad con lo establecido
                                 en la
                                 legislación vigente.<br><br>
@@ -163,16 +172,19 @@ include 'templates/dashboard.php'
                                     usuario y
                                     los servidores de Ignacio Lorenzo-Gestor Examenes
                                 </li>
-                                <li class="ng-binding">Encriptación de la información en los propios servidores de Ignacio Lorenzo-Gestor Examenes
+                                <li class="ng-binding">Encriptación de la información en los propios servidores de
+                                    Ignacio Lorenzo-Gestor Examenes
                                 </li>
                                 <li>Otras medidas que eviten el acceso a los datos del usuario por parte de terceros.
                                 </li>
-                                <li class="ng-binding">En aquellos casos en los que Ignacio Lorenzo-Gestor Examenes cuente con
+                                <li class="ng-binding">En aquellos casos en los que Ignacio Lorenzo-Gestor Examenes
+                                    cuente con
                                     prestadores
                                     de servicio para el mantenimiento de la plataforma que se encuentren fuera de la
                                     Unión
                                     Europea, estas trasferencias internacionales se hayan regularizadas atendiendo al
-                                    compromiso de Ignacio Lorenzo-Gestor Examenes con la protección, integridad y seguridad de los datos
+                                    compromiso de Ignacio Lorenzo-Gestor Examenes con la protección, integridad y
+                                    seguridad de los datos
                                     personales de los usuarios.
                                 </li>
                             </ul>
@@ -180,7 +192,8 @@ include 'templates/dashboard.php'
                             <h3>Derechos – ¿Cuáles son tus derechos cuando nos facilitas tus datos y cómo puedes
                                 ejercerlos?</h3>
                             <p class="ng-binding">
-                                Tienes derecho a obtener confirmación sobre si en Ignacio Lorenzo-Gestor Examenes estamos tratando datos
+                                Tienes derecho a obtener confirmación sobre si en Ignacio Lorenzo-Gestor Examenes
+                                estamos tratando datos
                                 personales que te conciernan, o no.<br>
                                 Asimismo, tienes derecho a acceder a tus datos personales, así como a solicitar la
                                 rectificación de los datos inexactos o, en su caso, solicitar su supresión cuando, entre
@@ -191,7 +204,8 @@ include 'templates/dashboard.php'
                                 en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de
                                 reclamaciones.<br>
                                 En determinadas circunstancias y por motivos relacionados con tu situación particular,
-                                podrás oponerte al tratamiento de tus datos. Ignacio Lorenzo-Gestor Examenes dejará de tratar los datos,
+                                podrás oponerte al tratamiento de tus datos. Ignacio Lorenzo-Gestor Examenes dejará de
+                                tratar los datos,
                                 salvo por motivos legítimos imperiosos, o el ejercicio o la defensa de posibles
                                 reclamaciones.<br><br>
                                 Asimismo, puedes ejercer el derecho a la portabilidad de los datos, así como retirar los
@@ -199,7 +213,8 @@ include 'templates/dashboard.php'
                                 tratamiento basado en el consentimiento previo a su retirada.<br><br>
 
                                 Si deseas hacer uso de cualquiera de tus derechos puede dirigirse a <a
-                                        href="mailto:ilorenzovelez.guadalupe@alumnado.fundacionloyola.net" class="ng-binding">ilorenzovelez.guadalupe@alumnado.fundacionloyola.net</a>.
+                                        href="mailto:ilorenzovelez.guadalupe@alumnado.fundacionloyola.net"
+                                        class="ng-binding">ilorenzovelez.guadalupe@alumnado.fundacionloyola.net</a>.
                                 <br><br>
                                 Por último, te informamos que puedes dirigirte ante la Agencia Española de Protección de
                                 Datos y demás organismos públicos competentes para cualquier reclamación derivada del
@@ -212,14 +227,18 @@ include 'templates/dashboard.php'
 
 
                             <p class="ng-binding">
-                                Ignacio Lorenzo-Gestor Examenes podrá modificar la presente Política de Privacidad en cualquier momento,
-                                siendo publicadas las sucesivas versiones en el Sitio Web. En cualquier caso, Ignacio Lorenzo-Gestor Examenes
+                                Ignacio Lorenzo-Gestor Examenes podrá modificar la presente Política de Privacidad en
+                                cualquier momento,
+                                siendo publicadas las sucesivas versiones en el Sitio Web. En cualquier caso, Ignacio
+                                Lorenzo-Gestor Examenes
                                 comunicará con previo aviso las modificaciones de la presente política que
                                 afecten
                                 a los usuarios a fin de que puedan aceptar las mismas. <br><br>
-                                La presente Política de Privacidad se encuentra actualizada a fecha 27/12/2018 Ignacio Lorenzo-Gestor Examenes (España). Reservados todos los derechos.
+                                La presente Política de Privacidad se encuentra actualizada a fecha 27/12/2018 Ignacio
+                                Lorenzo-Gestor Examenes (España). Reservados todos los derechos.
                                 <br><br>
-                                Si lo deseas también puedes consultar nuestra <strong><a href="<?php echo base_url() ?>Legal/cookies">Política de
+                                Si lo deseas también puedes consultar nuestra <strong><a
+                                            href="<?php echo base_url() ?>Legal/cookies">Política de
                                         Cookies</a></strong>
 
                             </p>
@@ -238,9 +257,11 @@ include 'templates/dashboard.php'
                                 Datos del responsable del tratamiento:
                                 Identidad: Ignacio Lorenzo-Gestor Examenes - NIF: 8723693A
                                 Dirección postal: calle falsa 123
-                                Teléfono: 645198732 - Correo electrónico:  ilorenzovelez.guadalupe@alumnado.fundacionloyola.net
+                                Teléfono: 645198732 - Correo electrónico:
+                                ilorenzovelez.guadalupe@alumnado.fundacionloyola.net
                                 <br><br>
-                                “En Ignacio Lorenzo-Gestor Examenes tratamos la información que nos facilita con el fin de prestarles el
+                                “En Ignacio Lorenzo-Gestor Examenes tratamos la información que nos facilita con el fin
+                                de prestarles el
                                 servicio solicitado y realizar su facturación. Los datos proporcionados se conservarán
                                 mientras se mantenga la relación comercial o durante el tiempo necesario para cumplir
                                 con
@@ -249,12 +270,15 @@ include 'templates/dashboard.php'
                                 cumplimiento de la finalidad para la que los datos fueron recabados. Los datos no se
                                 cederán
                                 a terceros salvo en los casos en que exista una obligación legal. Usted tiene derecho a
-                                obtener información sobre si en Ignacio Lorenzo-Gestor Examenes estamos tratando sus datos personales,
+                                obtener información sobre si en Ignacio Lorenzo-Gestor Examenes estamos tratando sus
+                                datos personales,
                                 por
                                 lo que puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad de
-                                datos y oposición y limitación a su tratamiento ante Ignacio Lorenzo-Gestor Examenes, calle falsa 123 o
+                                datos y oposición y limitación a su tratamiento ante Ignacio Lorenzo-Gestor Examenes,
+                                calle falsa 123 o
                                 en
-                                la dirección de correo electrónico ilorenzovelez.guadalupe@alumnado.fundacionloyola.net, adjuntando copia de su DNI
+                                la dirección de correo electrónico ilorenzovelez.guadalupe@alumnado.fundacionloyola.net,
+                                adjuntando copia de su DNI
                                 o
                                 documento equivalente. Asimismo, y especialmente si considera que no ha obtenido
                                 satisfacción plena en el ejercicio de sus derechos, podrá presentar una reclamación ante

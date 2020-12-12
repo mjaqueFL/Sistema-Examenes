@@ -33,7 +33,8 @@ include 'templates/dashboard.php'
                             responsables de esta web. Como usuario, es importante que conozcas estos términos antes
                             de
                             continuar tu navegación.
-                            Ignacio Lorenzo-Gestor Examenes.Como responsable de esta web, asume el compromiso de procesar la
+                            Ignacio Lorenzo-Gestor Examenes.Como responsable de esta web, asume el compromiso de
+                            procesar la
                             información
                             de nuestros usuarios y clientes con plenas garantías y cumplir con los requisitos
                             nacionales
@@ -44,11 +45,13 @@ include 'templates/dashboard.php'
                             sociedad de la información y de comercio electrónico.
                             <h3>CONDICIONES GENERALES DE USO</h3>
                             <p class="ng-binding">Las presentes Condiciones Generales regulan el uso (incluyendo el mero
-                                acceso) de las páginas de la web, integrantes del sitio web de http://localhost/GestorExamenes/
+                                acceso) de las páginas de la web, integrantes del sitio web de
+                                http://localhost/GestorExamenes/
                                 incluidos
                                 los contenidos y servicios puestos a disposición en ellas. Toda persona que acceda a la
                                 web,
-                                ilorenzovelez.guadalupe@alumnado.fundacionloyola.net (“Usuario”) acepta someterse a las Condiciones Generales vigentes en
+                                ilorenzovelez.guadalupe@alumnado.fundacionloyola.net (“Usuario”) acepta someterse a las
+                                Condiciones Generales vigentes en
                                 cada
                                 momento del portal http://localhost/GestorExamenes/</p>
                             <h3>DATOS PERSONALES QUE RECABAMOS Y CÓMO LO HACEMOS</h3>
@@ -56,7 +59,8 @@ include 'templates/dashboard.php'
                             <h3>COMPROMISOS Y OBLIGACIONES DE LOS USUARIOS</h3>
                             <p class="ng-binding">
                                 El Usuario queda informado, y acepta, que el acceso a la presente web no supone, en modo
-                                alguno, el inicio de una relación comercial con http://localhost/GestorExamenes/. De esta forma, el
+                                alguno, el inicio de una relación comercial con http://localhost/GestorExamenes/. De
+                                esta forma, el
                                 usuario
                                 se compromete a utilizar el sitio Web, sus servicios y contenidos sin contravenir la
                                 legislación vigente, la buena fe y el orden público.<br>
@@ -69,14 +73,17 @@ include 'templates/dashboard.php'
                                 vulneración de los derechos del prestador o de los legítimos titulares;Su utilización
                                 para
                                 fines comerciales o publicitarios.
-                                En la utilización de la web, http://localhost/GestorExamenes/, el Usuario se compromete a no llevar a
+                                En la utilización de la web, http://localhost/GestorExamenes/, el Usuario se compromete
+                                a no llevar a
                                 cabo
                                 ninguna conducta que pudiera dañar la imagen, los intereses y los derechos de
-                                http://localhost/GestorExamenes/ o de terceros o que pudiera dañar, inutilizar o sobrecargar el portal
+                                http://localhost/GestorExamenes/ o de terceros o que pudiera dañar, inutilizar o
+                                sobrecargar el portal
                                 (indicar dominio) o que impidiera, de cualquier forma, la normal utilización de la web.
                                 No obstante, el Usuario debe ser consciente de que las medidas de seguridad de los
                                 sistemas
-                                informáticos en Internet no son enteramente fiables y que, por tanto http://localhost/GestorExamenes/ no
+                                informáticos en Internet no son enteramente fiables y que, por tanto
+                                http://localhost/GestorExamenes/ no
                                 puede garantizar la inexistencia de virus u otros elementos que puedan producir
                                 alteraciones
                                 en los sistemas informáticos (software y hardware) del Usuario o en sus documentos
@@ -84,27 +91,33 @@ include 'templates/dashboard.php'
                             </p>
                             <h3>MEDIDAS DE SEGURIDAD</h3>
                             <p class="ng-binding">
-                                Los datos personales comunicados por el usuario a http://localhost/GestorExamenes/ pueden ser
+                                Los datos personales comunicados por el usuario a http://localhost/GestorExamenes/
+                                pueden ser
                                 almacenados en
                                 bases de datos automatizadas o no, cuya titularidad corresponde en exclusiva a
-                                http://localhost/GestorExamenes/, asumiendo ésta todas las medidas de índole técnica, organizativa y de
+                                http://localhost/GestorExamenes/, asumiendo ésta todas las medidas de índole técnica,
+                                organizativa y de
                                 seguridad que garantizan la confidencialidad, integridad y calidad de la información
                                 contenida en las mismas de acuerdo con lo establecido en la normativa vigente en
                                 protección
                                 de datos.<br>
-                                La comunicación entre los usuarios y http://localhost/GestorExamenes/ utiliza un canal seguro, y los
+                                La comunicación entre los usuarios y http://localhost/GestorExamenes/ utiliza un canal
+                                seguro, y los
                                 datos
                                 transmitidos son cifrados gracias a protocolos a https, por tanto, garantizamos las
                                 mejores
                                 condiciones de seguridad para que la confidencialidad de los usuarios esté garantizada.
                             </p>
                             <h3>RECLAMACIONES</h3>
-                            <p class="ng-binding">http://localhost/GestorExamenes/ informa que existen hojas de reclamación a
+                            <p class="ng-binding">http://localhost/GestorExamenes/ informa que existen hojas de
+                                reclamación a
                                 disposición de
                                 usuarios y clientes.
                                 El Usuario podrá realizar reclamaciones solicitando su hoja de reclamación o remitiendo
                                 un
-                                correo electrónico a <a href="mailto: ilorenzovelez.guadalupe@alumnado.fundacionloyola.net" class="ng-binding"> ilorenzovelez.guadalupe@alumnado.fundacionloyola.net</a>
+                                correo electrónico a <a
+                                        href="mailto: ilorenzovelez.guadalupe@alumnado.fundacionloyola.net"
+                                        class="ng-binding"> ilorenzovelez.guadalupe@alumnado.fundacionloyola.net</a>
                                 indicando su nombre y apellidos, el servicio y/o producto adquirido y exponiendo los
                                 motivos
                                 de su reclamación.<br><br>
@@ -135,7 +148,8 @@ include 'templates/dashboard.php'
                                 de la
                                 totalidad o parte de los contenidos de esta página web, con fines comerciales, en
                                 cualquier
-                                soporte y por cualquier medio técnico, sin la autorización de http://localhost/GestorExamenes/. El
+                                soporte y por cualquier medio técnico, sin la autorización de
+                                http://localhost/GestorExamenes/. El
                                 usuario
                                 se compromete a respetar los derechos de Propiedad Intelectual e Industrial titularidad
                                 de
@@ -151,7 +165,8 @@ include 'templates/dashboard.php'
                                 En el caso de que un usuario o un tercero consideren que se ha producido una violación
                                 de
                                 sus legítimos derechos de propiedad intelectual por la introducción de un determinado
-                                contenido en la web, deberá notificar dicha circunstancia a http://localhost/GestorExamenes/
+                                contenido en la web, deberá notificar dicha circunstancia a
+                                http://localhost/GestorExamenes/
                                 indicando:<br>
                             </p>
                             <ul>
@@ -172,12 +187,14 @@ include 'templates/dashboard.php'
                                 </li>
                             </ul>
                             <h3>ENLACES EXTERNOS</h3>
-                            <p class="ng-binding">Las páginas de la web  ilorenzovelez.guadalupe@alumnado.fundacionloyola.net, podría proporcionar enlaces a
+                            <p class="ng-binding">Las páginas de la web
+                                ilorenzovelez.guadalupe@alumnado.fundacionloyola.net, podría proporcionar enlaces a
                                 otros sitios web propios y contenidos que son propiedad de terceros.
                                 El único objeto de los enlaces es proporcionar al Usuario la posibilidad de acceder a
                                 dichos
                                 enlaces.
-                                ilorenzovelez.guadalupe@alumnado.fundacionloyola.net no se responsabiliza en ningún caso de los resultados que puedan
+                                ilorenzovelez.guadalupe@alumnado.fundacionloyola.net no se responsabiliza en ningún caso
+                                de los resultados que puedan
                                 derivarse
                                 al Usuario por acceso a dichos enlaces.<br>
                                 Asimismo, el usuario encontrará dentro de este sitio, páginas, promociones, programas de
@@ -193,11 +210,15 @@ include 'templates/dashboard.php'
                                 detalladamente las políticas de privacidad de los enlaces de afiliado.<br>
                                 El Usuario que se proponga establecer cualquier dispositivo técnico de enlace desde su
                                 sitio
-                                web al portal http://localhost/GestorExamenes/ deberá obtener la autorización previa y escrita de
-                                http://localhost/GestorExamenes/ El establecimiento del enlace no implica en ningún caso la existencia
+                                web al portal http://localhost/GestorExamenes/ deberá obtener la autorización previa y
+                                escrita de
+                                http://localhost/GestorExamenes/ El establecimiento del enlace no implica en ningún caso
+                                la existencia
                                 de
-                                relaciones entre http://localhost/GestorExamenes/ y el propietario del sitio en el que se establezca el
-                                enlace, ni la aceptación o aprobación por parte de http://localhost/GestorExamenes/ de sus contenidos o
+                                relaciones entre http://localhost/GestorExamenes/ y el propietario del sitio en el que
+                                se establezca el
+                                enlace, ni la aceptación o aprobación por parte de http://localhost/GestorExamenes/ de
+                                sus contenidos o
                                 servicios
                             </p>
                             <h3>POLÍTICA DE COMENTARIOS</h3>
@@ -248,16 +269,20 @@ include 'templates/dashboard.php'
                             </ul>
                             <p></p>
                             <h3>LEY APLICABLE Y JURISDICCIÓN</h3>
-                            <p class="ng-binding">Con carácter general las relaciones entre http://localhost/GestorExamenes/ con los
+                            <p class="ng-binding">Con carácter general las relaciones entre
+                                http://localhost/GestorExamenes/ con los
                                 Usuarios de sus servicios telemáticos, presentes en esta web se encuentran sometidas a
                                 la legislación y jurisdicción españolas y a los tribunales.</p>
                             <h3>CONTACTO</h3>
                             <p class="ng-binding">En caso de que cualquier Usuario tuviese alguna duda acerca de estas
-                                Condiciones legales o cualquier comentario sobre el portal http://localhost/GestorExamenes/, por favor
-                                diríjase a <a href="mailto:ilorenzovelez.guadalupe@alumnado.fundacionloyola.net" class="ng-binding">ilorenzovelez.guadalupe@alumnado.fundacionloyola.net</a>
+                                Condiciones legales o cualquier comentario sobre el portal
+                                http://localhost/GestorExamenes/, por favor
+                                diríjase a <a href="mailto:ilorenzovelez.guadalupe@alumnado.fundacionloyola.net"
+                                              class="ng-binding">ilorenzovelez.guadalupe@alumnado.fundacionloyola.net</a>
                             </p>
                             <p class="ng-binding">
-                                De parte del equipo que formamos Ignacio Lorenzo-Gestor Examenes te agradecemos el tiempo dedicado en
+                                De parte del equipo que formamos Ignacio Lorenzo-Gestor Examenes te agradecemos el
+                                tiempo dedicado en
                                 leer
                                 este Aviso Legal
                             </p>

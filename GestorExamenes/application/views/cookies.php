@@ -52,7 +52,8 @@ include('templates/dashboard.php');
                                 tus
                                 datos personales, en el sentido establecido por la Ley de Protección de Datos Personales
                                 es
-                                la página webtargaryen.com, propiedad de Ignacio Lorenzo-Gestor Examenes – calle falsa 123.</p>
+                                la página webtargaryen.com, propiedad de Ignacio Lorenzo-Gestor Examenes – calle falsa
+                                123.</p>
 
                             <h3>¿Qué son las cookies?</h3>
                             <p>Las cookies son un conjunto de datos que un servidor deposita en el navegador del usuario
@@ -166,7 +167,8 @@ include('templates/dashboard.php');
                                 para
                                 los usuarios Saber si el usuario que está accediendo es nuevo o repite visita.</p>
                             <p class="ng-binding">Importante: Salvo que el usuario decida registrarse en un servicio de
-                                Ignacio Lorenzo-Gestor Examenes, la cookie nunca irá asociada a ningún dato de carácter personal que
+                                Ignacio Lorenzo-Gestor Examenes, la cookie nunca irá asociada a ningún dato de carácter
+                                personal que
                                 pueda
                                 identificarle. Dichas cookies sólo serán utilizadas con propósitos estadísticos que
                                 ayuden a
@@ -175,7 +177,8 @@ include('templates/dashboard.php');
                             <h3>Cookies de publicidad</h3>
                             <p class="ng-binding">Este tipo de cookies permiten ampliar la información de los anuncios
                                 mostrados a cada usuario anónimo en los servicios de
-                                Ignacio Lorenzo-Gestor Examenes. Entre otros, se almacena la duración o frecuencia de visualización de
+                                Ignacio Lorenzo-Gestor Examenes. Entre otros, se almacena la duración o frecuencia de
+                                visualización de
                                 posiciones publicitarias, la interacción con las mismas, o los patrones de navegación
                                 y/o
                                 comportamientos del usuario ya que ayudan a conformar un perfil de interés publicitario.

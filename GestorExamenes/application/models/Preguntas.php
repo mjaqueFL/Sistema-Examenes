@@ -11,8 +11,9 @@ class Preguntas extends CI_Model
     }
 
     /**
+     * Saca todos los examenes de la coleccion de la base de datos de Mongo
      * @return mixed
-     *
+     * Retorna un objeto JSON por cada examen encontrado en la coleccion
      */
     public function sacarexamenes()
     {
@@ -21,35 +22,47 @@ class Preguntas extends CI_Model
     }
 
     /**
+     * Este método saca un examen en concreto de la coleccion de la base de datos de Mongo
      * @param $titulo
+     * El método recibe el nombre del examen
      * @return mixed
+     * El método devuelve el objeto JSON con el examen
      */
     public function sacarexamenconcreto($titulo)
     {
         $resultado = $this->mongo_db->where(['Titulo examen' => $titulo])->get(COLECCION);
         return $resultado;
     }
+
     /**
+     * Método que sirve para crear el objeto JSON con el examen
      * @param $examen
+     * El método recibe un array con el Título del examen, curso, asignatura, email y si está activada la opcion de barajar
      */
-    //crear documento examen en mongo con Titulo, curso, asignatura, email , barajar
     public function crearexamen($examen)
     {
         $this->mongo_db->insert(COLECCION, $examen);
 
     }
-/*
- *
- */
+
+
+    /**
+     * Método que borra un examen en concreto
+     * @param $examen
+     * Recibe el nombre del examen
+     */
     public function borrarexamenconcreto($examen)
     {
         $this->mongo_db->where('Titulo examen', $examen)->delete(COLECCION);
     }
+
     /**
+     *
+     * Método que modifica los datos de un examen concreto
      * @param $data
      * @param $examen
+     * El método recibe los nuevos datos y el nombre del examen a modificar
      */
-    //modificar datos examen con AJAX
     public function modificardatos($data, $examen)
     {
         $this->mongo_db->where('Titulo examen', $examen)->set($data)->update(COLECCION);
@@ -58,13 +71,14 @@ class Preguntas extends CI_Model
     }
 
     /**
+     * Método que recibe las preguntas de un examen en concreto y las almacenas en un array
      * @param $examen
      * @param $datos
+     * El método recibe las preguntas del examen y el nombre del examen en concreto a modificar
      */
-    // crea el array preguntas en mongo
     public function editarexamen($examen, $datos)
     {
-        var_dump($this->mongo_db->where('Titulo examen', $examen)->set($datos)->update(COLECCION));;
+        $this->mongo_db->where('Titulo examen', $examen)->set($datos)->update(COLECCION);
 
     }
 }
