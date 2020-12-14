@@ -56,7 +56,8 @@ include('templates/dashboard.php');
                     </div>
                     <div class="form-group ">
                         <label for="inputEmail">Email
-                            <input readonly="readonly" size="100" id="inputEmail" type="email" name="email" class="form-control"
+                            <input readonly="readonly" size="100" id="inputEmail" type="email" name="email"
+                                   class="form-control"
                                    value="<?php echo $this->miexamenconcreto[0]['Email'] ?>">
                         </label>
                     </div>
@@ -71,7 +72,7 @@ include('templates/dashboard.php');
 
     <div class="col">
         <!-- Cierre de preguntas examen-->
-        <form  id="formularioenviarexamen"
+        <form id="formularioenviarexamen"
               method="post">
             <div class=" col-xs-12 mb-3 text-center"><input class="btn btn-success" id="btnEnviar" type="submit"
                                                             value="Enviar"></div>
@@ -238,7 +239,7 @@ include('templates/dashboard.php');
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url:"<?php echo base_url()?>Examenes/modificarajax?nombreexamen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
+                url: "<?php echo base_url()?>Examenes/modificarajax?nombreexamen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
                 data: $(this).serialize(),
                 success: function (response) {
                     window.history.pushState("<?php echo base_url()?>Examenes", "modificar_examen.php", "crearpreguntas?examen=" + document.getElementsByName('tituloexamen')[0].value);
@@ -246,10 +247,6 @@ include('templates/dashboard.php');
                     $('#exampleModalCenter').on('hidden.bs.modal', function () {
                         location.reload();
                     })
-            /*        setTimeout(function()
-                    {
-                        location.reload();  //Refresh page
-                    }, 5000);*/
                 }
             });
         });
@@ -257,17 +254,13 @@ include('templates/dashboard.php');
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url:"<?php echo base_url()?>Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
+                url: "<?php echo base_url()?>Examenes/modificardatos?examen=<?php echo $this->miexamenconcreto[0]['Titulo examen']?>",
                 data: {data: crearExamen()},
                 success: function (response) {
                     $("#enviarexamen").modal('show');
-
                 }
             });
-
         });
-
-
     });
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -277,7 +270,7 @@ include('templates/dashboard.php');
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-<script type="text/javascript" src="<?php echo base_url()?>js/examenesJavascript.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>js/examenesJavascript.js"></script>
 
 </body>
 </html>

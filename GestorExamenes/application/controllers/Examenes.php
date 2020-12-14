@@ -39,9 +39,7 @@ class Examenes extends CI_Controller
     public function modificardatos()
     {
         $nombreexamen = $this->input->get('examen');
-/*        $data = $this->input->post('data');*/
-/*        $data =filter_input(INPUT_POST,'data',FILTER_SANITIZE_STRING);   */
-        $data =strip_tags( $this->input->post('data'));
+        $data = strip_tags($this->input->post('data'));
         $preguntas = json_decode($data, true);
         $this->Preguntas->editarexamen($nombreexamen, $preguntas);
     }
@@ -83,22 +81,6 @@ class Examenes extends CI_Controller
             'Asignatura' => strip_tags($this->input->post('asignatura')),
             'Email' => strip_tags($this->input->post('email')),
             'Barajar' => $barajar,
-            /*                        'Titulo examen' => filter_input(INPUT_POST,$this->input->post('tituloexamen'),FILTER_SANITIZE_STRING),
-                                    'Curso' => filter_input(INPUT_POST,$this->input->post('curso'),FILTER_SANITIZE_STRING),
-                                    'Asignatura' =>filter_input(INPUT_POST,$this->input->post('asignatura'),FILTER_SANITIZE_STRING),
-                                    'Email' => filter_input(INPUT_POST,$this->input->post('email'),FILTER_SANITIZE_STRING),
-                                    'Barajar' => $barajar,*/
-/*            'Titulo examen' => filter_input(INPUT_POST,$this->input->post('tituloexamen'),FILTER_SANITIZE_SPECIAL_CHARS),
-            'Curso' => filter_input(INPUT_POST,$this->input->post('curso'),FILTER_SANITIZE_SPECIAL_CHARS),
-            'Asignatura' =>filter_input(INPUT_POST,$this->input->post('asignatura'),FILTER_SANITIZE_SPECIAL_CHARS),
-            'Email' => filter_input(INPUT_POST,$this->input->post('email'),FILTER_SANITIZE_SPECIAL_CHARS),
-            'Barajar' => $barajar*/
-
-/*            'Titulo examen' => $this->input->post('tituloexamen'),
-            'Curso' => $this->input->post('curso'),
-            'Asignatura' => $this->input->post('asignatura'),
-            'Email' => $this->input->post('email'),
-            'Barajar' => $barajar,*/
         );
         $this->Preguntas->crearexamen($examen);
         redirect(base_url() . 'Examenes/examencreado');
@@ -174,6 +156,7 @@ class Examenes extends CI_Controller
 
 
     }
+
     /**
      * Se comprueba el login del usuario
      *

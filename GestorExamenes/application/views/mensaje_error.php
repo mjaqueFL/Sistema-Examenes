@@ -12,7 +12,7 @@ include('templates/dashboard.php');
 
         <div class="col-md-12">
             <div class="alert alert-danger">
-              Su examen está corrupto, por favor cree otro examen
+                Su examen está corrupto, por favor cree otro examen
             </div>
             <a class="btn btn-success" href="<?php echo base_url() ?>Examenes/listarexamenes">Volver a lista de
                 examenes</a>

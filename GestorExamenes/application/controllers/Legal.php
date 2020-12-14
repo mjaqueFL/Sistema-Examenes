@@ -16,7 +16,6 @@ class Legal extends CI_Controller
         parent::__construct();
         $this->load->helper('url');
         $this->load->library('google'); /*Libreria de Google necesaria*/
-
     }
 
     /**

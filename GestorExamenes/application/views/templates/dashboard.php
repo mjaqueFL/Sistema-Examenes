@@ -18,7 +18,7 @@ require_once('head.php');
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="<?php echo base_url()?>Dashboard">
+            <a class="nav-link" href="<?php echo base_url() ?>Dashboard">
                 <span class="fas fa-fw fa-tachometer-alt"></span>
                 <span>Dashboard</span></a>
         </li>
@@ -36,7 +36,7 @@ require_once('head.php');
             <div id="collapseQuiz" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
 
-                    <a class="collapse-item" href="<?php echo base_url()?>Examenes/"><img
+                    <a class="collapse-item" href="<?php echo base_url() ?>Examenes/"><img
                                 class="imgcrearexamen" src="/GestorExamenes/imagenes/examen.svg"
                                 alt="imagenaltaexamen"/>Crear examen</a>
 
@@ -66,8 +66,11 @@ require_once('head.php');
 
                         </p>
                     </div>
-                    <a href="<?= base_url() ?>auth/logout" class="btn btn-info"><span
-                                class="float-left fas fa-sign-out-alt"></span>Google logout</a>
+                    <div class="card-content">
+                        <a href="<?= base_url() ?>auth/logout" class="boton btn btn-danger">
+                        <span
+                                class="fas fa-sign-out-alt"></span>Google logout</a>
+                    </div>
                 </div>
             </div>
         <?php } ?>

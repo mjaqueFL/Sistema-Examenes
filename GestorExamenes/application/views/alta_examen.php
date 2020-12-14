@@ -6,7 +6,6 @@
 <?php
 include('templates/dashboard.php');
 ?>
-
 <div class="container-fluid">
     <h3>Alta examen</h3>
     <div class="row">

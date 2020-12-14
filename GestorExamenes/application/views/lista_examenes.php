@@ -7,7 +7,7 @@
 include('templates/dashboard.php');
 ?>
 <div class="container-fluid">
-    <div class="tablaexamen">
+    <div class="row">
         <?php
         if (isset($this->borrado)) {
             ?>
@@ -18,52 +18,49 @@ include('templates/dashboard.php');
         }
         ?>
         <h3>Lista examenes</h3>
-        <div class="table-responsive-sm">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Titulo examen</th>
-                    <th>Curso</th>
-                    <th>Asignatura</th>
-                    <th>Accion</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <?php
-                    foreach ($this->misexamenes as $valor) {
-                        echo '<tr>';
-                        echo '<td>' . $valor['Titulo examen'] . '</td>';
-                        echo '<td>' . $valor['Curso'] . '</td>';
-                        echo '<td>' . $valor['Asignatura'] . '</td>';
-                        ?>
-                        <td>
-                            <a href="<?php echo base_url() ?>Examenes/crearpreguntas?examen=<?php echo $valor["Titulo examen"] ?>"><span
-                                        class="fas fa-edit fa-lg"></span>
 
-                            </a>
-                            <a href="<?php echo base_url() ?>Examenes/antesborrar?examen=<?php echo $valor["Titulo examen"] ?>"><span
-                                        class="fas fa-times fa-lg"></span></a>
-                        </td>
-                        <?php
-                        echo '</tr>';
-                    }
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Titulo examen</th>
+                <th>Curso</th>
+                <th>Asignatura</th>
+                <th>Accion</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <?php
+                foreach ($this->misexamenes as $valor) {
+                    echo '<tr>';
+                    echo '<td>' . $valor['Titulo examen'] . '</td>';
+                    echo '<td>' . $valor['Curso'] . '</td>';
+                    echo '<td>' . $valor['Asignatura'] . '</td>';
                     ?>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+                    <td>
+                        <a href="<?php echo base_url() ?>Examenes/crearpreguntas?examen=<?php echo $valor["Titulo examen"] ?>"><span
+                                    class="fas fa-edit fa-lg"></span>
 
+                        </a>
+                        <a href="<?php echo base_url() ?>Examenes/antesborrar?examen=<?php echo $valor["Titulo examen"] ?>"><span
+                                    class="fas fa-times fa-lg"></span></a>
+                    </td>
+                    <?php
+                    echo '</tr>';
+                }
+                ?>
+            </tr>
+            </tbody>
+        </table>
     </div>
-    <?php
-    include 'templates/footer.php'
-    ?>
-    <?php
-    include 'templates/comprobacionescookie.php'
-    ?>
-    <?php
-    include 'templates/divcookie.php'
-    ?>
-
 </div>
+<?php
+include 'templates/footer.php'
+?>
+<?php
+include 'templates/comprobacionescookie.php'
+?>
+<?php
+include 'templates/divcookie.php'
+?>
 </html>

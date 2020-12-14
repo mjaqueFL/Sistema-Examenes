@@ -39,8 +39,6 @@ class Auth extends CI_Controller
             unlink(APPPATH . 'views\instalacion.php');
 
         }
-        /*la linea se descomentará cuando se presente el proyecto, para evitar
-        el borrado accidental de los metodos de instalacion    */
     }
 
 
@@ -62,17 +60,9 @@ class Auth extends CI_Controller
             'link' => $google_data['link'],
             'sess_logged_in' => 1
         );
-
         $this->session->set_userdata($session_data);
-        /*        print_r($google_data);
-                die();*/
-
         $data['google_login_url'] = $this->google->get_login_url();
-        /*        $this->load->view('home', $data);*/
         redirect('Dashboard', $data);
-
-        /*$this->load->controller('Dashboard');*/
-
     }
 
 
@@ -83,7 +73,6 @@ class Auth extends CI_Controller
      */
     public function logout()
     {
-        /*la funcion por defecto recordaba la sesion y solo se podia loguear con una misma cuenta*/
         $this->google->revoke_token();
         $this->session->unset_userdata('session_data');
         $this->session->sess_destroy();
