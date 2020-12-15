@@ -499,4 +499,3 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 //esta variable se generará en la instalacion, para las pruebas la pongo a pelo
-define("COLECCION","colecciondefault");
